@@ -1,0 +1,28 @@
+{
+    "preguntas": [
+        {
+            "enunciado": "¿Cuál es el animal más grande del mundo?",
+            "categoria": "animales",
+            "dificultad": "facil",
+            "opciones": [
+                "Elefante africano",
+                "Ballena azul",
+                "Jirafa",
+                "Tiburón blanco"
+            ],
+            "respuestaCorrecta": "Ballena azul"
+        },
+        {
+            "enunciado": "¿Cuántos planetas tiene el sistema solar?",
+            "categoria": "ciencia",
+            "dificultad": "media",
+            "opciones": [
+                "7",
+                "8",
+                "9",
+                "10"
+            ],
+            "respuestaCorrecta": "8"
+        }
+    ]
+}
