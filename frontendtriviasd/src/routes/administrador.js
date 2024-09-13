@@ -17,30 +17,28 @@ function AdminForm() {
                 <div className="flex flex-col justify-center   h-auto mr-5">
                     <div className='flex flex-col  '>
                         <label for="Name" className="block text-gray-700 text-md font-bold mb-2 ">
-                          Nombre del equipo  
+                            Nombre del equipo
                         </label>
                         <input type="text" id="Name" className="border-2 border-black rounded-lg "/>
                     </div>
                     <div className='flex flex-col mb-2 mt-5'>
                         <label for="leaderName" className="block text-gray-700 text-md font-bold mb-2 ">
-                
+
                             Nombre del líder
                         </label>
                         <input type="text" id="leaderName"  className="border-2 border-black rounded-lg "/>
                     </div>
                     <div className='flex flex-col mb-2 mt-5'>
                         <label for="leaderMail" className="block text-gray-700 text-md font-bold mb-2 ">
-                
+
                             Correo del líder
                         </label>
                         <input type="text" id="leaderEmail"  className="border-2 border-black rounded-lg "/>
                     </div>
 
                     <button type='button' className=" flex items-center justify-center self-center bg-lime-700 text-white  rounded-lg p-2 my-5 w-32 h-12 cursor-pointer" >Registrar</button>
-                   
                 </div>
 
-               
             </form>
         </div>
     );
