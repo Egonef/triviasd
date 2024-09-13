@@ -1,3 +1,5 @@
+//Pagina principal del presentador (WIP: No sabemos si mostrar una seleccion de equipos si se hará automaticamente, se decidirá tras hacer el registro de equipos)
+
 //Imports
 
 import React from 'react';

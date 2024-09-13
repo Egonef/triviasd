@@ -1,3 +1,5 @@
+//Pagina origen del proyecto, aqui controlamos las rutas de la aplicacion
+
 //Imports
 import React from 'react';
 import ReactDOM from 'react-dom/client';
@@ -12,15 +14,15 @@ import Presentador from './routes/presentador';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/presentador" element={<Presentador />} />
-        <Route path="/admin" element={<Admin />} />
-      </Routes>
-    </BrowserRouter>
-  </React.StrictMode>
+    <React.StrictMode>
+        <BrowserRouter>
+        <Routes>
+            <Route path="/" element={<App />} />
+            <Route path="/presentador" element={<Presentador />} />
+            <Route path="/admin" element={<Admin />} />
+        </Routes>
+        </BrowserRouter>
+    </React.StrictMode>
 );
 
 reportWebVitals();

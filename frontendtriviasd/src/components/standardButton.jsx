@@ -1,5 +1,6 @@
-//Imports
+//Componente de botón estándar que recibe un texto y una función onClick
 
+//Imports
 import React from "react";
 
 export default function StandardButton({ text, onClick }) {

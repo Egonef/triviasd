@@ -1,5 +1,4 @@
 // Pagina de seleccion de usuario
-// WIP los botones se separarán en dos componentes
 // Imports
 import React from 'react';
 import { useNavigate } from 'react-router-dom';

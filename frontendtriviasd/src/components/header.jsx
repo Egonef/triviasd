@@ -1,3 +1,6 @@
+//Componente de la barra de encabezado superior
+
+//Imports
 import React from 'react'
 
 
