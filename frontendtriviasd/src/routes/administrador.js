@@ -37,7 +37,7 @@ function AdminForm() {
                             <input type="text" id="leaderEmail"  className="border-2 border-black rounded-lg "/>
                         </div>
 
-                        <StandardButton text="Registrar" onClick={(console.log("hehe"))} />
+                        <StandardButton text="Registrar" onClick={(console.log("hehe"))} width={36} height={14} />
                     </div>
 
                 </form>
