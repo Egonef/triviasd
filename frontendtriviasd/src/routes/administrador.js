@@ -17,12 +17,12 @@ function AdminForm() {
     const [leaderName, setLeaderName] = useState('');
     const [leaderEmail, setLeaderEmail] = useState('');
 
-    async function registerTeam(Name, LeaderName, LeaderEmail) {
+    async function registerTeam() {
         try {
             const response = await axios.post('http://localhost:5000/api/admin/registerTeam', {
-                Name: teamName,
-                LeaderName: leaderName,
-                LeaderEmail: leaderEmail
+                teamName,
+                leaderName,
+                leaderEmail
             });
             console.log(response.data);
         } catch (error) {
@@ -41,7 +41,7 @@ function AdminForm() {
                             <label htmlFor="Name" className="block text-gray-700 text-md font-bold mb-2 ">
                                 Nombre del equipo
                             </label>
-                            <input type="text" id="Name" value={teamName} 
+                            <input type="text" id="Name" value={teamName}
                             onChange={(e) => setTeamName(e.target.value)}
                             className="border-2 border-black rounded-lg "/>
                         </div>
@@ -49,7 +49,7 @@ function AdminForm() {
                             <label htmlFor="leaderName" className="block text-gray-700 text-md font-bold mb-2 ">
                                 Nombre del líder
                             </label>
-                            <input type="text" id="leaderName" value={leaderName} 
+                            <input type="text" id="leaderName" value={leaderName}
                             onChange={(e) => setLeaderName(e.target.value)}
                             className="border-2 border-black rounded-lg "/>
                         </div>
@@ -58,7 +58,7 @@ function AdminForm() {
 
                                 Correo del líder
                             </label>
-                            <input type="text" id="leaderEmail"  value={leaderEmail} 
+                            <input type="text" id="leaderEmail"  value={leaderEmail}
                             onChange={(e) => setLeaderEmail(e.target.value)}
                             className="border-2 border-black rounded-lg "/>
                         </div>
