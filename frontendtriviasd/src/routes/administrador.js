@@ -52,7 +52,7 @@ function AdminForm() {
                             <input type="text" id="leaderEmail"  className="border-2 border-black rounded-lg "/>
                         </div>
 
-                        <StandardButton text="Registrar" onClick={apitest} size='small' />
+                        <StandardButton text="Registrar" onClick={apitest} size='small' type={"button"} />
                     </div>
 
                 </form>

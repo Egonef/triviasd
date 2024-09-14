@@ -3,7 +3,7 @@
 //Imports
 import React from "react";
 
-export default function StandardButton({ text, onClick , size}) {
+export default function StandardButton({ text, onClick , size , type}) {
 
 
     let baseClasses = "bg-[#FF0033] text-white text-3xl font-bold py-2 px-4 rounded-2xl mx-16 my-5";
@@ -30,7 +30,7 @@ export default function StandardButton({ text, onClick , size}) {
 
     return (
         <button
-        type="button"
+        type={type}
         onClick={onClick}
         className={buttonClasses}
         >
