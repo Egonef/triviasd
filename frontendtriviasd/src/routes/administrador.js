@@ -12,7 +12,7 @@ import StandardButton from '../components/standardButton';
 
 function AdminForm() {
 
-    async function apitest() {
+    async function registerTeam() {
         try {
             const response = await axios.get('http://localhost:5000/api/admin/test');
             console.log(response.data);
