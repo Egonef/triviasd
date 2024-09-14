@@ -22,6 +22,11 @@ var id = 0;
 export const registerTeam = asyncHandler(async(req, res) => {
     //Creamos un nuevo equipo con los datos recibidos
     const team = new Team(req.body.teamName, req.body.leaderName, req.body.leaderEmail);
+    //Comprobamos si el equipo ya está registrado
+    if (checkTeam(team.Name)) {
+        res.send('Team already registered');
+        return;
+    }
     //Le asignamos un id y lo guardamos en el vector
     id++;
     team.id = id;
@@ -30,3 +35,13 @@ export const registerTeam = asyncHandler(async(req, res) => {
     //Respondemos con un mensaje de confirmación
     res.send('Team registered');
 })
+
+//Funcion para comprobar si un equipo ya está registrado
+function checkTeam(teamName) {
+    for (let i = 0; i < teams.length; i++) {
+        if (teams[i].Name == teamName) {
+            return true;
+        }
+    }
+    return false;
+}
