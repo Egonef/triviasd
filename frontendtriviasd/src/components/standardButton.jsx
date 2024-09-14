@@ -13,16 +13,16 @@ export default function StandardButton({ text, onClick , size}) {
     let sizeClasses;
     switch (size) {
         case 'small':
-            sizeClasses = "w-24 h-8"; // Ajusta estos valores según tus necesidades
+            sizeClasses = "w-40 h-15";
             break;
         case 'medium':
-            sizeClasses = "w-56 h-24"; // Ajusta estos valores según tus necesidades
+            sizeClasses = "w-56 h-24";
             break;
         case 'large':
-            sizeClasses = "w-72 h-36"; // Ajusta estos valores según tus necesidades
+            sizeClasses = "w-72 h-36";
             break;
         default:
-            sizeClasses = "w-36 h-12"; // Sin tamaño adicional si 'size' no está definido o no coincide
+            sizeClasses = "w-36 h-12";
     }
 
 
@@ -30,9 +30,10 @@ export default function StandardButton({ text, onClick , size}) {
 
     return (
         <button
+        type="button"
         onClick={onClick}
-        className={buttonClasses}>
-
+        className={buttonClasses}
+        >
         {text}
         </button>
     );
