@@ -12,8 +12,7 @@ import asyncHandler from 'express-async-handler';
 function TeamConstructor(Name, LeaderName, LeaderEmail) {
     this.Name = Name;
     this.LeaderName = LeaderName;
-    this.LeaderEmail = LeaderEmail; 
-    
+    this.LeaderEmail = LeaderEmail;
 }
 
 var teams = [];

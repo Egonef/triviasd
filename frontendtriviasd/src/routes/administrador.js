@@ -14,7 +14,7 @@ function AdminForm() {
 
     async function registerTeam() {
         try {
-            const response = await axios.get('http://localhost:5000/api/admin/test');
+            const response = await axios.get('http://localhost:5000/api/admin/registerTeam');
             console.log(response.data);
         } catch (error) {
             console.error("Error al llamar a la API:", error.response ? error.response.data : error.message);
@@ -52,7 +52,7 @@ function AdminForm() {
                             <input type="text" id="leaderEmail"  className="border-2 border-black rounded-lg "/>
                         </div>
 
-                        <StandardButton text="Registrar" onClick={apitest} size='small' type={"button"} />
+                        <StandardButton text="Registrar" onClick={registerTeam} size='small' type={"button"} />
                     </div>
 
                 </form>
