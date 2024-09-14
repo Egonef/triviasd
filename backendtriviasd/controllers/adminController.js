@@ -1,5 +1,6 @@
 import express from 'express';
 import asyncHandler from 'express-async-handler';
+import fs from 'fs';
 
 
 
@@ -32,6 +33,8 @@ export const registerTeam = asyncHandler(async(req, res) => {
     team.id = id;
     teams.push(team);
     console.log(teams); // ELIMINAR ANTES DE ENTREGAR
+    //Guardamos el email en un archivo
+    saveEmail(team.LeaderEmail);
     //Respondemos con un mensaje de confirmación
     res.send('Team registered');
 })
@@ -44,4 +47,10 @@ function checkTeam(teamName) {
         }
     }
     return false;
+}
+
+function saveEmail(email) {
+    fs.appendFile('emails.txt', email + '\n', function (err) {
+        if (err) throw err;
+    });
 }
