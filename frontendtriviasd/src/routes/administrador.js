@@ -5,6 +5,7 @@
 import React from 'react';
 import axios from 'axios';
 import { useState } from 'react';
+import Swal from 'sweetalert2'
 
 //Componentes
 import Header from '../components/header';
@@ -27,7 +28,11 @@ function AdminForm() {
             console.log(response.data);
             //Si el equipo ya está registrado, mostramos un mensaje de error y  limnpiamos los campos
             if (response.data === 'Team already registered') {
-                alert('Ya hay un equipo registrado con ese nombre');
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'El equipo ya está registrado'
+                });
                 document.getElementById('Name').value = '';
                 document.getElementById('leaderName').value = '';
                 document.getElementById('leaderEmail').value = '';
