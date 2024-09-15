@@ -36,6 +36,16 @@ function AdminForm() {
                 document.getElementById('Name').value = '';
                 document.getElementById('leaderName').value = '';
                 document.getElementById('leaderEmail').value = '';
+            }else{
+                //Si el equipo se registró correctamente, mostramos un mensaje de éxito y limpiamos los campos
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Éxito',
+                    text: 'Equipo registrado'
+                });
+                document.getElementById('Name').value = '';
+                document.getElementById('leaderName').value = '';
+                document.getElementById('leaderEmail').value = '';
             }
         } catch (error) {
             console.error("Error al llamar a la API:", error.response ? error.response.data : error.message);
