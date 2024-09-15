@@ -34,31 +34,34 @@ function AdminForm() {
                     text: 'El equipo ya está registrado',
                     confirmButtonColor: '#FF0033',
                 });
-                document.getElementById('Name').value = '';
-                document.getElementById('leaderName').value = '';
-                document.getElementById('leaderEmail').value = '';
+                setTeamName('');
+                setLeaderName('');
+                setLeaderEmail('');
             }else{
                 //Si el equipo se registró correctamente, mostramos un mensaje de éxito y limpiamos los campos
                 Swal.fire({
                     icon: 'success',
                     title: 'Éxito',
-                    text: 'Equipo registrado'
+                    text: 'Equipo registrado',
+                    confirmButtonColor: '#95ff00',
                 });
-                document.getElementById('Name').value = '';
-                document.getElementById('leaderName').value = '';
-                document.getElementById('leaderEmail').value = '';
+                setTeamName('');
+                setLeaderName('');
+                setLeaderEmail('');
             }
+
         } catch (error) {
             console.error("Error al llamar a la API:", error.response ? error.response.data : error.message);
         }
     }
 
 
+
     return (
         <div className="App h-screen bg-gray-100">
             <Header/>
             <div className=" flex items-center flex-col h-[92%] pt-44"  >
-                <form className=" flex flex-col shadow-xl bg-gray-300  w-1/4 h-96 rounded-md p-8">
+                <form id='registerForm' className=" flex flex-col shadow-xl bg-gray-300  w-1/4 h-96 rounded-md p-8">
                     <div className="flex flex-col items-center h-auto ">
                         <div className='flex flex-col w-4/5 '>
                             <label htmlFor="Name" className="block text-gray-700 text-md font-bold mb-2 ">
