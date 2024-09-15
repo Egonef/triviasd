@@ -12,7 +12,7 @@ const app = express();
 
 // Configuración de cors para permitir peticiones desde el frontend
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: '*',
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE']
 }));
@@ -25,4 +25,6 @@ app.use('/api/caster', casterRoutes);
 
 const PORT = 5000;
 
-app.listen(PORT, console.log(`App is running on port ${PORT}`))
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Server listening on port ${PORT}`);
+});
