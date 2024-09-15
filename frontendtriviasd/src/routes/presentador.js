@@ -41,13 +41,15 @@ export default function Presentador(){
                 <div className='flex flex-col h-[70%] w-[70%] mt-10 bg-gray-400 rounded-lg shadow-2xl'>
                     <div className='flex items-center justify-center h-[15%] w-full bg-gray-600 rounded-t-md'>
                         <StandardButton text="Recargar" onClick={getTeams} size="tiny"/>
+                        <StandardButton text="Iniciar"  size="tiny"/>
                     </div>
                     <div className='flex flex-col items-center h-[85%] w-full overflow-scroll'>
                         {registeredTeams.map((team) => {
                             console.log(team);
                             return (
                                 <div className='flex items-center justify-center w-[97%] h-20 min-h-20 mt-4 bg-gray-500 border-b-2 border-gray-600 rounded-2xl'>
-                                    <p className='text-2xl'>{team.Name}</p>
+                                    <input id={`team-${team.id}`}  type= 'checkbox'className='text-2xl' value={team.Name} />
+                                    <label htmlFor={`team-${team.id}`}  className='text-2xl font-bold text-white'>{team.Name} </label>
                                 </div>
                             )
                         })}

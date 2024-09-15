@@ -37,6 +37,15 @@ function AdminForm() {
                 setTeamName('');
                 setLeaderName('');
                 setLeaderEmail('');
+            }else if(response.data === 'Empty record'){
+                //Si algún campo está vacío, mostramos un mensaje de error y limpiamos los campos
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'No se pueden dejar campos vacíos',
+                    confirmButtonColor: '#FF0033',
+                });
+
             }else{
                 //Si el equipo se registró correctamente, mostramos un mensaje de éxito y limpiamos los campos
                 Swal.fire({

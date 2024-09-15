@@ -27,6 +27,9 @@ export const registerTeam = asyncHandler(async(req, res) => {
     if (checkTeam(team.Name)) {
         res.send('Team already registered');
         return;
+    }else if(checkinput(team.Name,team.LeaderName,team.LeaderEmail)){
+        res.send('Empty record');
+        return;
     }
     //Le asignamos un id y lo guardamos en el vector
     id++;
@@ -45,6 +48,14 @@ function checkTeam(teamName) {
         if (teams[i].Name == teamName) {
             return true;
         }
+    }
+    return false;
+}
+
+//Funcion para comprobar si algun campo está vacío
+function checkinput(teamName,teamleader,leaderemail) {
+    if (teamName == '' || teamleader == '' || leaderemail == '') {
+        return true;
     }
     return false;
 }
