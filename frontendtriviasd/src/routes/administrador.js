@@ -20,7 +20,7 @@ function AdminForm() {
 
     async function registerTeam() {
         try {
-            const response = await axios.post('http://localhost:5000/api/admin/registerTeam', {
+            const response = await axios.post('http://127.0.0.1:5000/api/admin/registerTeam', {
                 teamName,
                 leaderName,
                 leaderEmail

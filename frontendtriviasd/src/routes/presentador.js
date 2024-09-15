@@ -20,7 +20,7 @@ export default function Presentador(){
     //Solicitud a la API para obtener los equipos registrados
     async function getTeams() {
         try {
-            const response = await axios.get('http://localhost:5000/api/admin/getTeams');
+            const response = await axios.get('http://127.0.0.1:5000/api/admin/getTeams'); //Cambiar la dirección IP por la de la máquina que corre el backend
             console.log(response.data);
             setRegisteredTeams(response.data);
         } catch (error) {
