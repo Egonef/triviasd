@@ -55,3 +55,8 @@ function saveEmail(email) {
         if (err) throw err;
     });
 }
+
+//Funcion para devolver el vector de equipos
+export const getTeams = asyncHandler(async(req, res) => {
+    res.send(teams);
+})

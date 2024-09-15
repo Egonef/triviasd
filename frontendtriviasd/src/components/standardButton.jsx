@@ -12,8 +12,11 @@ export default function StandardButton({ text, onClick , size , type}) {
     // Añadir clases de tamaño basadas en el argumento size
     let sizeClasses;
     switch (size) {
+        case 'tiny':
+            sizeClasses = "w-32 h-10 text-xl";
+            break
         case 'small':
-            sizeClasses = "w-40 h-15";
+            sizeClasses = "w-40 h-15 text-2xl";
             break;
         case 'medium':
             sizeClasses = "w-56 h-24";
