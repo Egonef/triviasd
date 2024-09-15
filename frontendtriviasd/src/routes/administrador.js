@@ -31,7 +31,8 @@ function AdminForm() {
                 Swal.fire({
                     icon: 'error',
                     title: 'Error',
-                    text: 'El equipo ya está registrado'
+                    text: 'El equipo ya está registrado',
+                    confirmButtonColor: '#FF0033',
                 });
                 document.getElementById('Name').value = '';
                 document.getElementById('leaderName').value = '';
