@@ -49,6 +49,7 @@ function checkTeam(teamName) {
     return false;
 }
 
+//Funcion para guarda los correos en un archivo
 function saveEmail(email) {
     fs.appendFile('emails.txt', email + '\n', function (err) {
         if (err) throw err;

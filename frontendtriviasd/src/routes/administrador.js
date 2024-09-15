@@ -25,6 +25,13 @@ function AdminForm() {
                 leaderEmail
             });
             console.log(response.data);
+            //Si el equipo ya está registrado, mostramos un mensaje de error y  limnpiamos los campos
+            if (response.data === 'Team already registered') {
+                alert('Ya hay un equipo registrado con ese nombre');
+                document.getElementById('Name').value = '';
+                document.getElementById('leaderName').value = '';
+                document.getElementById('leaderEmail').value = '';
+            }
         } catch (error) {
             console.error("Error al llamar a la API:", error.response ? error.response.data : error.message);
         }
