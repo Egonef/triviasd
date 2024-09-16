@@ -32,14 +32,21 @@ export default function Presentador(){
     useEffect(() => {
         getTeams();
     });
+    const firstTeamName = registeredTeams.length > 0 ? registeredTeams[0].Name : 'No hay equipos';
 
     return (
         <div className="App h-screen bg-gray-100">
             <Header/>
-            <div className="flex flex-col items-center h-[92%] pt-44">
-               
-                
+            <div className="flex flex-col  items-center h-[40%] mt-20">
+                <p className='text-4xl font-bold '>Turno del Equipo {firstTeamName}</p>
             </div>
+            <div className='flex flex-row items-baseline  h-[40%] w-12  o'>
+                    <h1 className='text-4xl font-bold ml-14'>Temática:</h1>
+                    <StandardButton text="Animales"  size="tiny"/>
+                    <StandardButton text="Comida"  size="tiny"/>
+                    <StandardButton text="Ropa"  size="tiny"/>
+                    <StandardButton text="yoquese"  size="tiny"/>
+                </div>
         </div>
     )
 }
