@@ -23,7 +23,7 @@ export default function Presentador(){
     async function getTeams() {
         try {
             const response = await axios.get('http://127.0.0.1:5000/api/admin/getTeams'); //Cambiar la dirección IP por la de la máquina que corre el backend
-            console.log(response.data);
+            //console.log(response.data);
             setRegisteredTeams(response.data);
         } catch (error) {
             console.error("Error al llamar a la API:", error.response ? error.response.data : error.message);
@@ -35,6 +35,7 @@ export default function Presentador(){
             const response = await axios.get('http://127.0.0.1:5000/api/admin/getGameStatus'); //Cambiar la dirección IP por la de la máquina que corre el backend
             console.log(response.data);
             setGameState(response.data);
+            console.log(gameState);
         }catch (error) {
             console.error("Error al llamar a la API:", error.response ? error.response.data : error.message);
         }
@@ -42,6 +43,7 @@ export default function Presentador(){
     //Llamamos a la función para obtener los equipos registrados al cargar la página
     useEffect(() => {
         getTeams();
+        checkgameready();
     });
     const firstTeamName = registeredTeams.length > 0 ? registeredTeams[0].Name : 'No hay equipos';
 
