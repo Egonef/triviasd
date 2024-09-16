@@ -16,6 +16,8 @@ export default function Presentador(){
 
     //Estado para almacenar los equipos registrados
     const [registeredTeams, setRegisteredTeams] = useState([]);
+    //Estado para almacenar el estado de la partida
+    const [gameState, setGameState] = useState([]);
 
     //Solicitud a la API para obtener los equipos registrados
     async function getTeams() {
@@ -27,7 +29,16 @@ export default function Presentador(){
             console.error("Error al llamar a la API:", error.response ? error.response.data : error.message);
         }
     }
-
+    //Solicitud a la API para obtener el estado de la partida
+    async function checkgameready() {
+        try {
+            const response = await axios.get('http://127.0.0.1:5000/api/admin/getGameStatus'); //Cambiar la dirección IP por la de la máquina que corre el backend
+            console.log(response.data);
+            setGameState(response.data);
+        }catch (error) {
+            console.error("Error al llamar a la API:", error.response ? error.response.data : error.message);
+        }
+    }
     //Llamamos a la función para obtener los equipos registrados al cargar la página
     useEffect(() => {
         getTeams();
