@@ -9,5 +9,6 @@ const router = express.Router();
 
 router.route('/registerTeam').post(ctr.registerTeam);
 router.route('/getTeams').get(ctr.getTeams);
+router.route('/getTeamsNumber').get(ctr.getTeamsNumber);
 
 export default router;

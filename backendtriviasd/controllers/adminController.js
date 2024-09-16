@@ -21,6 +21,11 @@ var id = 0;
 
 //Función para registrar un equipo en el sistema (Se guardan en un vector)
 export const registerTeam = asyncHandler(async(req, res) => {
+    //Comprobamos si ya hay 4 equipos registrados
+    if (teams.length == 4) {
+        res.send('Max teams reached');
+        return;
+    }
     //Creamos un nuevo equipo con los datos recibidos
     const team = new Team(req.body.teamName, req.body.leaderName, req.body.leaderEmail);
     //Comprobamos si el equipo ya está registrado
@@ -70,4 +75,10 @@ function saveEmail(email) {
 //Funcion para devolver el vector de equipos
 export const getTeams = asyncHandler(async(req, res) => {
     res.send(teams);
+})
+
+
+//Funcion para devolver el número de equipos registrados
+export const getTeamsNumber = asyncHandler(async(req, res) => {
+    res.send(teams.length.toString());
 })
