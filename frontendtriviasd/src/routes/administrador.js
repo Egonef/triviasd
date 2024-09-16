@@ -5,6 +5,7 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import axios from 'axios';
+import Swal from 'sweetalert2';
 
 //Componentes
 import Header from '../components/header';
@@ -22,6 +23,33 @@ function AdminForm() {
             const response = await axios.get('http://127.0.0.1:5000/api/admin/getTeams');
             console.log(response.data);
             setRegisteredTeams(response.data);
+        }
+        catch (error) {
+            console.error("Error al llamar a la API:", error.response ? error.response.data : error.message);
+        }
+    }
+
+    //LLamada para iniciar la partida
+
+    async function startGame() {
+        try {
+            const response = await axios.get('http://127.0.0.1:5000/api/admin/startGame');
+            console.log(response.data);
+            if (response.data === 'Not enough teams') {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'No hay suficientes equipos registrados',
+                    confirmButtonColor: '#FF0033',
+                });
+            } else {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Éxito',
+                    text: 'La trivia ha comenzado',
+                    confirmButtonColor: '#FF0033',
+                });
+            }
         }
         catch (error) {
             console.error("Error al llamar a la API:", error.response ? error.response.data : error.message);
@@ -52,7 +80,7 @@ function AdminForm() {
                                 </div>
                             )
                         })}
-                        <StandardButton text="Iniciar trivia" size="large" />
+                        <StandardButton text="Iniciar trivia" size="large" onClick={startGame} />
                 </div>
             </div>
         </div>

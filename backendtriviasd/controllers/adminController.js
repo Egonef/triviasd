@@ -18,6 +18,7 @@ function Team(Name, LeaderName, LeaderEmail) {
 
 var teams = [];
 var id = 0;
+var gameReady = false;
 
 //Función para registrar un equipo en el sistema (Se guardan en un vector)
 export const registerTeam = asyncHandler(async(req, res) => {
@@ -81,4 +82,19 @@ export const getTeams = asyncHandler(async(req, res) => {
 //Funcion para devolver el número de equipos registrados
 export const getTeamsNumber = asyncHandler(async(req, res) => {
     res.send(teams.length.toString());
+})
+
+//Funcion para iniciar la trivia
+export const startGame = asyncHandler(async(req, res) => {
+    //Comprobamos si hay 4 equipos registrados
+    if (teams.length == 4) {
+        gameReady = true;
+        res.send('Game started');
+    } else {
+        res.send('Not enough teams');
+    }
+})
+
+export const getGameStatus = asyncHandler(async(req, res) => {
+    res.send(gameReady);
 })
