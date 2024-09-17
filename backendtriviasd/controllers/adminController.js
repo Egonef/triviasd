@@ -14,9 +14,10 @@ function Team(Name, LeaderName, LeaderEmail) {
     this.Name = Name;
     this.LeaderName = LeaderName;
     this.LeaderEmail = LeaderEmail;
+    this.turn = false;
 }
 
-var teams = [];
+export var teams = [];
 var id = 0;
 var gameReady = false;
 
@@ -90,6 +91,7 @@ export const startGame = asyncHandler(async(req, res) => {
     if (teams.length == 4) {
         gameReady = true;
         res.send('Game started');
+        return true;
     } else {
         res.send('Not enough teams');
     }
