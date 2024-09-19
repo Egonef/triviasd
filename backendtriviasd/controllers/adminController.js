@@ -88,12 +88,15 @@ export const getTeamsNumber = asyncHandler(async(req, res) => {
 //Funcion para iniciar la trivia
 export const startGame = asyncHandler(async(req, res) => {
     //Comprobamos si hay 4 equipos registrados
-    if (teams.length == 4) {
+    if (teams.length < 2) {
+        res.send('Not enough teams');
+    }else if(teams.length > 4){
+        res.send('Too many teams');
+    }else {
+        teams[0].turn = true;
         gameReady = true;
         res.send('Game started');
         return true;
-    } else {
-        res.send('Not enough teams');
     }
 })
 

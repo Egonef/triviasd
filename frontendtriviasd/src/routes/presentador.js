@@ -5,7 +5,7 @@
 import React, { useEffect } from 'react';
 import axios from 'axios';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 
 //Componentes
 
@@ -28,8 +28,9 @@ export default function Presentador(){
     //Solicitud a la API para obtener los equipos registrados
     async function getTeams() {
         try {
+            console.log('getTeams llamado');
             const response = await axios.get('http://127.0.0.1:5000/api/admin/getTeams'); //Cambiar la dirección IP por la de la máquina que corre el backend
-            //console.log(response.data);
+            //console.log('getTeams devuelve: ' + response.data[0].Name);
             if (teamLock === false && gameState === true) {
                 setRegisteredTeams(response.data);
                 teamLock = true;
@@ -64,6 +65,7 @@ export default function Presentador(){
         }
     }
 
+    //Función para imprimir el estado de la partida ( solo para debuggear)
     function printGameStatus() {
         console.log("Valor real de gameState: ", gameState);
     }
@@ -71,24 +73,39 @@ export default function Presentador(){
     useEffect(() => {
         // Esta función se ejecutará cada vez que gameState cambie.
         console.log("gameState cambió a:", gameState);
+        if (gameState) {
+            getTeams();
+        }
         // Aquí puedes poner cualquier lógica que dependa del valor actualizado de gameState.
     }, [gameState]); 
 
     //Llamamos a la función para obtener los equipos registrados al cargar la página
     useEffect(() => {
         const interval = setInterval(() => {
-            getTeams();
             checkgameready();
-        }, 1000); // Se ejecuta cada 1000 milisegundos (1 segundo)
+        }, 2000); // Se ejecuta cada 1000 milisegundos (1 segundo)
 
         return () => clearInterval(interval); // Limpieza al desmontar el componente
     }, []);
+
+
+
+    //Funcion para comprobar cual es el equipo que tiene el turno
+    function checkTurn() {
+        console.log(registeredTeams);
+        for (let i = 0; i < registeredTeams.length; i++) {
+            if (registeredTeams[i].turn === true) {
+                return registeredTeams[i].Name;
+            }
+        }
+    }
+
 
     return (
         <div className="App h-screen bg-gray-100">
             <Header/>
             <div className="flex flex-col  items-center h-[40%] mt-20">
-                <p className='text-4xl font-bold '>Turno del Equipo {currentTeamTurn}</p>
+                <p className='text-4xl font-bold '>Turno del Equipo {registeredTeams.length > 0 ? checkTurn() : ''}</p>
             </div>
             <div className='flex flex-row items-baseline  h-[40%] w-12  o'>
                     <h1 className='text-4xl font-bold ml-14'>Temática:</h1>
