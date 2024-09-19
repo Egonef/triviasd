@@ -12,6 +12,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Admin from './routes/administrador';
 import Presentador from './routes/presentador';
 import pregunta from './routes/pregunta';
+import ExperienciaSD from './routes/xpsd';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -22,6 +23,7 @@ root.render(
             <Route path="/presentador" element={<Presentador />} />
             <Route path="/admin" element={<Admin />} />
             <Route path="/pregunta/" element={pregunta} />
+            <Route path="/xpsd" element={<ExperienciaSD />} />
         </Routes>
         </BrowserRouter>
     </React.StrictMode>
