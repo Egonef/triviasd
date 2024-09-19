@@ -14,7 +14,7 @@ export const nextTurn = asyncHandler(async(req, res) => {
         if(teams[i].turn == true){
             console.log('termina turno del equipo: ' + teams[i].Name);
             teams[i].turn = false;
-            if(i == 3){
+            if(i == teams.length - 1){
                 teams[0].turn = true;
             }else{
                 teams[i+1].turn = true;

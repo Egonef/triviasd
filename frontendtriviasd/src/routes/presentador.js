@@ -58,7 +58,7 @@ export default function Presentador(){
                 registeredTeams
             }); //Cambiar la dirección IP por la de la máquina que corre el backend
             console.log(response.data);
-            setCurrentTeamTurn(response.data);
+            setRegisteredTeams(response.data);
         }
         catch (error) {
             console.error("Error al llamar a la API:", error.response ? error.response.data : error.message);
@@ -114,8 +114,8 @@ export default function Presentador(){
                     <StandardButton text="Ropa"  size="tiny"/>
                     <StandardButton text="yoquese"  size="tiny"/>
             </div>
-            <StandardButton text="Siguiente Turno" size="big" onClick={printGameStatus}/>
-            <StandardButton text="Inicio de la Partida" size="big" onClick={checkgameready}/>
+            <StandardButton text="Siguiente Turno" size="big" onClick={nextTurn}/>
+            <StandardButton text="Inicio de la Partida" size="big" onClick={printGameStatus}/>
         </div>
     )
 }
