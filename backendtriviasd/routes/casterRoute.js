@@ -6,6 +6,6 @@ const router = express.Router();
 
 
 router.route('/nextTurn').post(ctr.nextTurn);
-
+router.route('/getQuestion').get(ctr.getQuestion);
 
 export default router;

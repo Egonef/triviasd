@@ -1,0 +1,52 @@
+{
+    "preguntas": [
+      {
+        "tematica": "Animales",
+        "dificultad": "Fácil",
+        "enunciado": "¿Cuál es el mamífero más grande del mundo?",
+        "respuestas": [
+          "Elefante",
+          "Ballena Azul",
+          "Rinoceronte",
+          "Hipopótamo"
+        ],
+        "respuesta_correcta": "Ballena Azul"
+      },
+      {
+        "tematica": "Comida",
+        "dificultad": "Media",
+        "enunciado": "¿Cuál es el ingrediente principal del guacamole?",
+        "respuestas": [
+          "Tomate",
+          "Cebolla",
+          "Aguacate",
+          "Limón"
+        ],
+        "respuesta_correcta": "Aguacate"
+      },
+      {
+        "tematica": "Ropa",
+        "dificultad": "Difícil",
+        "enunciado": "¿Qué diseñador es conocido por la creación del 'Little Black Dress'?",
+        "respuestas": [
+          "Coco Chanel",
+          "Giorgio Armani",
+          "Ralph Lauren",
+          "Versace"
+        ],
+        "respuesta_correcta": "Coco Chanel"
+      },
+      {
+        "tematica": "Yoquese",
+        "dificultad": "Fácil",
+        "enunciado": "¿Cuál es la capital de Francia?",
+        "respuestas": [
+          "Madrid",
+          "Berlín",
+          "París",
+          "Roma"
+        ],
+        "respuesta_correcta": "París"
+      }
+    ]
+}

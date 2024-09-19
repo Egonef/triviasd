@@ -5,6 +5,7 @@
 import React, { useEffect } from 'react';
 import axios from 'axios';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 //Componentes
 
@@ -102,7 +103,7 @@ export default function Presentador(){
     )
 }
 
-
+//He quitado la etiquieta link pq no me funcnionabax
 
 /* Version alternativa de la lista de equipos
 <div className='flex items-center h-[85%] w-full overflow-y-auto'>
