@@ -22,8 +22,9 @@ export default function Presentador(){
     //Estado para almacenar el estado de la partida
     const [gameState, setGameState] = useState(false);
 
-    //Estado para almacenar el nombre del equipo que tiene el turno
-    const [currentTeamTurn, setCurrentTeamTurn] = useState(0);
+    //Estado para almacenar la temática seleccionada
+    const [tema, setTema] = useState('');
+
 
     //Solicitud a la API para obtener los equipos registrados
     async function getTeams() {
@@ -104,18 +105,38 @@ export default function Presentador(){
     return (
         <div className="App h-screen bg-gray-100">
             <Header/>
-            <div className="flex flex-col  items-center h-[40%] mt-20">
-                <p className='text-4xl font-bold '>Turno del Equipo {registeredTeams.length > 0 ? checkTurn() : ''}</p>
+            <div className='flex flex-col items-center align-middle'>
+                <div className="flex flex-col  items-center h-[40%] mt-20">
+                    <p className='text-4xl font-bold '>Turno del Equipo {registeredTeams.length > 0 ? checkTurn() : 'patata'}</p>
+                </div>
+                {tema === '' ?
+                    <div className='flex flex-col items-center  h-[40%] w-[60%] p-10 my-24 rounded-2xl bg-gray-500'>
+                        <h1 className='text-4xl font-bold'>Temática:</h1>
+                        <div>
+                            <StandardButton text="Animales" size="medium" onClick={() => setTema('Animales')}/>
+                            <StandardButton text="Comida" size="medium" onClick={() => setTema('Comida')}/>
+                        </div>
+                        <div>
+                            <StandardButton text="Ropa" size="medium" onClick={() => setTema('Ropa')}/>
+                            <StandardButton text="yoquese" size="medium" onClick={() => setTema('yokse')}/>
+                        </div>
+                    </div>
+
+                    :
+
+                    <div className='flex flex-col items-center  h-[40%] w-[60%] p-10 my-24 rounded-2xl bg-gray-500'>
+                        <h1 className='text-4xl font-bold'>Dificultad:</h1>
+                        <div>
+                            <StandardButton text="Facil" size="medium" onClick={() => setTema('Facil')}/>
+                            <StandardButton text="Media" size="medium" onClick={() => setTema('Media')}/>
+                            <StandardButton text="Dificil" size="medium" onClick={() => setTema('Dificil')}/>
+                        </div>
+                    </div>
+                }
+
+                <StandardButton text="Siguiente Turno" size="big" onClick={nextTurn}/>
+                <StandardButton text="Inicio de la Partida" size="big" onClick={printGameStatus}/>
             </div>
-            <div className='flex flex-row items-baseline  h-[40%] w-12  o'>
-                    <h1 className='text-4xl font-bold ml-14'>Temática:</h1>
-                    <StandardButton text="Animales"  size="tiny"/>
-                    <StandardButton text="Comida"  size="tiny"/>
-                    <StandardButton text="Ropa"  size="tiny"/>
-                    <StandardButton text="yoquese"  size="tiny"/>
-            </div>
-            <StandardButton text="Siguiente Turno" size="big" onClick={nextTurn}/>
-            <StandardButton text="Inicio de la Partida" size="big" onClick={printGameStatus}/>
         </div>
     )
 }
