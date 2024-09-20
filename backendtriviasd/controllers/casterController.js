@@ -33,6 +33,7 @@ export const nextTurn = asyncHandler(async(req, res) => {
 
 var tema = '';
 var dificultad = '';
+var selectedQuestion;
 
 //Funcion que guarda el tema y la dificultad seleccionada
 export const setTopicandDifficulty = asyncHandler(async(req, res) => {
@@ -46,6 +47,7 @@ export const setTopicandDifficulty = asyncHandler(async(req, res) => {
         const question = await getQuestion(tema, dificultad);
         console.log('Pregunta enviada: ');
         console.log(question);
+        selectedQuestion = question;
         res.send(question);
     } catch (error) {
         console.error('Error al obtener la pregunta:', error);
@@ -70,7 +72,6 @@ async function getQuestion(tema, dificultad){
     }
      // Si no se encuentran preguntas con la categoría dada
     if (filteredQuestions.length === 0) {
-        
         console.log('No se encontraron preguntas con la temática y dificultad dadas');
         return ('No se encontraron preguntas con la temática y dificultad dadas');
     }
@@ -85,3 +86,7 @@ async function getQuestion(tema, dificultad){
 
     return randomQuestion;
 }
+
+export const getSelectedQuestion = asyncHandler(async(req, res) => {
+    res.send(selectedQuestion);
+});

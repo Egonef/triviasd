@@ -5,12 +5,13 @@
 import React, { useEffect } from 'react';
 import axios from 'axios';
 import { useState } from 'react';
-//import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 //Componentes
 
 import Header from '../components/header';
 import StandardButton from '../components/standardButton';
+
 
 
 export default function Presentador(){
@@ -83,6 +84,7 @@ export default function Presentador(){
     //Función para imprimir el estado de la partida ( solo para debuggear)
     function printGameStatus() {
         console.log("Valor real de gameState: ", gameState);
+
     }
 
     useEffect(() => {
@@ -170,6 +172,7 @@ export default function Presentador(){
 
                 <StandardButton text="Siguiente Turno" size="big" onClick={nextTurn}/>
                 <StandardButton text="Inicio de la Partida" size="big" onClick={printGameStatus}/>
+                <Link to="http://localhost:3000/admin" className=' bg-slate-600 h-10 w-10' ></Link>
             </div>
         </div>
     )
