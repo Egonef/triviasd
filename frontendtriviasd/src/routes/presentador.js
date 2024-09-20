@@ -26,20 +26,17 @@ export default function Presentador(){
     const [tema, setTema] = useState('');
 
     //Estado para almacenar la dificutad seleccionada
-    const [dificutad, setdificultad] = useState('');
+    const [dificultad, setdificultad] = useState('');
 
     // Función que se ejecuta al hacer clic en el botón
-    const handleButtonClickF = () => {
-        setdificultad('Facil');
-        setTopicandDifficulty();
+    const setEasyDiff = () => {
+        setdificultad('Fácil');
     };
-    const handleButtonClickM = () => {
+    const setMidDiff = () => {
         setdificultad('Media');
-        setTopicandDifficulty();
     };
-    const handleButtonClickD = () => {
-        setdificultad('Dificil');
-        setTopicandDifficulty();
+    const setHardDiff = () => {
+        setdificultad('Difícil');
     };
 
 
@@ -95,9 +92,9 @@ export default function Presentador(){
             getTeams();
         }
         // Aquí puedes poner cualquier lógica que dependa del valor actualizado de gameState.
-    }, [gameState]); 
+    }, [gameState]);
 
-    //Llamamos a la función para obtener los equipos registrados al cargar la página
+    //Funcion para comprobar si la partida está lista
     useEffect(() => {
         const interval = setInterval(() => {
             checkgameready();
@@ -107,6 +104,10 @@ export default function Presentador(){
     }, []);
 
 
+    //Funcion para comprobar is la dicultad se ha seleccionado y buscar una pregunta
+    useEffect(() => {
+        searchQuestion();
+    }, [dificultad]);
 
     //Funcion para comprobar cual es el equipo que tiene el turno
     function checkTurn() {
@@ -118,15 +119,15 @@ export default function Presentador(){
         }
     }
 
-    async function setTopicandDifficulty() {
+    async function searchQuestion() {
         try {
-            const response = await axios.post('http://127.0.0.1:5000/api/admin/registerTeam', {
-                tema,
-                dificutad
-
-            });
-            console.log(response.data);
-            //Si el equipo ya está registrado, mostramos un mensaje de error y  limnpiamos los campos
+            if (tema !== '' && dificultad !== '') {
+                const response = await axios.post('http://127.0.0.1:5000/api/caster/setTopicandDifficulty', {
+                    tema,
+                    dificultad
+                });
+                console.log(response.data.enunciado);
+            }
         } catch (error) {
             console.error("Error al llamar a la API:", error.response ? error.response.data : error.message);
         }
@@ -151,7 +152,7 @@ export default function Presentador(){
                         </div>
                         <div>
                             <StandardButton text="Ropa" size="medium" onClick={() => setTema('Ropa')}/>
-                            <StandardButton text="yoquese" size="medium" onClick={() => setTema('yokse')}/>
+                            <StandardButton text="yoquese" size="medium" onClick={() => setTema('Yoquese')}/>
                         </div>
                     </div>
 
@@ -160,9 +161,9 @@ export default function Presentador(){
                     <div className='flex flex-col items-center  h-[40%] w-[60%] p-10 my-24 rounded-2xl bg-gray-500'>
                         <h1 className='text-4xl font-bold'>Dificultad:</h1>
                         <div>
-                            <StandardButton text="Facil" size="medium" onClick={handleButtonClickF}/>
-                            <StandardButton text="Media" size="medium" onClick={handleButtonClickM}/>
-                            <StandardButton text="Dificil" size="medium" onClick={handleButtonClickD}/>
+                            <StandardButton text="Facil" size="medium" onClick={setEasyDiff}/>
+                            <StandardButton text="Media" size="medium" onClick={setMidDiff}/>
+                            <StandardButton text="Dificil" size="medium" onClick={setHardDiff}/>
                         </div>
                     </div>
                 }
