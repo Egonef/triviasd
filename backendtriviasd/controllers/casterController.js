@@ -27,27 +27,44 @@ export const nextTurn = asyncHandler(async(req, res) => {
 })
 
 
-//Funcion que busca una pregunta segun la temática
-export const getQuestion = asyncHandler(async(req, res) => {
-    const {tema} = req.body;
+
+
+
+var tema = '';
+var dificultad = '';
+
+//Funcion que guarda el tema y la dificultad seleccionada
+export const setTopicandDifficulty = asyncHandler(async(req, res) => {
+    tema = req.body.tema;
+    dificultad = req.body.dificultad;
     console.log(tema);
-     // Leer el archivo JSON que contiene las preguntas
-    const data = await fs.readFile('./preguntas.json', 'utf8');
-    const questions = JSON.parse(data).preguntas;
-      // Filtrar las preguntas según la categoría dada
-    const filteredQuestions = questions.filter(question => question.tematica === tema);
-
-      // Si no se encuentran preguntas con la categoría dada
-    if (filteredQuestions.length === 0) {
-        res.status(404).send({ message: 'No se encontraron preguntas para la categoría dada' });
-        return;
-    }
-
-     // Escoger una pregunta aleatoria de la lista filtrada
-    const randomIndex = Math.floor(Math.random() * filteredQuestions.length);
-    const randomQuestion = filteredQuestions[randomIndex];
-
-     // Enviar la pregunta aleatoria como respuesta
-    res.send(randomQuestion);
+    console.log(dificultad);
+    res.send('Tema y dificultad guardados');
     return;
+})
+
+//Funcion que busca una pregunta segun la temática y la dificultad
+export const getQuestion = asyncHandler(async(req, res) => {
+
+    // Leer el archivo JSON que contiene las preguntas
+   const data = await fs.readFile('./preguntas.json', 'utf8');
+   const questions = JSON.parse(data).preguntas;
+     // Filtrar las preguntas según la categoría dada
+   const filteredQuestions = questions.filter(question =>
+       question.tematica === tema && question.dificultad === dificultad
+   );
+
+     // Si no se encuentran preguntas con la categoría dada
+   if (filteredQuestions.length === 0) {
+       res.status(404).send({ message: 'No se encontraron preguntas para la categoría dada' });
+       return;
+   }
+
+    // Escoger una pregunta aleatoria de la lista filtrada
+   const randomIndex = Math.floor(Math.random() * filteredQuestions.length);
+   const randomQuestion = filteredQuestions[randomIndex];
+
+    // Enviar la pregunta aleatoria como respuesta
+   res.send(randomQuestion);
+   return;
 })

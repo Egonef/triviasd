@@ -25,6 +25,23 @@ export default function Presentador(){
     //Estado para almacenar la temática seleccionada
     const [tema, setTema] = useState('');
 
+    //Estado para almacenar la dificutad seleccionada
+    const [dificutad, setdificultad] = useState('');
+
+    // Función que se ejecuta al hacer clic en el botón
+    const handleButtonClickF = () => {
+        setdificultad('Facil');
+        setTopicandDifficulty();
+    };
+    const handleButtonClickM = () => {
+        setdificultad('Media');
+        setTopicandDifficulty();
+    };
+    const handleButtonClickD = () => {
+        setdificultad('Dificil');
+        setTopicandDifficulty();
+    };
+
 
     //Solicitud a la API para obtener los equipos registrados
     async function getTeams() {
@@ -101,6 +118,22 @@ export default function Presentador(){
         }
     }
 
+    async function setTopicandDifficulty() {
+        try {
+            const response = await axios.post('http://127.0.0.1:5000/api/admin/registerTeam', {
+                tema,
+                dificutad
+
+            });
+            console.log(response.data);
+            //Si el equipo ya está registrado, mostramos un mensaje de error y  limnpiamos los campos
+        } catch (error) {
+            console.error("Error al llamar a la API:", error.response ? error.response.data : error.message);
+        }
+    }
+
+
+
 
     return (
         <div className="App h-screen bg-gray-100">
@@ -127,9 +160,9 @@ export default function Presentador(){
                     <div className='flex flex-col items-center  h-[40%] w-[60%] p-10 my-24 rounded-2xl bg-gray-500'>
                         <h1 className='text-4xl font-bold'>Dificultad:</h1>
                         <div>
-                            <StandardButton text="Facil" size="medium" onClick={() => setTema('Facil')}/>
-                            <StandardButton text="Media" size="medium" onClick={() => setTema('Media')}/>
-                            <StandardButton text="Dificil" size="medium" onClick={() => setTema('Dificil')}/>
+                            <StandardButton text="Facil" size="medium" onClick={handleButtonClickF}/>
+                            <StandardButton text="Media" size="medium" onClick={handleButtonClickM}/>
+                            <StandardButton text="Dificil" size="medium" onClick={handleButtonClickD}/>
                         </div>
                     </div>
                 }
