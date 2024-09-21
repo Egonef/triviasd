@@ -3,11 +3,12 @@
 //Imports
 import React from "react";
 
-export default function StandardButton({ text, onClick , size , type}) {
+export default function StandardButton({ text, onClick , size , type , isCorrect , isIncorrect }) {
 
 
     let baseClasses = "bg-[#FF0033] text-white text-3xl font-bold py-2 px-4 rounded-2xl mx-16 my-5";
 
+    let colorClass = isCorrect ? "bg-green-500" : isIncorrect ? "bg-blue-500" : "bg-[#FF0033]";
 
     // Añadir clases de tamaño basadas en el argumento size
     let sizeClasses;
@@ -29,7 +30,7 @@ export default function StandardButton({ text, onClick , size , type}) {
     }
 
 
-    let buttonClasses = `${baseClasses} ${sizeClasses}`;
+    let buttonClasses = `${baseClasses} ${sizeClasses} ${colorClass}`;
 
     return (
         <button

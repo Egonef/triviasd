@@ -87,6 +87,11 @@ async function getQuestion(tema, dificultad){
     return randomQuestion;
 }
 
+
+//Función que devuelve la pregunta seleccionada
 export const getSelectedQuestion = asyncHandler(async(req, res) => {
     res.send(selectedQuestion);
+    console.log('Pregunta enviada qetselectedquetion: ');
+    console.log(selectedQuestion);
+    return;
 });

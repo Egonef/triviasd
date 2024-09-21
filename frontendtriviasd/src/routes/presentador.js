@@ -6,6 +6,8 @@ import React, { useEffect } from 'react';
 import axios from 'axios';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 
 //Componentes
 
@@ -15,6 +17,8 @@ import StandardButton from '../components/standardButton';
 
 
 export default function Presentador(){
+
+    const navigate = useNavigate();
 
     //Estado para almacenar los equipos registrados
     var teamLock = false;
@@ -109,6 +113,9 @@ export default function Presentador(){
     //Funcion para comprobar is la dicultad se ha seleccionado y buscar una pregunta
     useEffect(() => {
         searchQuestion();
+        if (dificultad !== '' && searchQuestion() !== '') {
+            navigate('/pregunta');
+        }
     }, [dificultad]);
 
     //Funcion para comprobar cual es el equipo que tiene el turno

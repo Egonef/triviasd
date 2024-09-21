@@ -11,7 +11,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 //Import de paginas
 import Admin from './routes/administrador';
 import Presentador from './routes/presentador';
-import pregunta from './routes/pregunta';
+import Pregunta from './routes/pregunta';
 import ExperienciaSD from './routes/xpsd';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -22,7 +22,7 @@ root.render(
             <Route path="/" element={<App />} />
             <Route path="/presentador" element={<Presentador />} />
             <Route path="/admin" element={<Admin />} />
-            <Route path="/pregunta/" element={pregunta} />
+            <Route path="/pregunta" element={<Pregunta />} />
             <Route path="/xpsd" element={<ExperienciaSD />} />
         </Routes>
         </BrowserRouter>
