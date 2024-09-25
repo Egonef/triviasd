@@ -82,6 +82,10 @@ export const getTeams = asyncHandler(async(req, res) => {
     res.send(teams);
 })
 
+//Funcion para devolver los equipos seleccionados para esta partida
+export const getSelectedTeams = asyncHandler(async(req, res) => {
+    res.send(selectedTeams);
+})
 
 //Funcion para devolver el número de equipos registrados
 export const getTeamsNumber = asyncHandler(async(req, res) => {

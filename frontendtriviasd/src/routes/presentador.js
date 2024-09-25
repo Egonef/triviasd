@@ -49,7 +49,7 @@ export default function Presentador(){
     async function getTeams() {
         try {
             console.log('getTeams llamado');
-            const response = await axios.get('http://127.0.0.1:5000/api/admin/getTeams'); //Cambiar la dirección IP por la de la máquina que corre el backend
+            const response = await axios.get('http://127.0.0.1:5000/api/admin/getSelectedTeams'); //Cambiar la dirección IP por la de la máquina que corre el backend
             //console.log('getTeams devuelve: ' + response.data[0].Name);
             if (teamLock === false && gameState === true) {
                 setRegisteredTeams(response.data);
