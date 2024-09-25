@@ -87,7 +87,7 @@ export const getTeamsNumber = asyncHandler(async(req, res) => {
     res.send(teams.length.toString());
 })
 
-//Funcion para iniciar la trivia
+//Funcion para iniciar la trivia //*
 export const startGame = asyncHandler(async(req, res) => {
     //Comprobamos si hay 4 equipos registrados
     if (teams.length < 2) {

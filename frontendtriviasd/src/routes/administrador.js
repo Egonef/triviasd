@@ -76,7 +76,8 @@ function AdminForm() {
                             console.log(team);
                             return (
                                 <div className='flex items-center justify-center w-full h-20 bg-gray-500 border-b-2 border-gray-600'>
-                                    <p className='text-2xl'>{team.Name}</p>
+                                    <input type ="checkbox" id="check" checked/>
+                                    <label className='text-2xl'>{team.Name} </label>
                                 </div>
                             )
                         })}
