@@ -12,7 +12,7 @@ router.route('/getTeams').get(ctr.getTeams);
 router.route('/getTeamsNumber').get(ctr.getTeamsNumber);
 router.route('/startGame').get(ctr.startGame);
 router.route('/getGameStatus').get(ctr.getGameStatus);
-
+router.route('/saveSelectedTeams').post(ctr.saveSelectedTeams);
 
 
 

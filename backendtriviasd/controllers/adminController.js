@@ -19,17 +19,18 @@ function Team(Name, LeaderName, LeaderEmail) {
     
 }
 
+//Vector donde se guardan todos los equipos registrados
 export var teams = [];
+//Vector de los equipos seleccionados para la partida actual
+export var selectedTeams = [];
+
+
 var id = 0;
 var gameReady = false;
 
 //Función para registrar un equipo en el sistema (Se guardan en un vector)
 export const registerTeam = asyncHandler(async(req, res) => {
-    //Comprobamos si ya hay 4 equipos registrados
-    if (teams.length == 4) {
-        res.send('Max teams reached');
-        return;
-    }
+
     //Creamos un nuevo equipo con los datos recibidos
     const team = new Team(req.body.teamName, req.body.leaderName, req.body.leaderEmail);
     //Comprobamos si el equipo ya está registrado
@@ -90,18 +91,29 @@ export const getTeamsNumber = asyncHandler(async(req, res) => {
 //Funcion para iniciar la trivia //*
 export const startGame = asyncHandler(async(req, res) => {
     //Comprobamos si hay 4 equipos registrados
-    if (teams.length < 2) {
+    if (selectedTeams.length < 2) {
         res.send('Not enough teams');
-    }else if(teams.length > 4){
+    }else if(selectedTeams.length > 4){
         res.send('Too many teams');
     }else {
-        teams[0].turn = true;
+        selectedTeams[0].turn = true;
         gameReady = true;
         res.send('Game started');
         return true;
     }
 })
 
+
+//Funcion que devuelve el estado de la partida
 export const getGameStatus = asyncHandler(async(req, res) => {
     res.send(gameReady);
+})
+
+
+//Funcion para guardar los equipos seleccionados
+export const saveSelectedTeams = asyncHandler(async(req, res) => {
+    console.log('Guardando equipos seleccionados');
+    selectedTeams = req.body;
+    console.log(selectedTeams);
+    res.send('Selected teams saved');
 })

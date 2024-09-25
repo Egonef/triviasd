@@ -71,18 +71,6 @@ function AdminForm() {
             <h1 >Registra a los equipos participantes({registeredTeams.length}/4)</h1>
             <div className=" flex justify-evenly h-[89%] pt-44"  >
                 <TeamForm/>
-                <div className='flex flex-col items-center h-[50%] w-[40%] overflow-y-auto bg-gray-600'>
-                        {registeredTeams.map((team) => {
-                            console.log(team);
-                            return (
-                                <div className='flex items-center justify-center w-full h-20 bg-gray-500 border-b-2 border-gray-600'>
-                                    <input type ="checkbox" id="check" checked/>
-                                    <label className='text-2xl'>{team.Name} </label>
-                                </div>
-                            )
-                        })}
-                        <StandardButton text="Iniciar trivia" size="large" onClick={startGame} />
-                </div>
             </div>
         </div>
     );

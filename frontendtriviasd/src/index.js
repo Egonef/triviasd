@@ -13,6 +13,7 @@ import Admin from './routes/administrador';
 import Presentador from './routes/presentador';
 import Pregunta from './routes/pregunta';
 import ExperienciaSD from './routes/xpsd';
+import TeamSelection from './routes/seleccionEquipos';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -24,6 +25,7 @@ root.render(
             <Route path="/admin" element={<Admin />} />
             <Route path="/pregunta" element={<Pregunta />} />
             <Route path="/xpsd" element={<ExperienciaSD />} />
+            <Route path="/seleccionEquipos" element={<TeamSelection />} />
         </Routes>
         </BrowserRouter>
     </React.StrictMode>

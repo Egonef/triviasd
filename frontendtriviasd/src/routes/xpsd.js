@@ -9,7 +9,7 @@ export default function ExperienciaSD() {
 
 
     return(
-        <div className="App  h-screen bg-gray-100" onClick={() => navigate("/presentador")}>
+        <div className="App  h-screen bg-gray-100" onClick={() => navigate("/seleccionEquipos")}>
 
             <div className="flex flex-col items-center h-[50%] pt-44">
             <TypeAnimation className="text-4xl font-bold"
