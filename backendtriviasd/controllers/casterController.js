@@ -6,11 +6,15 @@ import { getTeams , getGameStatus, teams } from '../controllers/adminController.
 
 
 
+//Funcion para actualizar el estado de los equipos en el backend
+
+
 //Funcion que recorre los equipos para determinar su turno
 
 export const nextTurn = asyncHandler(async(req, res) => {
     var teams = req.body.registeredTeams;
-    console.log('Equipos antes de cambiar turnos' + teams);
+    console.log('Equipos antes de cambiar turnos');
+    console.log(teams);
     for (let i = 0; i < teams.length; i++) {
         if(teams[i].turn == true){
             console.log('termina turno del equipo: ' + teams[i].Name);
@@ -20,7 +24,8 @@ export const nextTurn = asyncHandler(async(req, res) => {
             }else{
                 teams[i+1].turn = true;
             }
-            console.log('Equipos depues de cambiar turno: ' + teams);
+            console.log('Equipos depues de cambiar turno: ');
+            console.log(teams);
             res.send(teams);
             return;
         }
@@ -39,14 +44,14 @@ var selectedQuestion;
 export const setTopicandDifficulty = asyncHandler(async(req, res) => {
     tema = req.body.tema;
     dificultad = req.body.dificultad;
-    console.log(tema);
-    console.log('Dificultad mandada por la solicitud post: '  + req.body.dificultad);
-    console.log(dificultad);
+    //console.log(tema);
+    //console.log('Dificultad mandada por la solicitud post: '  + req.body.dificultad);
+    //console.log(dificultad);
     try {
         // Esperar a que getQuestion se resuelva antes de imprimir y enviar la respuesta
         const question = await getQuestion(tema, dificultad);
-        console.log('Pregunta enviada: ');
-        console.log(question);
+        //console.log('Pregunta enviada: ');
+        //console.log(question);
         selectedQuestion = question;
         res.send(question);
     } catch (error) {
@@ -67,21 +72,21 @@ async function getQuestion(tema, dificultad){
         question.tematica === tema && question.dificultad === dificultad
     );
     for (let i = 0; i < filteredQuestions.length; i++) {
-        console.log('Preguntas filtradas: ');
-        console.log(filteredQuestions[i].enunciado);
+        //console.log('Preguntas filtradas: ');
+        //console.log(filteredQuestions[i].enunciado);
     }
      // Si no se encuentran preguntas con la categoría dada
     if (filteredQuestions.length === 0) {
-        console.log('No se encontraron preguntas con la temática y dificultad dadas');
+        //console.log('No se encontraron preguntas con la temática y dificultad dadas');
         return ('No se encontraron preguntas con la temática y dificultad dadas');
     }
 
     // Escoger una pregunta aleatoria de la lista filtrada
     const randomIndex = Math.floor(Math.random() * filteredQuestions.length);
-    console.log('Indice aleatorio seleccionado: ' + randomIndex);
+    //console.log('Indice aleatorio seleccionado: ' + randomIndex);
     //console.log(filteredQuestions[randomIndex]);
     const randomQuestion = filteredQuestions[randomIndex];
-    console.log('Pregunta aleatoria seleccionada: ' + randomQuestion.enunciado);
+    //console.log('Pregunta aleatoria seleccionada: ' + randomQuestion.enunciado);
     // Enviar la pregunta aleatoria como respuesta
 
     return randomQuestion;
@@ -91,7 +96,7 @@ async function getQuestion(tema, dificultad){
 //Función que devuelve la pregunta seleccionada
 export const getSelectedQuestion = asyncHandler(async(req, res) => {
     res.send(selectedQuestion);
-    console.log('Pregunta enviada qetselectedquetion: ');
-    console.log(selectedQuestion);
+    //console.log('Pregunta enviada qetselectedquetion: ');
+    //console.log(selectedQuestion);
     return;
 });

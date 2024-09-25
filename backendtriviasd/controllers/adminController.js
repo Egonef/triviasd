@@ -102,6 +102,8 @@ export const startGame = asyncHandler(async(req, res) => {
     }else {
         selectedTeams[0].turn = true;
         gameReady = true;
+        console.log('Equipos seleccionados para la partida:');
+        console.log(selectedTeams);
         res.send('Game started');
         return true;
     }
@@ -116,6 +118,14 @@ export const getGameStatus = asyncHandler(async(req, res) => {
 
 //Funcion para guardar los equipos seleccionados
 export const saveSelectedTeams = asyncHandler(async(req, res) => {
+    console.log('Guardando equipos seleccionados');
+    selectedTeams = req.body;
+    console.log(selectedTeams);
+    res.send('Selected teams saved');
+})
+
+//Funcion para guardar los equipos seleccionados
+export const saveSelectedTeams2 = asyncHandler(async(req, res) => {
     console.log('Guardando equipos seleccionados');
     selectedTeams = req.body;
     console.log(selectedTeams);

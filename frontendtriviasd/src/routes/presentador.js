@@ -45,15 +45,31 @@ export default function Presentador(){
     };
 
 
+    //Funcion para actualizar el estado de los equipos en el backend 
+    async function updateTeams() {
+        console.log('updateTeams llamado');
+        console.log("Equipos a enviar: ", registeredTeams);
+        try {
+            const response = await axios.post('http://localhost:5000/api/admin/saveSelectedTeams', {
+                registeredTeams
+            });
+            console.log(response.data);
+        } catch (error) {
+            console.error("Error al llamar a la API:", error.response ? error.response.data : error.message);
+        }
+    }
+
     //Solicitud a la API para obtener los equipos registrados
     async function getTeams() {
         try {
             console.log('getTeams llamado');
             const response = await axios.get('http://127.0.0.1:5000/api/admin/getSelectedTeams'); //Cambiar la dirección IP por la de la máquina que corre el backend
-            //console.log('getTeams devuelve: ' + response.data[0].Name);
-            if (teamLock === false && gameState === true) {
+            console.log('getTeams devuelve: ');
+            //Imprimir los equipos registrados
+            console.log(response.data);
+            if (gameState === true) {
+                console.log('Registrando equipos');
                 setRegisteredTeams(response.data);
-                teamLock = true;
             }
         } catch (error) {
             console.error("Error al llamar a la API:", error.response ? error.response.data : error.message);
@@ -71,6 +87,21 @@ export default function Presentador(){
         }
     }
 
+    //Funcion para actualizar el estado de los equipos en el backend
+    async function updateTeams() {
+        console.log('updateTeams llamado');
+        console.log("Equipos a enviar: ", registeredTeams);
+        try {
+            const response = await axios.put('http://127.0.0.1:5000/api/admin/saveSelectedTeams2', {
+                registeredTeams
+            });
+            console.log(response.data);
+        } catch (error) {
+            console.error("Error al llamar a la API:", error.response ? error.response.data : error.message);
+        }
+    }
+
+
     //Funcion para cambiar el turno de los equipos
     async function nextTurn() {
         try {
@@ -79,6 +110,7 @@ export default function Presentador(){
             }); //Cambiar la dirección IP por la de la máquina que corre el backend
             console.log(response.data);
             setRegisteredTeams(response.data);
+            updateTeams();
         }
         catch (error) {
             console.error("Error al llamar a la API:", error.response ? error.response.data : error.message);
@@ -120,9 +152,11 @@ export default function Presentador(){
 
     //Funcion para comprobar cual es el equipo que tiene el turno
     function checkTurn() {
+        console.log('Modificando texto de turno')
         console.log(registeredTeams);
         for (let i = 0; i < registeredTeams.length; i++) {
             if (registeredTeams[i].turn === true) {
+                console.log('Turno del equipo: ', registeredTeams[i].Name);
                 return registeredTeams[i].Name;
             }
         }
