@@ -88,13 +88,11 @@ export default function Presentador(){
     }
 
     //Funcion para actualizar el estado de los equipos en el backend
-    async function updateTeams() {
+    async function updateTeams2() {
         console.log('updateTeams llamado');
         console.log("Equipos a enviar: ", registeredTeams);
         try {
-            const response = await axios.put('http://127.0.0.1:5000/api/admin/saveSelectedTeams2', {
-                registeredTeams
-            });
+            const response = await axios.put('http://127.0.0.1:5000/api/admin/saveSelectedTeams2', registeredTeams);
             console.log(response.data);
         } catch (error) {
             console.error("Error al llamar a la API:", error.response ? error.response.data : error.message);
@@ -110,7 +108,7 @@ export default function Presentador(){
             }); //Cambiar la dirección IP por la de la máquina que corre el backend
             console.log(response.data);
             setRegisteredTeams(response.data);
-            updateTeams();
+            updateTeams2();
         }
         catch (error) {
             console.error("Error al llamar a la API:", error.response ? error.response.data : error.message);
@@ -177,7 +175,12 @@ export default function Presentador(){
     }
 
 
+    //DEBUGEo
 
+    function debug() {
+        console.log('Equipos registrados: ', registeredTeams);
+        console.log('Tamaño del vector: ', registeredTeams.length);
+    }
 
     return (
         <div className="App h-screen bg-gray-100">
@@ -212,7 +215,7 @@ export default function Presentador(){
                 }
 
                 <StandardButton text="Siguiente Turno" size="big" onClick={nextTurn}/>
-                <StandardButton text="Inicio de la Partida" size="big" onClick={printGameStatus}/>
+                <StandardButton text="Inicio de la Partida" size="big" onClick={debug}/>
                 <Link to="http://localhost:3000/admin" className=' bg-slate-600 h-10 w-10' ></Link>
             </div>
         </div>
