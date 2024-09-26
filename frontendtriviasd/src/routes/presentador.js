@@ -21,7 +21,6 @@ export default function Presentador(){
     const navigate = useNavigate();
 
     //Estado para almacenar los equipos registrados
-    var teamLock = false;
     const [registeredTeams, setRegisteredTeams] = useState([]);
 
     //Estado para almacenar el estado de la partida
@@ -34,30 +33,20 @@ export default function Presentador(){
     const [dificultad, setdificultad] = useState('');
 
     // Función que se ejecuta al hacer clic en el botón
-    const setEasyDiff = () => {
+    const setEasyDiff = async () => {
+        await nextTurn();
         setdificultad('Fácil');
     };
-    const setMidDiff = () => {
+    const setMidDiff = async () => {
+        await nextTurn();
         setdificultad('Media');
     };
-    const setHardDiff = () => {
+    const setHardDiff = async () => {
+        await nextTurn();
         setdificultad('Difícil');
     };
 
 
-    //Funcion para actualizar el estado de los equipos en el backend 
-    async function updateTeams() {
-        console.log('updateTeams llamado');
-        console.log("Equipos a enviar: ", registeredTeams);
-        try {
-            const response = await axios.post('http://localhost:5000/api/admin/saveSelectedTeams', {
-                registeredTeams
-            });
-            console.log(response.data);
-        } catch (error) {
-            console.error("Error al llamar a la API:", error.response ? error.response.data : error.message);
-        }
-    }
 
     //Solicitud a la API para obtener los equipos registrados
     async function getTeams() {
@@ -87,30 +76,16 @@ export default function Presentador(){
         }
     }
 
-    //Funcion para actualizar el estado de los equipos en el backend
-    async function updateTeams2() {
-        console.log('updateTeams llamado');
-        console.log("Equipos a enviar: ", registeredTeams);
-        try {
-            const response = await axios.put('http://127.0.0.1:5000/api/admin/saveSelectedTeams2', registeredTeams);
-            console.log(response.data);
-        } catch (error) {
-            console.error("Error al llamar a la API:", error.response ? error.response.data : error.message);
-        }
-    }
 
-
-    //Funcion para cambiar el turno de los equipos
+    // Función para cambiar el turno de los equipos
     async function nextTurn() {
         try {
-            const response = await axios.post('http://127.0.0.1:5000/api/caster/nextTurn' , {
+            const response = await axios.post('http://127.0.0.1:5000/api/caster/nextTurn', {
                 registeredTeams
-            }); //Cambiar la dirección IP por la de la máquina que corre el backend
+            }); // Cambiar la dirección IP por la de la máquina que corre el backend
             console.log(response.data);
             setRegisteredTeams(response.data);
-            updateTeams2();
-        }
-        catch (error) {
+        } catch (error) {
             console.error("Error al llamar a la API:", error.response ? error.response.data : error.message);
         }
     }
@@ -120,6 +95,27 @@ export default function Presentador(){
         console.log("Valor real de gameState: ", gameState);
 
     }
+
+
+    // useEffect para actualizar el backend cuando registeredTeams cambie
+    useEffect(() => {
+        if (registeredTeams.length > 0) {
+            updateTeams();
+        }
+    }, [registeredTeams]);
+
+    // Función para actualizar el estado de los equipos en el backend
+    async function updateTeams() {
+        console.log('updateTeams llamado');
+        console.log("Equipos a enviar: ", registeredTeams);
+        try {
+            const response = await axios.put('http://127.0.0.1:5000/api/admin/saveSelectedTeams2', registeredTeams); // Envía el array directamente
+            console.log(response.data);
+        } catch (error) {
+            console.error("Error al llamar a la API:", error.response ? error.response.data : error.message);
+        }
+    }
+
 
     useEffect(() => {
         // Esta función se ejecutará cada vez que gameState cambie.

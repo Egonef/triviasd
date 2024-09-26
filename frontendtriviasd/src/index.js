@@ -14,6 +14,7 @@ import Presentador from './routes/presentador';
 import Pregunta from './routes/pregunta';
 import ExperienciaSD from './routes/xpsd';
 import TeamSelection from './routes/seleccionEquipos';
+import RankingLocal from './routes/localRanking';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -26,6 +27,7 @@ root.render(
             <Route path="/pregunta" element={<Pregunta />} />
             <Route path="/xpsd" element={<ExperienciaSD />} />
             <Route path="/seleccionEquipos" element={<TeamSelection />} />
+            <Route path="/rankingLocal" element={<RankingLocal />} />
         </Routes>
         </BrowserRouter>
     </React.StrictMode>

@@ -14,7 +14,6 @@ router.route('/startGame').get(ctr.startGame);
 router.route('/getGameStatus').get(ctr.getGameStatus);
 router.route('/saveSelectedTeams').post(ctr.saveSelectedTeams);
 router.route('/saveSelectedTeams2').put(ctr.saveSelectedTeams2);
-
 router.route('/getSelectedTeams').get(ctr.getSelectedTeams);
 
 
