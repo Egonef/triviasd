@@ -4,7 +4,7 @@
 
 import React, { useEffect } from 'react';
 import axios from 'axios';
-import { useState } from 'react';
+import { useState , useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
@@ -32,16 +32,24 @@ export default function Presentador(){
     //Estado para almacenar la dificutad seleccionada
     const [dificultad, setdificultad] = useState('');
 
+    const [currentTeam, setCurrentTeam] = useState(null); // Variable para guardar el equipo actual
+
+
+    //Estado para guardar el equipo que ha ido a responder
+
     // Función que se ejecuta al hacer clic en el botón
     const setEasyDiff = async () => {
+        setCurrentTeam(checkTurn());
         await nextTurn();
         setdificultad('Fácil');
     };
     const setMidDiff = async () => {
+        setCurrentTeam(checkTurn());
         await nextTurn();
         setdificultad('Media');
     };
     const setHardDiff = async () => {
+        setCurrentTeam(checkTurn());
         await nextTurn();
         setdificultad('Difícil');
     };
@@ -116,7 +124,20 @@ export default function Presentador(){
         }
     }
 
+    //Funcion para enviar al backend el ultimo equipo que iba a responder
+    async function sendLastAnswerTeam(teamName) {
+        try {
+            const response = await axios.post('http://127.0.0.1:5000/api/admin/setLastAnswerTeam', {
+                teamName
+            });
+            console.log(response.data);
+        } catch (error) {
+            console.error("Error al llamar a la API:", error.response ? error.response.data : error.message);
+        }
+    }
 
+
+    // useEffect para llamar a getTeams cuando gameState cambie
     useEffect(() => {
         // Esta función se ejecutará cada vez que gameState cambie.
         console.log("gameState cambió a:", gameState);
@@ -151,6 +172,7 @@ export default function Presentador(){
         for (let i = 0; i < registeredTeams.length; i++) {
             if (registeredTeams[i].turn === true) {
                 console.log('Turno del equipo: ', registeredTeams[i].Name);
+                sendLastAnswerTeam(registeredTeams[i].Name);
                 return registeredTeams[i].Name;
             }
         }

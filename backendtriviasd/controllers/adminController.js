@@ -24,6 +24,11 @@ export var teams = [];
 //Vector de los equipos seleccionados para la partida actual
 export var selectedTeams = [];
 
+//Variable para guardar el nombre del ultimo equipo en responder
+export var lastAnswerTeam = '';
+//Variable para guardar la dificultad de la pregunta actual
+export var questionDifficulty = '';
+
 
 var id = 0;
 var gameReady = false;
@@ -130,4 +135,28 @@ export const saveSelectedTeams2 = asyncHandler(async(req, res) => {
     selectedTeams = req.body;
     console.log(selectedTeams);
     res.send('Selected teams saved');
+})
+
+
+//Funcion para guardar cual ha sido el ultimo equipo en responder
+export const setLastAnswerTeam = asyncHandler(async(req, res) => {
+    lastAnswerTeam = req.body.teamName;
+    console.log('Ultimo equipo en responder:');
+    console.log(lastAnswerTeam);
+    res.send('Last answer team saved');
+})
+
+//Funcion para añadir puntos a un equipo
+export const addPoints = asyncHandler(async(req, res) => {
+    console.log('Añadiendo puntos');
+    console.log(req.body);
+    for (let i = 0; i < selectedTeams.length; i++) {
+        if (selectedTeams[i].Name == lastAnswerTeam) {
+            selectedTeams[i].score += req.body.puntos;
+            console.log('Puntos finales al equipo:');
+            console.log(selectedTeams[i].score);
+        }
+    }
+    console.log(selectedTeams);
+    res.send('Points added');
 })

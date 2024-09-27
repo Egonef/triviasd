@@ -38,9 +38,49 @@ export default function Pregunta() {
     function checkAnswer(answer){
         setTimeout(() => {
             setSelectedAnswer(answer);
+            sendPoints();
         }, 2000);
     }
 
+    //Funcion para calcular los puntos que deben de añadirse o restarse al equipo
+    function calculatePoints(){
+        switch (question.dificultad) {
+            case 'Fácil':
+                if(selectedAnswer === question.respuesta_correcta){
+                    return 1;
+                }else{
+                    return -1;
+                }
+            case 'Media':
+                if(selectedAnswer === question.respuesta_correcta){
+                    return 2;
+                }else{
+                    return -2;
+                }
+            case 'Difícil':
+                if(selectedAnswer === question.respuesta_correcta){
+                    return 3;
+                }else{
+                    return -3;
+                }
+            default:
+                return 0;
+        }
+    }
+
+    //Funcion para enviar al backend los puntos que se deben añadir o restar al equipo
+    async function sendPoints(){
+        const puntos = calculatePoints();
+        try {
+            const response = await axios.post('http://localhost:5000/api/admin/addPoints', {puntos});
+            console.log(response.data);
+        }
+        catch (error) {
+            console.error("Error al llamar a la API:", error.response ? error.response.data : error.message);
+        }
+    }
+
+    //Funcion para devolver al menú principal
     function backToMenu() {
         navigate('/presentador');
     }
