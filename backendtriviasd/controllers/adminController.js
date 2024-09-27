@@ -16,7 +16,7 @@ function Team(Name, LeaderName, LeaderEmail) {
     this.LeaderEmail = LeaderEmail;
     this.turn = false;
     this.score = 30;
-    
+
 }
 
 //Vector donde se guardan todos los equipos registrados

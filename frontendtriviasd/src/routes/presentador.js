@@ -172,7 +172,8 @@ export default function Presentador(){
         for (let i = 0; i < registeredTeams.length; i++) {
             if (registeredTeams[i].turn === true) {
                 console.log('Turno del equipo: ', registeredTeams[i].Name);
-                sendLastAnswerTeam(registeredTeams[i].Name);
+                sendLastAnswerTeam(currentTeam); //he cambiado solo esto, antes era registeredTeams[i].Name
+                console.log('Ultimo equipo en responder: ', currentTeam);
                 return registeredTeams[i].Name;
             }
         }

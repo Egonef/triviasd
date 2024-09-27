@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
+
 //Components
 import Header from '../components/header';
 import StandardButton from '../components/standardButton';
@@ -12,6 +13,12 @@ export default function Pregunta() {
     const navigate = useNavigate();
     const [question, setQuestion] = useState(null);
     const [selectedAnswer, setSelectedAnswer] = useState(null);
+
+    useEffect(() => {
+        if (selectedAnswer !== null) {
+            sendPoints();
+        }
+    }, [selectedAnswer]);
 
     async function getQuestion() {
         try {
@@ -33,20 +40,25 @@ export default function Pregunta() {
     }
 
 
-    
     //Funcion para compronar si la respuesta es correcta
     function checkAnswer(answer){
         setTimeout(() => {
             setSelectedAnswer(answer);
-            sendPoints();
+
         }, 2000);
+        
     }
 
     //Funcion para calcular los puntos que deben de añadirse o restarse al equipo
     function calculatePoints(){
+        console.log('Dificultad: ', question.dificultad);
+        console.log('Respuesta correcta: ', question.respuesta_correcta);
+        console.log('Respuesta correcta: ', selectedAnswer);
         switch (question.dificultad) {
-            case 'Fácil':
+
+            case "Fácil":
                 if(selectedAnswer === question.respuesta_correcta){
+
                     return 1;
                 }else{
                     return -1;
@@ -79,6 +91,9 @@ export default function Pregunta() {
             console.error("Error al llamar a la API:", error.response ? error.response.data : error.message);
         }
     }
+
+
+    
 
     //Funcion para devolver al menú principal
     function backToMenu() {
