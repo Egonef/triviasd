@@ -9,12 +9,45 @@ import StandardButton from '../components/standardButton';
 
 export default function RankingLocal() {
 
+     //Estado para almacenar los equipos registrados
+     const [registeredTeams, setRegisteredTeams] = useState([]);
+
+    async function getTeams() {
+        try {
+            console.log('getTeams llamado');
+            const response = await axios.get('http://127.0.0.1:5000/api/admin/getSelectedTeams'); //Cambiar la dirección IP por la de la máquina que corre el backend
+            console.log('getTeams devuelve: ');
+            //Imprimir los equipos registrados
+            console.log(response.data);
+            console.log('Registrando equipos');
+            setRegisteredTeams(response.data);
+
+        } catch (error) {
+            console.error("Error al llamar a la API:", error.response ? error.response.data : error.message);
+        }
+    }
+    useEffect(() => {
+        getTeams(); // Llama inmediatamente al montar el componente
+
+    }, []);
+
 
     return (
         <div className="App h-screen bg-gray-100">
             <Header />
             <div className="flex flex-col h-[82%] w-full items-center">
                 <div className=' mt-36 w-[60%] h-[70%] bg-slate-500 '>
+                    <ul className='w-full'>
+                        {registeredTeams.map((team) => {
+                            console.log(team);
+                            return (
+                                <li key={team.Name} className='flex items-center justify-between w-full h-20 bg-gray-500 border-b-2 border-gray-600 px-4'>
+                                    <p className='text-2xl'>{team.Name}</p>
+                                    <p className='text-2xl'>{team.score}</p>
+                                </li>
+                            )
+                        })}
+                    </ul>
 
                 </div>
             </div>
