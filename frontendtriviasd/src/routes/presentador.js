@@ -34,6 +34,18 @@ export default function Presentador(){
 
     const [currentTeam, setCurrentTeam] = useState(null); // Variable para guardar el equipo actual
 
+    const [timeLeft, setTimeLeft] = useState(120); // Temporizador inicializado a 60 segundos
+
+    useEffect(() => {
+        if (timeLeft > 0) {
+            const timerId = setInterval(() => {
+                setTimeLeft(timeLeft - 1);
+            }, 1000);
+            return () => clearInterval(timerId);
+        } else {
+            navigate('/RankingLocal'); // Redirige a otra página cuando el temporizador llega a 0
+        }
+    }, [timeLeft, navigate]);
 
     //Estado para guardar el equipo que ha ido a responder
 
@@ -193,6 +205,11 @@ export default function Presentador(){
         }
     }
 
+    const formatTime = (seconds) => {
+        const minutes = Math.floor(seconds / 60);
+        const remainingSeconds = seconds % 60;
+        return `${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
+    };
 
     //DEBUGEo
 
@@ -206,6 +223,7 @@ export default function Presentador(){
             <Header/>
             <div className='flex flex-col items-center align-middle'>
                 <div className="flex flex-col  items-center h-[40%] mt-20">
+                    <p className="text-xl font-bold">Tiempo restante: {formatTime(timeLeft)}</p>
                     <p className='text-4xl font-bold '>Turno del Equipo {registeredTeams.length > 0 ? checkTurn() : 'patata'}</p>
                 </div>
                 {tema === '' ?
