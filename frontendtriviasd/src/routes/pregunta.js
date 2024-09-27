@@ -97,7 +97,7 @@ export default function Pregunta() {
 
     //Funcion para devolver al menú principal
     function backToMenu() {
-        navigate('/presentador');
+        navigate('/RankingLocal');
     }
 
     return (

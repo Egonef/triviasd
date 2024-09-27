@@ -21,10 +21,9 @@ export default function RankingLocal() {
             const response = await axios.get('http://127.0.0.1:5000/api/admin/getSelectedTeams'); //Cambiar la dirección IP por la de la máquina que corre el backend
             console.log('getTeams devuelve: ');
             //Imprimir los equipos registrados
-            console.log(response.data);
-            console.log('Registrando equipos');
-            setRegisteredTeams(response.data);
-
+            //console.log(response.data);
+            const sortedTeams = response.data.sort((a, b) => b.score - a.score); // Ordenar los equipos antes de actualizar el estado
+            setRegisteredTeams(sortedTeams);
         } catch (error) {
             console.error("Error al llamar a la API:", error.response ? error.response.data : error.message);
         }
