@@ -14,6 +14,74 @@ export default function Pregunta() {
     const [question, setQuestion] = useState(null);
     const [selectedAnswer, setSelectedAnswer] = useState(null);
 
+    const [timeLeft, setTimeLeft] = useState(120); // Temporizador inicializado a 60 segundos
+
+
+    useEffect(() => {
+        getTimeLeft(); // Recuperar el tiempo restante del backend al cargar la página
+    }, []);
+
+    useEffect(() => {
+        if (timeLeft > 0) {
+            const timerId = setInterval(() => {
+                setTimeLeft(prevTimeLeft => {
+                    const newTimeLeft = prevTimeLeft - 1;
+                    sendTimeLeft(newTimeLeft); // Enviar el tiempo restante al backend
+                    return newTimeLeft;
+                });
+            }, 1000);
+            return () => clearInterval(timerId);
+        } else {
+            navigate('/RankingLocal'); // Redirige a otra página cuando el temporizador llega a 0
+        }
+    }, [timeLeft]);
+
+
+    /*
+    useEffect(() => {
+        if (timeLeft > 0) {
+            const timerId = setInterval(() => {
+                setTimeLeft(timeLeft - 1);
+                sendTimeLeft();
+            }, 1000);
+            return () => clearInterval(timerId);
+        } else {
+            navigate('/RankingLocal'); // Redirige a otra página cuando el temporizador llega a 0
+        }
+    }, [timeLeft]);
+    */
+
+    const formatTime = (seconds) => {
+        const minutes = Math.floor(seconds / 60);
+        const remainingSeconds = seconds % 60;
+        return `${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
+    };
+
+    //Funcion para obtener el tiempo restante de la partida
+    async function getTimeLeft() {
+        try {
+            const response = await axios.get('http://localhost:5000/api/caster/getTimeLeft');
+            console.log('Tiempo restante recibido: ');
+            console.log(response.data);
+            setTimeLeft(response.data);
+        }
+        catch (error) {
+            console.error("Error al llamar a la API:", error.response ? error.response.data : error.message);
+        }
+    }
+
+    //Funcion para enviar el tiempo restante al backend
+    async function sendTimeLeft(newTimeLeft) {
+        try {
+            const response = await axios.post('http://localhost:5000/api/caster/saveTimeLeft', {
+                timeLeft: newTimeLeft
+            });
+            console.log(response.data);
+        } catch (error) {
+            console.error("Error al llamar a la API:", error.response ? error.response.data : error.message);
+        }
+    }
+
     useEffect(() => {
         if (selectedAnswer !== null) {
             sendPoints();
@@ -44,9 +112,7 @@ export default function Pregunta() {
     function checkAnswer(answer){
         setTimeout(() => {
             setSelectedAnswer(answer);
-
         }, 2000);
-        
     }
 
     //Funcion para calcular los puntos que deben de añadirse o restarse al equipo
@@ -58,7 +124,6 @@ export default function Pregunta() {
 
             case "Fácil":
                 if(selectedAnswer === question.respuesta_correcta){
-
                     return 1;
                 }else{
                     return -1;
@@ -104,6 +169,7 @@ export default function Pregunta() {
         <div className="App h-screen bg-gray-100">
             <Header />
             <div className="flex flex-col h-[82%] w-full items-center">
+                <p className="text-xl font-bold">Tiempo restante: {formatTime(timeLeft)}</p>
                 <div className="flex flex-col items- my-20">
                     <h1 className="text-4xl font-bold">{question.enunciado}</h1>
                 </div>

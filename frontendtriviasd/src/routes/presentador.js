@@ -37,17 +37,47 @@ export default function Presentador(){
     const [timeLeft, setTimeLeft] = useState(120); // Temporizador inicializado a 60 segundos
 
     useEffect(() => {
+        getTimeLeft(); // Recuperar el tiempo restante del backend al cargar la página
+    }, []);
+
+    useEffect(() => {
         if (timeLeft > 0) {
             const timerId = setInterval(() => {
                 setTimeLeft(timeLeft - 1);
+                sendTimeLeft();
             }, 1000);
             return () => clearInterval(timerId);
         } else {
             navigate('/RankingLocal'); // Redirige a otra página cuando el temporizador llega a 0
         }
-    }, [timeLeft, navigate]);
+    }, [timeLeft]);
 
-    //Estado para guardar el equipo que ha ido a responder
+    //Funcion para obtener el tiempo restante de la partida
+    async function getTimeLeft() {
+        try {
+            const response = await axios.get('http://localhost:5000/api/caster/getTimeLeft');
+            console.log('Tiempo restante recibido: ');
+            console.log(response.data);
+            setTimeLeft(response.data);
+        }
+        catch (error) {
+            console.error("Error al llamar a la API:", error.response ? error.response.data : error.message);
+        }
+    }
+
+    //Funcion para enviar el tiempo restante al backend
+    async function sendTimeLeft() {
+        try {
+            const response = await axios.post('http://localhost:5000/api/caster/saveTimeLeft', {
+                timeLeft
+            });
+            console.log(response.data);
+        }
+        catch (error) {
+            console.error("Error al llamar a la API:", error.response ? error.response.data : error.message);
+        }
+    }
+
 
     // Función que se ejecuta al hacer clic en el botón
     const setEasyDiff = async () => {
@@ -113,7 +143,6 @@ export default function Presentador(){
     //Función para imprimir el estado de la partida ( solo para debuggear)
     function printGameStatus() {
         console.log("Valor real de gameState: ", gameState);
-
     }
 
 

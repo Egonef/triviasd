@@ -5,9 +5,22 @@ import fs from 'fs/promises';
 import { getTeams , getGameStatus, teams } from '../controllers/adminController.js';
 
 
+export var timeLeft = 120;
 
-//Funcion para actualizar el estado de los equipos en el backend
+//Funcion para guardar el tiempo restante de partida
+export const saveTimeLeft = asyncHandler(async(req, res) => {
+    timeLeft = req.body.timeLeft;
+    console.log('Tiempo restante recibido: ' + timeLeft);
+    res.send('Tiempo restante recibido');
+    return;
+})
 
+
+//Funcion que devuelve el tiempo restante de la partida
+export const getTimeLeft = asyncHandler(async(req, res) => {
+    res.send(timeLeft);
+    return;
+})
 
 //Funcion que recorre los equipos para determinar su turno
 
