@@ -12,15 +12,13 @@ export const saveTimeLeft = asyncHandler(async(req, res) => {
     timeLeft = req.body.timeLeft;
     console.log('Tiempo restante recibido: ' + timeLeft);
     res.send('Tiempo restante recibido');
-    return;
 })
 
 
-//Funcion que devuelve el tiempo restante de la partida
-export const getTimeLeft = asyncHandler(async(req, res) => {
-    res.send(timeLeft);
-    return;
-})
+// Función que devuelve el tiempo restante de la partida
+export const getTimeLeft = asyncHandler(async (req, res) => {
+    res.send(timeLeft.toString()); // Asegurarse de enviar el tiempo como una cadena
+});
 
 //Funcion que recorre los equipos para determinar su turno
 

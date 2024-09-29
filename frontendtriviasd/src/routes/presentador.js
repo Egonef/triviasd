@@ -34,21 +34,26 @@ export default function Presentador(){
 
     const [currentTeam, setCurrentTeam] = useState(null); // Variable para guardar el equipo actual
 
-    const [timeLeft, setTimeLeft] = useState(120); // Temporizador inicializado a 60 segundos
+    const [timeLeft, setTimeLeft] = useState(null); // Temporizador inicializado a 60 segundos
 
     useEffect(() => {
         getTimeLeft(); // Recuperar el tiempo restante del backend al cargar la página
     }, []);
 
     useEffect(() => {
-        if (timeLeft > 0) {
-            const timerId = setInterval(() => {
-                setTimeLeft(timeLeft - 1);
-                sendTimeLeft();
-            }, 1000);
-            return () => clearInterval(timerId);
-        } else {
-            navigate('/RankingLocal'); // Redirige a otra página cuando el temporizador llega a 0
+        if (timeLeft !== null) { // Solo iniciar el temporizador si timeLeft no es null
+            if (timeLeft > 0) {
+                const timerId = setInterval(() => {
+                    setTimeLeft(prevTimeLeft => {
+                        const newTimeLeft = prevTimeLeft - 1;
+                        sendTimeLeft(newTimeLeft); // Enviar el tiempo restante al backend
+                        return newTimeLeft;
+                    });
+                }, 1000);
+                return () => clearInterval(timerId);
+            } else {
+                navigate('/RankingLocal'); // Redirige a otra página cuando el temporizador llega a 0
+            }
         }
     }, [timeLeft]);
 
@@ -65,15 +70,14 @@ export default function Presentador(){
         }
     }
 
-    //Funcion para enviar el tiempo restante al backend
-    async function sendTimeLeft() {
+    // Función para enviar el tiempo restante al backend
+    async function sendTimeLeft(newTimeLeft) {
         try {
             const response = await axios.post('http://localhost:5000/api/caster/saveTimeLeft', {
-                timeLeft
+                timeLeft: newTimeLeft
             });
             console.log(response.data);
-        }
-        catch (error) {
+        } catch (error) {
             console.error("Error al llamar a la API:", error.response ? error.response.data : error.message);
         }
     }

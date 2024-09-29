@@ -14,7 +14,7 @@ export default function Pregunta() {
     const [question, setQuestion] = useState(null);
     const [selectedAnswer, setSelectedAnswer] = useState(null);
 
-    const [timeLeft, setTimeLeft] = useState(120); // Temporizador inicializado a 60 segundos
+    const [timeLeft, setTimeLeft] = useState(null); // Temporizador inicializado a 60 segundos
 
 
     useEffect(() => {
@@ -22,17 +22,19 @@ export default function Pregunta() {
     }, []);
 
     useEffect(() => {
-        if (timeLeft > 0) {
-            const timerId = setInterval(() => {
-                setTimeLeft(prevTimeLeft => {
-                    const newTimeLeft = prevTimeLeft - 1;
-                    sendTimeLeft(newTimeLeft); // Enviar el tiempo restante al backend
-                    return newTimeLeft;
-                });
-            }, 1000);
-            return () => clearInterval(timerId);
-        } else {
-            navigate('/RankingLocal'); // Redirige a otra página cuando el temporizador llega a 0
+        if (timeLeft !== null) { // Solo iniciar el temporizador si timeLeft no es null
+            if (timeLeft > 0) {
+                const timerId = setInterval(() => {
+                    setTimeLeft(prevTimeLeft => {
+                        const newTimeLeft = prevTimeLeft - 1;
+                        sendTimeLeft(newTimeLeft); // Enviar el tiempo restante al backend
+                        return newTimeLeft;
+                    });
+                }, 1000);
+                return () => clearInterval(timerId);
+            } else {
+                navigate('/RankingLocal'); // Redirige a otra página cuando el temporizador llega a 0
+            }
         }
     }, [timeLeft]);
 
