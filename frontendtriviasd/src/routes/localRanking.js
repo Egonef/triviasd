@@ -18,7 +18,7 @@ export default function RankingLocal() {
     async function getTeams() {
         try {
             console.log('getTeams llamado');
-            const response = await axios.get('http://127.0.0.1:5000/api/admin/getSelectedTeams'); //Cambiar la dirección IP por la de la máquina que corre el backend
+            const response = await axios.get('http://5.56.56.16:5000/api/admin/getSelectedTeams'); //Cambiar la dirección IP por la de la máquina que corre el backend
             console.log('getTeams devuelve: ');
             //Imprimir los equipos registrados
             //console.log(response.data);

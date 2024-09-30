@@ -86,7 +86,7 @@ export default function Pregunta() {
     //Funcion para obtener el tiempo restante de la partida
     async function getTimeLeft() {
         try {
-            const response = await axios.get('http://localhost:5000/api/caster/getTimeLeft');
+            const response = await axios.get('http://5.56.56.16:5000/api/caster/getTimeLeft');
             console.log('Tiempo restante recibido: ');
             console.log(response.data);
             setTimeLeft(response.data);
@@ -99,7 +99,7 @@ export default function Pregunta() {
     //Funcion para enviar el tiempo restante al backend
     async function sendTimeLeft(newTimeLeft) {
         try {
-            const response = await axios.post('http://localhost:5000/api/caster/saveTimeLeft', {
+            const response = await axios.post('http://5.56.56.16:5000/api/caster/saveTimeLeft', {
                 timeLeft: newTimeLeft
             });
             console.log(response.data);
@@ -116,7 +116,7 @@ export default function Pregunta() {
 
     async function getQuestion() {
         try {
-            const response = await axios.get('http://localhost:5000/api/caster/selectedQuestion');
+            const response = await axios.get('http://5.56.56.16:5000/api/caster/selectedQuestion');
             setQuestion(response.data);
             console.log('Pregunta recibida: ');
             console.log(response.data);
@@ -175,7 +175,7 @@ export default function Pregunta() {
     async function sendPoints(){
         const puntos = calculatePoints();
         try {
-            const response = await axios.post('http://localhost:5000/api/admin/addPoints', {puntos});
+            const response = await axios.post('http://5.56.56.16:5000/api/admin/addPoints', {puntos});
             console.log(response.data);
         }
         catch (error) {

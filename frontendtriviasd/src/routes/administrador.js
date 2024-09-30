@@ -20,7 +20,7 @@ function AdminForm() {
     //Solicitud a la API para obtener el número de equipos registrados
     async function getRegisteredTeams() {
         try {
-            const response = await axios.get('http://127.0.0.1:5000/api/admin/getTeams');
+            const response = await axios.get('http://5.56.56.16:5000/api/admin/getTeams');
             console.log(response.data);
             setRegisteredTeams(response.data);
         }
@@ -33,7 +33,7 @@ function AdminForm() {
 
     async function startGame() {
         try {
-            const response = await axios.get('http://127.0.0.1:5000/api/admin/startGame');
+            const response = await axios.get('http://5.56.56.16:5000/api/admin/startGame');
             console.log(response.data);
             if (response.data === 'Not enough teams') {
                 Swal.fire({
