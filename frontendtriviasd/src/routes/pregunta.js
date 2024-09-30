@@ -14,9 +14,11 @@ export default function Pregunta() {
     const [question, setQuestion] = useState(null);
     const [selectedAnswer, setSelectedAnswer] = useState(null);
 
-    const [timeLeft, setTimeLeft] = useState(null); // Temporizador inicializado a 60 segundos
+    const [timeLeft, setTimeLeft] = useState(null);
+    const [questionTimeLeft, setQuestionTimeLeft] = useState(60);
 
 
+    //Funciones para gestionar el tiempo de la partida
     useEffect(() => {
         getTimeLeft(); // Recuperar el tiempo restante del backend al cargar la página
     }, []);
@@ -38,6 +40,34 @@ export default function Pregunta() {
         }
     }, [timeLeft]);
 
+    //Funcion para formatear el tiempo
+    const formatTime = (seconds) => {
+        const minutes = Math.floor(seconds / 60);
+        const remainingSeconds = seconds % 60;
+        return `${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
+    };
+
+
+    //Funciones para gestionar el tiempo de la pregunta
+    useEffect(() => {
+        if (questionTimeLeft !== null) { // Solo iniciar el temporizador si timeLeft no es null
+            if (questionTimeLeft > 0) {
+                const timerIdq = setInterval(() => {
+                    setQuestionTimeLeft(questionTimeLeft - 1);
+                }, 1000);
+                return () => clearInterval(timerIdq);
+            } else {
+                setSelectedAnswer('Tiempo agotado'); // Redirige a otra página cuando el temporizador de la pregunta llega a 0
+            }
+        }
+    }, [questionTimeLeft]);
+
+    //Funcion para formatear el tiempo
+    const formatTimeq = (seconds) => {
+        const minutes = Math.floor(seconds / 60);
+        const remainingSeconds = seconds % 60;
+        return `${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
+    };
 
     /*
     useEffect(() => {
@@ -52,12 +82,6 @@ export default function Pregunta() {
         }
     }, [timeLeft]);
     */
-
-    const formatTime = (seconds) => {
-        const minutes = Math.floor(seconds / 60);
-        const remainingSeconds = seconds % 60;
-        return `${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
-    };
 
     //Funcion para obtener el tiempo restante de la partida
     async function getTimeLeft() {
@@ -171,6 +195,7 @@ export default function Pregunta() {
         <div className="App h-screen bg-gray-100">
             <Header />
             <div className="flex flex-col h-[82%] w-full items-center">
+                <p className="text-xl font-bold">Tiempo restante de la pregunta: {formatTimeq(questionTimeLeft)}</p>
                 <p className="text-xl font-bold">Tiempo restante: {formatTime(timeLeft)}</p>
                 <div className="flex flex-col items- my-20">
                     <h1 className="text-4xl font-bold">{question.enunciado}</h1>

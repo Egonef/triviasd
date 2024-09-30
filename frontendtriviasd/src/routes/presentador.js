@@ -51,7 +51,8 @@ export default function Presentador(){
                     });
                 }, 1000);
                 return () => clearInterval(timerId);
-            } else {
+            } else { //AQUI SE ACABA DE TERMINAR LA PARTIDA , HAY QUE PREPARAR PARA LA SIGUIENTE
+                sendTimeLeft(120) // Reiniciar el temporizador a 60 segundos
                 navigate('/RankingLocal'); // Redirige a otra página cuando el temporizador llega a 0
             }
         }
