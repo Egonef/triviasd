@@ -6,7 +6,7 @@ import React from "react";
 export default function StandardButton({ text, onClick , size , type , isCorrect , isIncorrect }) {
 
 
-    let baseClasses = "bg-[#FF0033] text-white text-3xl font-bold py-2 px-4 rounded-2xl mx-16 my-5";
+    let baseClasses = "bg-[#FF0033] text-white text-3xl font-bold py-2 px-4 rounded-tl-3xl rounded-br-3xl mx-16 my-5 font-serif";
 
     let colorClass = isCorrect ? "bg-green-500" : isIncorrect ? "bg-blue-500" : "bg-[#FF0033]";
 

@@ -1,6 +1,7 @@
 //Imports
 import { TypeAnimation } from 'react-type-animation';
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
+//import background from '../assets/xpsd.svg'; // Importa el archivo SVG
 //Components
 
 
@@ -9,13 +10,17 @@ export default function ExperienciaSD() {
 
 
     return(
-        <div className="App  h-screen bg-gray-100" onClick={() => navigate("/seleccionEquipos")}>
+        <div
+            className="App  min-h-screen bg-gray-100 overflow-hidden" onClick={() => navigate("/seleccionEquipos")}
+            style={{ backgroundImage: `url('/xpsd.svg')`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+        >
 
-            <div className="flex flex-col items-center h-[50%] pt-44">
-            <TypeAnimation className="text-4xl font-bold"
-                    sequence={['Vive la experiencia securitas direct',500,
-                                '',500]}
-                    style={{ fontSize: '2em' }}
+
+            <div className="flex flex-col items-center justify-center h-full mt-60">
+            <TypeAnimation className="text-9xl font-extrabold text-gray-500 font-sans"
+                    sequence={['VIVE LA EXPERIENCIA',700,
+                                '',800]}
+                    style={{ fontSize: '3em', fontWeight: 'bolder' }}
                     repeat={Infinity}
             />
 
