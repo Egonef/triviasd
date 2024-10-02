@@ -9,8 +9,8 @@ export default function Header() {
     const navigate = useNavigate();
 
     return (
-        <header className="flex justify-center h-[8%] bg-[#FF0033]">
-            <img onClick={() => navigate("/")} className=" cursor-pointer" src="pingu.png" alt="logo" ></img>
+        <header className="fixed top-0 left-0 w-full z-50 flex justify-center h-[26%]">
+            <img onClick={() => navigate("/")} className=" cursor-pointer" src="logosd4.svg" alt="logo" ></img>
         </header>
     )
 }
