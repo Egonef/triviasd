@@ -284,10 +284,6 @@ export default function Presentador(){
                         </div>
                     </div>
                 }
-
-                <StandardButton text="Siguiente Turno" size="big" onClick={nextTurn}/>
-                <StandardButton text="Inicio de la Partida" size="big" onClick={debug}/>
-                <Link to="http://localhost:3000/admin" className=' bg-slate-600 h-10 w-10' ></Link>
             </div>
         </div>
     )
