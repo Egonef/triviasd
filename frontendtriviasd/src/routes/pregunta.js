@@ -148,29 +148,26 @@ export default function Pregunta() {
     return (
         <div className="App h-screen bg-gray-100">
             <Header />
-            <div className="flex flex-col h-[82%] w-full items-center pt-20">
-                <div className="flex  items-center justify-between h-[10%] w-[90%]  mt-16">
-                <p className="text-xl font-bold ml-4">Equipo: </p>
+            <div className="flex flex-col h-[82%] w-full items-center">
                 <p className="text-xl font-bold">Tiempo restante: {formatTime(timeLeft)}</p>
-                </div>
                 {showQuestion && (
                     <>
-                        <div className="flex flex-grow items-center justify-center h-[35%] w-[90%]  rounded-tl-3xl rounded-br-3xl  border-[#FF0033] border-2 border-dashed mt-4">
-                            <h1 className="text-4xl font-bold pt-1 pb-1">{question.enunciado}</h1>
+                        <div className="flex flex-col items-center my-20">
+                            <h1 className="text-4xl font-bold">{question.enunciado}</h1>
                         </div>
-                        <div className="flex flex-row justify-center items-center h-[30%] w-[90%] rounded-2xl pt-20">
+                        <div className="flex justify-center items-center h-[60%] w-[70%] rounded-2xl bg-slate-600">
                             {question.respuestas.map((respuesta, index) => (
                                 <StandardButton
                                     key={index}
                                     text={respuesta}
-                                    size="large"
+                                    size="medium"
                                     onClick={() => checkAnswer(respuesta)}
                                     isCorrect={selectedAnswer !== null && respuesta === question.respuesta_correcta}
                                     isIncorrect={selectedAnswer === respuesta && respuesta !== question.respuesta_correcta}
                                 />
                             ))}
                         </div>
-                        {selectedAnswer !== null && <StandardButton text="Siguiente" size="large" onClick={backToMenu} />}
+                        {selectedAnswer !== null && <StandardButton text="Siguiente" size="medium" onClick={backToMenu} />}
                     </>
                 )}
             </div>
