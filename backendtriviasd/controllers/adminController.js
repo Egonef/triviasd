@@ -157,6 +157,13 @@ export const addPoints = asyncHandler(async(req, res) => {
             console.log(selectedTeams[i].score);
         }
     }
+    for (let i = 0; i < teams.length; i++) {
+        if (teams[i].Name == lastAnswerTeam) {
+            teams[i].score += req.body.puntos;
+            console.log('Puntos finales al equipo:');
+            console.log(teams[i].score);
+        }
+    }
     console.log(selectedTeams);
     res.send('Points added');
 })
