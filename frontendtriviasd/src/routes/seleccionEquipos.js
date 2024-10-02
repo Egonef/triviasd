@@ -88,6 +88,18 @@ function TeamSelection() {
         }
     }
 
+    //Llamada a la API para recuperar los equipos registrados
+    async function recoverTeams() {
+        try {
+            console.log('recoverTeams llamado');
+            const response = await axios.get('http://localhost:5000/api/admin/loadTeams'); //Cambiar la dirección IP por la de la máquina que corre el backend
+            //Imprimir los equipos registrados
+            navigate('/seleccionEquipos');
+        } catch (error) {
+            console.error("Error al llamar a la API:", error.response ? error.response.data : error.message);
+        }
+    }
+
     useEffect(() => {
         getRegisteredTeams(); // Llama inmediatamente al montar el componente
         const interval = setInterval(() => {
@@ -112,6 +124,7 @@ function TeamSelection() {
                             )
                         })}
                         <StandardButton text="Iniciar trivia" size="large" onClick={startGame} />
+                        <StandardButton text="Recuperar equipos" size="large" onClick={recoverTeams} />
                 </div>
             </div>
         </div>

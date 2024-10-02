@@ -38,10 +38,7 @@ export default function RankingLocal() {
         <div className="App h-screen bg-gray-100">
             <Header />
             <div className="flex flex-col h-[82%] w-full items-center">
-                <div className="flex w-full justify-end h-[30%]">
-                    <StandardButton text="Siguiente" size="big" onClick={() => navigate('/presentador')}/>
-                </div>
-                <div className=' mt-35 w-[60%] h-[70%] bg-slate-500 '>
+                <div className=' mt-35 w-[60%] h-[70%] bg-slate-500 mt-52'>
                     <ul className='w-full'>
                         {registeredTeams.map((team) => {
                             console.log(team);
@@ -53,7 +50,9 @@ export default function RankingLocal() {
                             )
                         })}
                     </ul>
-
+                </div>
+                <div className="flex w-full justify-end h-[30%]">
+                    <StandardButton text="Siguiente" size="big" onClick={() => navigate('/presentador')}/>
                 </div>
             </div>
         </div>

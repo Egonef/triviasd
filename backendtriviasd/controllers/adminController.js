@@ -53,6 +53,8 @@ export const registerTeam = asyncHandler(async(req, res) => {
     console.log(teams); // ELIMINAR ANTES DE ENTREGAR
     //Guardamos el email en un archivo
     saveEmail(team.LeaderEmail);
+    //Guardamos los equipos en un archivo
+    saveTeams();
     //Respondemos con un mensaje de confirmación
     res.send('Team registered');
 })
@@ -164,6 +166,25 @@ export const addPoints = asyncHandler(async(req, res) => {
             console.log(teams[i].score);
         }
     }
+    saveTeams();
     console.log(selectedTeams);
     res.send('Points added');
+})
+
+
+//Funcion para sobreescribir un documento de equipos cuando teams se modifica
+function saveTeams() {
+    fs.writeFile('teams.txt', JSON.stringify(teams), function (err) {
+        if (err) throw err;
+    });
+}
+
+//Funcion para cargar en el vector de equipos los equipos guardados en el archivo cuando se llama desde el frontend
+export const loadTeams = asyncHandler(async(req, res) => {
+    fs.readFile('teams.txt', 'utf8', function (err, data) {
+        if (err) throw err;
+        teams = JSON.parse(data);
+        console.log(teams);
+        res.send('Teams loaded');
+    });
 })

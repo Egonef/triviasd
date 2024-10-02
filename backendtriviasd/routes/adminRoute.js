@@ -17,6 +17,7 @@ router.route('/saveSelectedTeams2').put(ctr.saveSelectedTeams2);
 router.route('/getSelectedTeams').get(ctr.getSelectedTeams);
 router.route('/setLastAnswerTeam').post(ctr.setLastAnswerTeam);
 router.route('/addPoints').post(ctr.addPoints);
+router.route('/loadTeams').get(ctr.loadTeams);
 
 
 

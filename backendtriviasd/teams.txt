@@ -1,0 +1,1 @@
+[{"Name":"Equipo1","LeaderName":"lkhjb","LeaderEmail":"lkjh","turn":false,"score":31,"id":1},{"Name":"Equipo2","LeaderName":"lkhjg","LeaderEmail":"lkjh","turn":false,"score":30,"id":2}]
