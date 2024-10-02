@@ -68,7 +68,6 @@ function AdminForm() {
     return (
         <div className="App h-screen bg-gray-100">
             <Header/>
-            <h1 >Registra a los equipos participantes({registeredTeams.length}/4)</h1>
             <div className=" flex justify-evenly h-[89%] pt-44"  >
                 <TeamForm/>
             </div>

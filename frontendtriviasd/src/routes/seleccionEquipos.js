@@ -100,7 +100,6 @@ function TeamSelection() {
     return (
         <div className="App h-screen bg-gray-100">
             <Header/>
-            <h1 >Registra a los equipos participantes({registeredTeams.length}/4)</h1>
             <div className=" flex justify-evenly h-[89%] pt-44"  >
                 <div className='flex flex-col items-center h-[50%] w-[40%] overflow-y-auto bg-gray-600'>
                         {registeredTeams.map((team) => {
