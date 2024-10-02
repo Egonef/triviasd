@@ -258,7 +258,7 @@ export default function Presentador(){
             <div className='flex flex-col items-center align-middle'>
                 <div className="flex flex-col  items-center h-[40%] mt-20">
                     <p className="text-xl font-bold">Tiempo restante: {formatTime(timeLeft)}</p>
-                    <p className='text-4xl font-bold '>Turno del Equipo {registeredTeams.length > 0 ? checkTurn() : 'patata'}</p>
+                    <p className='text-4xl font-bold '>Turno del Equipo {registeredTeams.length > 0 ? checkTurn() : ''}</p>
                 </div>
                 {tema === '' ?
                     <div className='flex flex-col items-center  h-[40%] w-[60%] p-10 my-24 rounded-2xl bg-gray-500'>
