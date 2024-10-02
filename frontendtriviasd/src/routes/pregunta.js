@@ -35,7 +35,7 @@ export default function Pregunta() {
                 }, 1000);
                 return () => clearInterval(timerId);
             } else {
-                navigate('/RankingLocal'); // Redirige a otra página cuando el temporizador llega a 0
+                navigate('/RankingGlobal'); // Redirige a otra página cuando el temporizador llega a 0
             }
         }
     }, [timeLeft]);
@@ -68,20 +68,6 @@ export default function Pregunta() {
         const remainingSeconds = seconds % 60;
         return `${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
     };
-
-    /*
-    useEffect(() => {
-        if (timeLeft > 0) {
-            const timerId = setInterval(() => {
-                setTimeLeft(timeLeft - 1);
-                sendTimeLeft();
-            }, 1000);
-            return () => clearInterval(timerId);
-        } else {
-            navigate('/RankingLocal'); // Redirige a otra página cuando el temporizador llega a 0
-        }
-    }, [timeLeft]);
-    */
 
     //Funcion para obtener el tiempo restante de la partida
     async function getTimeLeft() {

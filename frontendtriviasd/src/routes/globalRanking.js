@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import Header from '../components/header';
 import StandardButton from '../components/standardButton';
 
-export default function RankingLocal() {
+export default function RankingGlobal() {
 
     //Estado para almacenar los equipos registrados
     const [registeredTeams, setRegisteredTeams] = useState([]);
@@ -18,7 +18,7 @@ export default function RankingLocal() {
     async function getTeams() {
         try {
             console.log('getTeams llamado');
-            const response = await axios.get('http://localhost:5000/api/admin/getSelectedTeams'); //Cambiar la dirección IP por la de la máquina que corre el backend
+            const response = await axios.get('http://localhost:5000/api/admin/getTeams'); //Cambiar la dirección IP por la de la máquina que corre el backend
             console.log('getTeams devuelve: ');
             //Imprimir los equipos registrados
             //console.log(response.data);
@@ -39,7 +39,7 @@ export default function RankingLocal() {
             <Header />
             <div className="flex flex-col h-[82%] w-full items-center">
                 <div className="flex w-full justify-end h-[30%]">
-                    <StandardButton text="Siguiente" size="big" onClick={() => navigate('/presentador')}/>
+                    <StandardButton text="Siguiente" size="big" onClick={() => navigate('/seleccionEquipos')}/>
                 </div>
                 <div className=' mt-35 w-[60%] h-[70%] bg-slate-500 '>
                     <ul className='w-full'>

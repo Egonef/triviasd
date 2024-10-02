@@ -15,6 +15,7 @@ import Pregunta from './routes/pregunta';
 import ExperienciaSD from './routes/xpsd';
 import TeamSelection from './routes/seleccionEquipos';
 import RankingLocal from './routes/localRanking';
+import RankingGlobal from './routes/globalRanking';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -28,6 +29,7 @@ root.render(
             <Route path="/xpsd" element={<ExperienciaSD />} />
             <Route path="/seleccionEquipos" element={<TeamSelection />} />
             <Route path="/rankingLocal" element={<RankingLocal />} />
+            <Route path="/rankingGlobal" element={<RankingGlobal />} />
         </Routes>
         </BrowserRouter>
     </React.StrictMode>
