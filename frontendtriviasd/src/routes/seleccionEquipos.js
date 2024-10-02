@@ -112,21 +112,23 @@ function TeamSelection() {
     return (
         <div className="App min-h-screen bg-gray-100 flex flex-col">
             <Header/>
-            <div className=" flex flex-col items-center justify-center mt-40 2xl:pt-20"  >
-                <div className="flex flex-col items-center h-[50%] w-[40%]  rounded-tl-3xl rounded-br-3xl  border-[#FF0033] border-2 border-dashed">
-                    <div className="flex flex-col items-center h-[95%] w-[95%] my-3 bg-gray-600 rounded-br-3xl rounded-tl-3xl over">
-
-                                {registeredTeams.map((team) => {
-                                    console.log(team);
-                                    return (
-                                        <div className='flex items-center justify-center w-full h-20 bg-gray-500 border-b-2 border-gray-600 rounded-tl-3xl rounded-br-3xl overflow-y-auto'>
-                                            <input type ="checkbox" id="check"/>
-                                            <label className='text-2xl'>{team.Name} </label>
-                                        </div>
-                                    )
-                                })}
-                                <StandardButton text="Iniciar trivia" size="small" onClick={startGame} />
-
+            <div className=" flex 2xl:flex-col sm:flex-row items-center justify-center 2xl:h-[50rem] 2xl:mt-40 sm:mt-20 md:h-[45rem] 2xl:pt-20"  >
+                <div className="flex flex-col items-center h-[70%] w-[40%]  rounded-tl-3xl rounded-br-3xl  border-[#FF0033] border-2 border-dashed">
+                    <div className="flex flex-col items-center justify-center h-[95%] w-[95%] my-3 bg-gray-600 rounded-br-3xl rounded-tl-3xl">
+                        <div className=' flex flex-col items-center h-[70%] w-[95%] mt-5 overflow-scroll'>
+                            {registeredTeams.map((team) => {
+                                console.log(team);
+                                return (
+                                    <div className='flex items-center justify-center w-full min-h-20 bg-gray-500 border-b-2 border-gray-600 rounded-tl-3xl rounded-br-3xl'>
+                                        <input type ="checkbox" id="check"/>
+                                        <label className='text-2xl'>{team.Name} </label>
+                                    </div>
+                                )
+                            })}
+                        </div>
+                        <div className=' h-[30%]'>
+                            <StandardButton text="Iniciar trivia" size="small" onClick={startGame} />
+                        </div>
                     </div>
                 </div>
                 <StandardButton text="Recuperar equipos" size="small" onClick={recoverTeams} />
