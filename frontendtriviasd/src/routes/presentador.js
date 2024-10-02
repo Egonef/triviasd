@@ -88,17 +88,17 @@ export default function Presentador(){
     const setEasyDiff = async () => {
         setCurrentTeam(checkTurn());
         await nextTurn();
-        setdificultad('Fácil');
+        setdificultad('Facil');
     };
     const setMidDiff = async () => {
         setCurrentTeam(checkTurn());
         await nextTurn();
-        setdificultad('Media');
+        setdificultad('Medio');
     };
     const setHardDiff = async () => {
         setCurrentTeam(checkTurn());
         await nextTurn();
-        setdificultad('Difícil');
+        setdificultad('Dificil');
     };
 
 
@@ -264,12 +264,12 @@ export default function Presentador(){
                     <div className='flex flex-col items-center  h-[40%] w-[60%] p-10 my-24 rounded-2xl bg-gray-500'>
                         <h1 className='text-4xl font-bold'>Temática:</h1>
                         <div>
-                            <StandardButton text="Animales" size="medium" onClick={() => setTema('Animales')}/>
-                            <StandardButton text="Comida" size="medium" onClick={() => setTema('Comida')}/>
+                            <StandardButton text="Así somos" size="medium" onClick={() => setTema('Así somos')}/>
+                            <StandardButton text="Más que alarmas" size="medium" onClick={() => setTema('Captación')}/>
                         </div>
                         <div>
-                            <StandardButton text="Ropa" size="medium" onClick={() => setTema('Ropa')}/>
-                            <StandardButton text="yoquese" size="medium" onClick={() => setTema('Yoquese')}/>
+                            <StandardButton text="El viaje del cliente" size="medium" onClick={() => setTema('Portfolio')}/>
+                            <StandardButton text="Sobre todo, personas" size="medium" onClick={() => setTema('Soporte a Negocio')}/>
                         </div>
                     </div>
 

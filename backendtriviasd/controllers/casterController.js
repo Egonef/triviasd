@@ -76,7 +76,7 @@ export const setTopicandDifficulty = asyncHandler(async(req, res) => {
 async function getQuestion(tema, dificultad){
 
     // Leer el archivo JSON que contiene las preguntas
-    const data = await fs.readFile('./preguntas.json', 'utf8');
+    const data = await fs.readFile('./preguntassd.json', 'utf8');
     const questions = JSON.parse(data).preguntas;
      // Filtrar las preguntas según la categoría dada
     const filteredQuestions = questions.filter(question =>
