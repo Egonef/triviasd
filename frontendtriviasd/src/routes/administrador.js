@@ -66,9 +66,9 @@ function AdminForm() {
     }, []);
 
     return (
-        <div className="App h-screen bg-gray-100">
+        <div className="App min-h-screen bg-gray-100 flex flex-col">
             <Header/>
-            <div className=" flex justify-evenly h-[89%] pt-44"  >
+            <div className=" flex flex-grow items-center justify-center"  >
                 <TeamForm/>
             </div>
         </div>

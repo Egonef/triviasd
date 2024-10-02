@@ -113,7 +113,8 @@ function TeamSelection() {
         <div className="App min-h-screen bg-gray-100 flex flex-col">
             <Header/>
             <div className=" flex flex-grow items-center justify-center"  >
-                <div className="flex flex-col items-center h-[50%] w-[40%] overflow-y-auto bg-gray-600 p-4 rounded-tl-3xl rounded-br-3xl">
+                <div className="flex flex-col items-center h-[50%] w-[40%]  rounded-tl-3xl rounded-br-3xl  border-[#FF0033] border-2 border-dashed">
+                <div className="flex flex-col items-center h-[95%] w-[95%] my-3 bg-gray-600 rounded-br-3xl rounded-tl-3xl">
                         {registeredTeams.map((team) => {
                             console.log(team);
                             return (
@@ -125,6 +126,7 @@ function TeamSelection() {
                         })}
                         <StandardButton text="Iniciar trivia" size="large" onClick={startGame} />
                         <StandardButton text="Recuperar equipos" size="large" onClick={recoverTeams} />
+                </div>
                 </div>
             </div>
         </div>

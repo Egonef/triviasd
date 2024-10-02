@@ -75,37 +75,39 @@ export default function TeamForm() {
 
 
     return (
-        <form id='registerForm' className=" flex flex-col shadow-xl bg-gray-300  w-[40%] h-96 rounded-md p-8">
+        <div className="flex flex-col items-center w-[45%] h-[30%] rounded-tl-3xl rounded-br-3xl  border-[#FF0033] border-2 border-dashed">
+        <form id='registerForm' className=" flex flex-col shadow-xl bg-[#636466] my-4 w-[95%] h-[95%] rounded-tl-3xl rounded-br-3xl p-8 ">
             <div className="flex flex-col items-center h-auto ">
                 <div className='flex flex-col w-4/5 '>
-                    <label htmlFor="Name" className="block text-gray-700 text-md font-bold mb-2 ">
+                    <label htmlFor="Name" className="block text-white text-md font-bold mb-2 font-serif">
                         Nombre del equipo
                     </label>
                     <input type="text" id="Name" value={teamName}
                     onChange={(e) => setTeamName(e.target.value)}
-                    className="border-2 border-black rounded-lg "/>
+                    className="border-2 border-[#FF0033] rounded-lg "/>
                 </div>
                 <div className='flex flex-col mb-2 mt-5 w-4/5 '>
-                    <label htmlFor="leaderName" className="block text-gray-700 text-md font-bold mb-2 ">
+                    <label htmlFor="leaderName" className="block text-white text-md font-bold mb-2 font-serif">
                         Nombre del líder
                     </label>
                     <input type="text" id="leaderName" value={leaderName}
                     onChange={(e) => setLeaderName(e.target.value)}
-                    className="border-2 border-black rounded-lg "/>
+                    className="border-2 border-[#FF0033] rounded-lg"/>
                 </div>
                 <div className='flex flex-col mb-2 mt-5 w-4/5'>
-                    <label htmlFor="leaderMail" className="block text-gray-700 text-md font-bold mb-2 ">
+                    <label htmlFor="leaderMail" className="block text-white text-md font-bold mb-2 font-serif">
 
                         Correo del líder
                     </label>
                     <input type="text" id="leaderEmail"  value={leaderEmail}
                     onChange={(e) => setLeaderEmail(e.target.value)}
-                    className="border-2 border-black rounded-lg "/>
+                    className="border-2 border-[#FF0033] rounded-lg"/>
                 </div>
 
                 <StandardButton text="Registrar" onClick={registerTeam} size='small' type={"button"} />
             </div>
 
         </form>
+        </div>
     )
 }
