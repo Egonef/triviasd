@@ -98,10 +98,10 @@ function TeamSelection() {
     }, []);
 
     return (
-        <div className="App h-screen bg-gray-100">
+        <div className="App min-h-screen bg-gray-100 flex flex-col">
             <Header/>
-            <div className=" flex justify-evenly h-[89%] pt-44"  >
-                <div className='flex flex-col items-center h-[50%] w-[40%] overflow-y-auto bg-gray-600'>
+            <div className=" flex flex-grow items-center justify-center"  >
+                <div className="flex flex-col items-center h-[50%] w-[40%] overflow-y-auto bg-gray-600 p-4 rounded-tl-3xl rounded-br-3xl">
                         {registeredTeams.map((team) => {
                             console.log(team);
                             return (

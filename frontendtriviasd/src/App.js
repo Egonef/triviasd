@@ -12,10 +12,10 @@ function App() {
     const navigate = useNavigate();
 
     return (
-        <div className="App h-screen bg-gray-100">
+        <div className="App min-h-screen flex items-center justify-center">
             <Header/>
-            <div className=" flex items-center flex-col h-[92%] pt-44"  >
-                <h1 className=" text-4xl " ><b>Elige tu tipo de usuario:</b></h1>
+            <div className=" flex items-center flex-col"  >
+                <h1 className=" text-4xl font-serif text-[#636466]" >Elige tu tipo de usuario:</h1>
                 <div className=" mt-28">
                     <StandardButton text="Presentador" onClick={() => navigate('/xpsd')} size="large" />
                     <StandardButton text="Administrador" onClick={() => navigate('/admin')} size="large" />
