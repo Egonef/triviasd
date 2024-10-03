@@ -1,12 +1,8 @@
-//Componente de botón estándar que recibe un texto y una función onClick
-
-//Imports
 import React from "react";
 
-export default function StandardButton({ text, onClick , size , type , isCorrect , isIncorrect , waiting }) {
+export default function StandardButton({ text, onClick, size, type, isCorrect, isIncorrect, waiting, marginX, marginY }) {
 
-
-    let baseClasses = "bg-[#FF0033] text-white text-3xl  py-2 px-4 rounded-tl-3xl rounded-br-3xl mx-16 my-5 font-serif";
+    let baseClasses = "bg-[#FF0033] text-white text-3xl py-2 px-4 rounded-tl-3xl rounded-br-3xl font-serif";
 
     let colorClass;
     if (waiting) {
@@ -14,12 +10,13 @@ export default function StandardButton({ text, onClick , size , type , isCorrect
     } else {
         colorClass = isCorrect ? "bg-green-500" : isIncorrect ? "bg-gray-900" : "bg-[#FF0033]";
     }
+
     // Añadir clases de tamaño basadas en el argumento size
     let sizeClasses;
     switch (size) {
         case 'tiny':
             sizeClasses = "w-32 h-10 text-xl";
-            break
+            break;
         case 'small':
             sizeClasses = "w-40 h-15 text-2xl";
             break;
@@ -33,19 +30,25 @@ export default function StandardButton({ text, onClick , size , type , isCorrect
             sizeClasses = "w-56 h-56 ";
             break;
         default:
-            sizeClasses = "w-36 h-12";
+            sizeClasses = "";
     }
 
-
-    let buttonClasses = `${baseClasses} ${sizeClasses} ${colorClass}`;
+    // Aplicar márgenes usando el atributo style
+    const marginStyle = {
+        marginLeft: marginX ? `${marginX}px` : '16px',
+        marginRight: marginX ? `${marginX}px` : '16px',
+        marginTop: marginY ? `${marginY}px` : '5px',
+        marginBottom: marginY ? `${marginY}px` : '5px',
+    };
 
     return (
         <button
-        type={type}
-        onClick={onClick}
-        className={buttonClasses}
+            className={`${baseClasses} ${colorClass} ${sizeClasses}`}
+            onClick={onClick}
+            type={type}
+            style={marginStyle}
         >
-        {text}
+            {text}
         </button>
     );
 }

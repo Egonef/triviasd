@@ -268,15 +268,15 @@ export default function Presentador(){
                         <h1 className='text-white text-center'>Tema</h1>
                     </div>
                 </div>
-                    <div className='flex flex-col items-center  justify-center  h-[75%] w-[35%] rounded-tl-3xl rounded-br-3xl  border-[#FF0033] border-2 border-dashed translate-y-[-10%]'>
+                    <div className='flex flex-col items-center  justify-center  2xl:h-[50%] 2xl:w-[26%] sm:h-[60%] sm:w-[45%] rounded-tl-3xl rounded-br-3xl  border-[#FF0033] border-2 border-dashed translate-y-[-10%]'>
                         <div className="flex flex-row  w-full h-full">
-                            <div className="flex flex-col  h-full w-1/2">
-                                <StandardButton text={<><span>Así</span><br /><span>somos</span></>} size="huge" onClick={() => setTema('Así somos')} />
-                                <StandardButton text="Más que alarmas" size="huge" onClick={() => setTema('Captación')} />
+                            <div className="flex flex-col items-end h-full w-1/2">
+                                <StandardButton text={<><span>Así</span><br /><span>somos</span></>} size="huge" onClick={() => setTema('Así somos')} marginX="10" />
+                                <StandardButton text="Más que alarmas" size="huge" onClick={() => setTema('Captación')} marginX="10" />
                             </div>
-                            <div className="flex flex-col  h-full w-1/2">
-                                <StandardButton text="El viaje del cliente" size="huge" onClick={() => setTema('Portfolio')} />
-                                <StandardButton text="Sobre todo, personas" size="huge" onClick={() => setTema('Soporte a Negocio')} />
+                            <div className="flex flex-col items-start h-full w-1/2">
+                                <StandardButton text="El viaje del cliente" size="huge" onClick={() => setTema('Portfolio')} marginX="10" />
+                                <StandardButton text="Sobre todo, personas" size="huge" onClick={() => setTema('Soporte a Negocio')} marginX="10" />
                             </div>
                         </div>
                     </div>
