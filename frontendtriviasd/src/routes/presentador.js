@@ -257,21 +257,26 @@ export default function Presentador(){
             <Header/>
             <div className='flex flex-col items-center align-middle pt-20'>
                 <div className="flex  items-center justify-between h-[10%] w-[90%]  mt-16">
-                    <p className='text-2xl'>Turno del Equipo {registeredTeams.length > 0 ? checkTurn() : ''}</p>
+                    <p className='text-2xl font-bold'>Equipo: {registeredTeams.length > 0 ? checkTurn() : ''}</p>
                     <p className="text-xl font-bold">Tiempo restante: {formatTime(timeLeft)}</p>
+                </div>
+                <div className="flex  items-center justify-between h-[5%] w-[100%]">
+                    <div className='text-4xl font-bold bg-[#FF0033] w-60 h-20 rounded-br-3xl'>
+                        <h1 className='text-white text-center pt-5'>Tema</h1>
+                    </div>
                 </div>
                 {tema === '' ?
 
-                   
-                    <div className='flex flex-col items-center  h-[40%] w-[60%] p-10 my-24 rounded-2xl bg-gray-500'>
-                        <h1 className='text-4xl font-bold'>Temática:</h1>
-                        <div>
-                        <StandardButton text={<><span>Así</span><br /><span>somos</span></>} size="medium" onClick={() => setTema('Así somos')}/>
-                            <StandardButton text="Más que alarmas" size="medium" onClick={() => setTema('Captación')}/>
-                        </div>
-                        <div>
-                            <StandardButton text="El viaje del cliente" size="medium" onClick={() => setTema('Portfolio')}/>
-                            <StandardButton text="Sobre todo, personas" size="medium" onClick={() => setTema('Soporte a Negocio')}/>
+                    <div className='flex flex-col items-center  justify-center h-[35%] w-[35%] rounded-tl-3xl rounded-br-3xl  border-[#FF0033] border-2 border-dashed translate-y-[-15%]'>
+                        <div className="flex flex-row  w-full h-full">
+                            <div className="flex flex-col  h-full w-1/2">
+                                <StandardButton text={<><span>Así</span><br /><span>somos</span></>} size="huge" onClick={() => setTema('Así somos')} />
+                                <StandardButton text="Más que alarmas" size="huge" onClick={() => setTema('Captación')} />
+                            </div>
+                            <div className="flex flex-col  h-full w-1/2">
+                                <StandardButton text="El viaje del cliente" size="huge" onClick={() => setTema('Portfolio')} />
+                                <StandardButton text="Sobre todo, personas" size="huge" onClick={() => setTema('Soporte a Negocio')} />
+                            </div>
                         </div>
                     </div>
 

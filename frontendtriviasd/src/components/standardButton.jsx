@@ -29,6 +29,9 @@ export default function StandardButton({ text, onClick , size , type , isCorrect
         case 'large':
             sizeClasses = "w-72 h-36";
             break;
+        case 'huge':
+            sizeClasses = "w-56 h-56 ";
+            break;
         default:
             sizeClasses = "w-36 h-12";
     }
