@@ -37,19 +37,23 @@ export default function RankingGlobal() {
     return (
         <div className="App h-screen bg-gray-100">
             <Header />
-            <div className="flex flex-col h-[82%] w-full items-center">
-                <div className=' mt-35 w-[60%] h-[70%] bg-slate-500 mt-52'>
-                    <ul className='w-full'>
-                        {registeredTeams.map((team) => {
-                            console.log(team);
-                            return (
-                                <li key={team.Name} className='flex items-center justify-between w-full h-20 bg-gray-500 border-b-2 border-gray-600 px-4'>
-                                    <p className='text-2xl'>{team.Name}</p>
-                                    <p className='text-2xl'>{team.score}</p>
-                                </li>
-                            )
-                        })}
-                    </ul>
+            
+            <div className="flex flex-col h-full w-full items-center">
+                <div className="flex justify-center w-[60%] h-[80%]  mt-52 rounded-tl-3xl rounded-br-3xl border-[#FF0033] border-2 border-dashed p-4">
+
+                    <div className='w-full h-full bg-slate-500 rounded-tl-3xl rounded-br-3xl'>
+                        <ul className='w-full'>
+                            {registeredTeams.map((team) => {
+                                console.log(team);
+                                return (
+                                    <li key={team.Name} className='flex items-center justify-between w-full h-20 bg-gray-500 border-b-2 border-gray-600 px-4 rounded-tl-3xl rounded-br-3xl'>
+                                        <p className='text-2xl'>{team.Name}</p>
+                                        <p className='text-2xl'>{team.score}</p>
+                                    </li>
+                                )
+                            })}
+                        </ul>
+                    </div>
                 </div>
                 <div className="flex w-full justify-end h-[30%]">
                     <StandardButton text="Siguiente" size="big" onClick={() => navigate('/seleccionEquipos')}/>
