@@ -112,7 +112,7 @@ function TeamSelection() {
     return (
         <div className="App min-h-screen bg-gray-100 flex flex-col">
             <Header/>
-            <div className=" flex 2xl:flex-col sm:flex-row items-center justify-center 2xl:h-[50rem] 2xl:mt-40 sm:mt-20 md:h-[45rem] 2xl:pt-20"  >
+            <div className=" flex 2xl:flex-col sm:flex-row items-center justify-center 2xl:h-[50rem] 2xl:mt-40 sm:mt-20 md:h-[35rem] 2xl:pt-20"  >
                 <div className="flex flex-col items-center h-[70%] w-[40%]  rounded-tl-3xl rounded-br-3xl  border-[#FF0033] border-2 border-dashed">
                     <div className="flex flex-col items-center justify-center h-[95%] w-[95%] my-3 bg-gray-600 rounded-br-3xl rounded-tl-3xl">
                         <div className=' flex flex-col items-center h-[70%] w-[95%] mt-5 overflow-scroll'>
@@ -126,7 +126,7 @@ function TeamSelection() {
                                 )
                             })}
                         </div>
-                        <div className=' h-[30%]'>
+                        <div className=' 2xl:h-[20%]c sm:h-[40%]'>
                             <StandardButton text="Iniciar trivia" size="small" onClick={startGame} />
                         </div>
                     </div>
