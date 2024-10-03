@@ -253,21 +253,21 @@ export default function Presentador(){
     }
 
     return (
-        <div className="App min-h-screen bg-gray-100">
+        <div className="App h-screen bg-gray-100">
             <Header/>
-            <div className='flex flex-col items-center align-middle pt-20'>
+            <div className='flex flex-col items-center align-middle pt-20 h-screen'>
                 <div className="flex  items-center justify-between h-[10%] w-[90%]  mt-16">
                     <p className='text-2xl font-bold'>Equipo: {registeredTeams.length > 0 ? checkTurn() : ''}</p>
                     <p className="text-xl font-bold">Tiempo restante: {formatTime(timeLeft)}</p>
                 </div>
                 <div className="flex  items-center justify-between h-[5%] w-[100%]">
-                    <div className='text-4xl font-bold bg-[#FF0033] w-60 h-20 rounded-br-3xl'>
-                        <h1 className='text-white text-center pt-5'>Tema</h1>
+                    <div className=' flex text-4xl font-bold bg-[#FF0033] w-60 h-[3.5rem] rounded-br-3xl justify-center items-center'>
+                        <h1 className='text-white text-center'>Tema</h1>
                     </div>
                 </div>
                 {tema === '' ?
 
-                    <div className='flex flex-col items-center  justify-center h-[35%] w-[35%] rounded-tl-3xl rounded-br-3xl  border-[#FF0033] border-2 border-dashed translate-y-[-15%]'>
+                    <div className='flex flex-col items-center  justify-center  h-[75%] w-[35%] rounded-tl-3xl rounded-br-3xl  border-[#FF0033] border-2 border-dashed translate-y-[-10%]'>
                         <div className="flex flex-row  w-full h-full">
                             <div className="flex flex-col  h-full w-1/2">
                                 <StandardButton text={<><span>Así</span><br /><span>somos</span></>} size="huge" onClick={() => setTema('Así somos')} />
