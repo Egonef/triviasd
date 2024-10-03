@@ -13,6 +13,7 @@ export default function Pregunta() {
     const [timeLeft, setTimeLeft] = useState(null); // Inicializar a null
     const [loading, setLoading] = useState(true); // Estado de carga
     const [showQuestion, setShowQuestion] = useState(false); // Estado para controlar si la pregunta debe mostrarse
+    const [waitingButtonIndex, setWaitingButtonIndex] = useState(null);
 
     useEffect(() => {
         getTimeLeft(); // Recuperar el tiempo restante del backend al cargar la página
@@ -106,9 +107,11 @@ export default function Pregunta() {
     }
 
     // Función para comprobar si la respuesta es correcta
-    function checkAnswer(answer) {
+    function checkAnswer(answer, index) {
+        setWaitingButtonIndex(index);
         setTimeout(() => {
             setSelectedAnswer(answer);
+            setWaitingButtonIndex(null);
         }, 2000);
     }
 
@@ -164,9 +167,10 @@ export default function Pregunta() {
                                     key={index}
                                     text={respuesta}
                                     size="large"
-                                    onClick={() => checkAnswer(respuesta)}
+                                    onClick={() => checkAnswer(respuesta, index)}
                                     isCorrect={selectedAnswer !== null && respuesta === question.respuesta_correcta}
                                     isIncorrect={selectedAnswer === respuesta && respuesta !== question.respuesta_correcta}
+                                    waiting={waitingButtonIndex === index}
                                 />
                             ))}
                         </div>

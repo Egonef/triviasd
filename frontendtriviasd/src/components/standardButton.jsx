@@ -3,13 +3,17 @@
 //Imports
 import React from "react";
 
-export default function StandardButton({ text, onClick , size , type , isCorrect , isIncorrect }) {
+export default function StandardButton({ text, onClick , size , type , isCorrect , isIncorrect , waiting }) {
 
 
     let baseClasses = "bg-[#FF0033] text-white text-3xl  py-2 px-4 rounded-tl-3xl rounded-br-3xl mx-16 my-5 font-serif";
 
-    let colorClass = isCorrect ? "bg-green-500" : isIncorrect ? "bg-blue-500" : "bg-[#FF0033]";
-
+    let colorClass;
+    if (waiting) {
+        colorClass = "bg-gray-500";
+    } else {
+        colorClass = isCorrect ? "bg-green-500" : isIncorrect ? "bg-gray-900" : "bg-[#FF0033]";
+    }
     // Añadir clases de tamaño basadas en el argumento size
     let sizeClasses;
     switch (size) {
