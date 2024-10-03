@@ -253,14 +253,16 @@ export default function Presentador(){
     }
 
     return (
-        <div className="App h-screen bg-gray-100">
+        <div className="App min-h-screen bg-gray-100">
             <Header/>
-            <div className='flex flex-col items-center align-middle'>
-                <div className="flex flex-col  items-center h-[40%] mt-20">
+            <div className='flex flex-col items-center align-middle pt-20'>
+                <div className="flex  items-center justify-between h-[10%] w-[90%]  mt-16">
+                    <p className='text-2xl'>Turno del Equipo {registeredTeams.length > 0 ? checkTurn() : ''}</p>
                     <p className="text-xl font-bold">Tiempo restante: {formatTime(timeLeft)}</p>
-                    <p className='text-4xl font-bold '>Turno del Equipo {registeredTeams.length > 0 ? checkTurn() : ''}</p>
                 </div>
                 {tema === '' ?
+
+                   
                     <div className='flex flex-col items-center  h-[40%] w-[60%] p-10 my-24 rounded-2xl bg-gray-500'>
                         <h1 className='text-4xl font-bold'>Temática:</h1>
                         <div>
