@@ -166,7 +166,7 @@ export default function Pregunta() {
                                 <StandardButton
                                     key={index}
                                     text={respuesta}
-                                    size="large"
+                                    size="long"
                                     onClick={() => checkAnswer(respuesta, index)}
                                     isCorrect={selectedAnswer !== null && respuesta === question.respuesta_correcta}
                                     isIncorrect={selectedAnswer === respuesta && respuesta !== question.respuesta_correcta}

@@ -289,7 +289,7 @@ export default function Presentador(){
                             <h1 className='text-white text-center'>Dificultad</h1>
                         </div>
                     </div>
-                    <div className='flex flex-row   h-[35%] w-[80%] rounded-tl-3xl rounded-br-3xl  border-[#FF0033] border-2 border-dashed translate-y-[-10%]'>
+                    <div className='flex flex-row justify-center items-center 2xl:h-[27%] 2xl:w-[42%] rounded-tl-3xl rounded-br-3xl  border-[#FF0033] border-2 border-dashed translate-y-[50%]'>
                         <div>
                             <StandardButton text="Facil" size="huge" onClick={setEasyDiff}/>
                             <StandardButton text="Media" size="huge" onClick={setMidDiff}/>

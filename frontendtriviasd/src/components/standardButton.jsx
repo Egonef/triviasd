@@ -2,7 +2,7 @@ import React from "react";
 
 export default function StandardButton({ text, onClick, size, type, isCorrect, isIncorrect, waiting, marginX, marginY }) {
 
-    let baseClasses = "bg-[#FF0033] text-white text-3xl py-2 px-4 rounded-tl-3xl rounded-br-3xl font-serif";
+    let baseClasses = "bg-[#FF0033] text-white 2xl:text-3xl sm:text-xl py-2 px-4 rounded-tl-3xl rounded-br-3xl font-serif";
 
     let colorClass;
     if (waiting) {
@@ -29,6 +29,9 @@ export default function StandardButton({ text, onClick, size, type, isCorrect, i
         case 'huge':
             sizeClasses = "w-56 h-56 ";
             break;
+        case 'long':
+            sizeClasses = "w-96 h-48";
+            break
         default:
             sizeClasses = "";
     }
