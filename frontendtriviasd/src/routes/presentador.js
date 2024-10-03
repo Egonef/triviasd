@@ -264,7 +264,7 @@ export default function Presentador(){
                     <div className='flex flex-col items-center  h-[40%] w-[60%] p-10 my-24 rounded-2xl bg-gray-500'>
                         <h1 className='text-4xl font-bold'>Temática:</h1>
                         <div>
-                            <StandardButton text="Así somos" size="medium" onClick={() => setTema('Así somos')}/>
+                        <StandardButton text={<><span>Así</span><br /><span>somos</span></>} size="medium" onClick={() => setTema('Así somos')}/>
                             <StandardButton text="Más que alarmas" size="medium" onClick={() => setTema('Captación')}/>
                         </div>
                         <div>
