@@ -159,7 +159,7 @@ export default function Pregunta() {
                 {showQuestion && (
                     <>
                         <div className="flex flex-grow items-center justify-center h-[35%] w-[90%]  rounded-tl-3xl rounded-br-3xl  border-[#FF0033] border-2 border-dashed mt-4">
-                            <h1 className="text-4xl font-bold pt-1 pb-1">{question.enunciado}</h1>
+                            <h1 className="text-4xl font-bold pt-1 pb-1 text-center">{question.enunciado}</h1>
                         </div>
                         <div className="flex flex-row justify-center items-center h-[30%] w-[90%] rounded-2xl pt-20">
                             {question.respuestas.map((respuesta, index) => (

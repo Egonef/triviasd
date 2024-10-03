@@ -260,13 +260,14 @@ export default function Presentador(){
                     <p className='text-2xl font-bold'>Equipo: {registeredTeams.length > 0 ? checkTurn() : ''}</p>
                     <p className="text-xl font-bold">Tiempo restante: {formatTime(timeLeft)}</p>
                 </div>
-                <div className="flex  items-center justify-between h-[5%] w-[100%]">
+               
+                {tema === '' ?
+                <>
+                    <div className="flex  items-center justify-between h-[5%] w-[100%]">
                     <div className=' flex text-4xl font-bold bg-[#FF0033] w-60 h-[3.5rem] rounded-br-3xl justify-center items-center'>
                         <h1 className='text-white text-center'>Tema</h1>
                     </div>
                 </div>
-                {tema === '' ?
-
                     <div className='flex flex-col items-center  justify-center  h-[75%] w-[35%] rounded-tl-3xl rounded-br-3xl  border-[#FF0033] border-2 border-dashed translate-y-[-10%]'>
                         <div className="flex flex-row  w-full h-full">
                             <div className="flex flex-col  h-full w-1/2">
@@ -279,17 +280,23 @@ export default function Presentador(){
                             </div>
                         </div>
                     </div>
+                </>
 
                     :
-
-                    <div className='flex flex-col items-center  h-[40%] w-[60%] p-10 my-24 rounded-2xl bg-gray-500'>
-                        <h1 className='text-4xl font-bold'>Dificultad:</h1>
-                        <div>
-                            <StandardButton text="Facil" size="medium" onClick={setEasyDiff}/>
-                            <StandardButton text="Media" size="medium" onClick={setMidDiff}/>
-                            <StandardButton text="Dificil" size="medium" onClick={setHardDiff}/>
+                    <>
+                    <div className="flex  items-center justify-between h-[5%] w-[100%]">
+                        <div className=' flex text-4xl font-bold bg-[#FF0033] w-60 h-[3.5rem] rounded-br-3xl justify-center items-center'>
+                            <h1 className='text-white text-center'>Dificultad</h1>
                         </div>
                     </div>
+                    <div className='flex flex-row   h-[35%] w-[80%] rounded-tl-3xl rounded-br-3xl  border-[#FF0033] border-2 border-dashed translate-y-[-10%]'>
+                        <div>
+                            <StandardButton text="Facil" size="huge" onClick={setEasyDiff}/>
+                            <StandardButton text="Media" size="huge" onClick={setMidDiff}/>
+                            <StandardButton text="Dificil" size="huge" onClick={setHardDiff}/>
+                        </div>
+                    </div>
+                    </>
                 }
             </div>
         </div>
