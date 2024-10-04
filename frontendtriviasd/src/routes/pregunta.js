@@ -177,7 +177,7 @@ export default function Pregunta() {
     }
 
     return (
-        <div className="App h-screen bg-gray-100">
+        <div className="App h-screen bg-gray-100" translate='no'>
             <Header />
             <p className="text-xl font-bold">Tiempo restante de la pregunta: {formatTimeq(questionTimeLeft)}</p>
             <div className="flex flex-col h-[82%] w-full items-center pt-20">

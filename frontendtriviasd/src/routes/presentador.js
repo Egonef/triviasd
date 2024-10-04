@@ -258,7 +258,7 @@ export default function Presentador(){
     }
 
     return (
-        <div className="App h-screen bg-gray-100">
+        <div className="App h-screen bg-gray-100 " translate='no'>
             <Header/>
             <div className='flex flex-col items-center align-middle pt-20 h-screen'>
                 <div className="flex  items-center justify-between h-[10%] w-[90%]  mt-16">
