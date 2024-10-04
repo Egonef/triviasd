@@ -24,7 +24,7 @@ function TeamSelection() {
     //Solicitud a la API para obtener el número de equipos registrados
     async function getRegisteredTeams() {
         try {
-            const response = await axios.get('http://5.56.56.16:5000/api/admin/getTeams');
+            const response = await axios.get('http://localhost:5000/api/admin/getTeams');
             console.log(response.data);
             setRegisteredTeams(response.data);
         }
@@ -53,7 +53,7 @@ function TeamSelection() {
 
 
             //Enviamos la solicitud a la API para guardar los equipos seleccionados
-            const respuestaPost = await axios.post('http://5.56.56.16:5000/api/admin/saveSelectedTeams', selectedTeamsTemp);
+            const respuestaPost = await axios.post('http://localhost:5000/api/admin/saveSelectedTeams', selectedTeamsTemp);
             if (respuestaPost.data !== 'Selected teams saved') {
                 Swal.fire({
                     icon: 'error',
@@ -63,7 +63,7 @@ function TeamSelection() {
                 });
             }
 
-            const respuestaGet = await axios.get('http://5.56.56.16:5000/api/admin/startGame');
+            const respuestaGet = await axios.get('http://localhost:5000/api/admin/startGame');
             console.log(respuestaGet.data);
             if (respuestaGet.data === 'Not enough teams') {
                 Swal.fire({
@@ -92,7 +92,7 @@ function TeamSelection() {
     async function recoverTeams() {
         try {
             console.log('recoverTeams llamado');
-            const response = await axios.get('http://5.56.56.16:5000/api/admin/loadTeams'); //Cambiar la dirección IP por la de la máquina que corre el backend
+            const response = await axios.get('http://localhost:5000/api/admin/loadTeams'); //Cambiar la dirección IP por la de la máquina que corre el backend
             //Imprimir los equipos registrados
             navigate('/seleccionEquipos');
         } catch (error) {
@@ -114,8 +114,8 @@ function TeamSelection() {
             <Header/>
             <div className=" flex 2xl:flex-col sm:flex-row items-center justify-center 2xl:h-[50rem] 2xl:mt-40 sm:mt-32 md:h-[35rem] 2xl:pt-20"  >
                 <div className="flex flex-col items-center h-[70%] w-[40%]  rounded-tl-3xl rounded-br-3xl  border-[#FF0033] border-2 border-dashed">
-                    <div className="flex flex-col items-center justify-center h-[95%] w-[95%] my-3 bg-gray-600 rounded-br-3xl rounded-tl-3xl">
-                        <div className=' flex flex-col items-center h-[70%] w-[95%] mt-5 overflow-scroll'>
+                    <div className="flex flex-col items-center justify-center h-[95%] w-[95%] my-3 bg-gray-400 rounded-br-3xl rounded-tl-3xl">
+                        <div className=' flex flex-col items-center h-[100%] w-[95%] mt-4 mb-4 overflow-scroll'>
                             {registeredTeams.map((team) => {
                                 console.log(team);
                                 return (
@@ -126,12 +126,13 @@ function TeamSelection() {
                                 )
                             })}
                         </div>
-                        <div className=' 2xl:h-[20%]c sm:h-[40%]'>
-                            <StandardButton text="Iniciar trivia" size="small" onClick={startGame} />
-                        </div>
                     </div>
                 </div>
-                <StandardButton text="Recuperar equipos" size="small" onClick={recoverTeams} />
+                <div className='flex justify-between w-full mt-5'>
+                    <StandardButton text="Recuperar equipos" size="medium" onClick={recoverTeams}/>
+                    <StandardButton text="Iniciar trivia" size="medium" onClick={startGame} />
+                    <StandardButton text="Ranking" size="medium" onClick={() => navigate('/RankingGlobal')}/>
+                </div>
             </div>
         </div>
     );

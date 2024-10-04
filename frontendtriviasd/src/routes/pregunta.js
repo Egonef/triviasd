@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 // Components
 import Header from '../components/header';
@@ -14,6 +15,10 @@ export default function Pregunta() {
     const [loading, setLoading] = useState(true); // Estado de carga
     const [showQuestion, setShowQuestion] = useState(false); // Estado para controlar si la pregunta debe mostrarse
     const [waitingButtonIndex, setWaitingButtonIndex] = useState(null);
+    const [questionTimeLeft, setQuestionTimeLeft] = useState(60);
+
+
+
 
     useEffect(() => {
         getTimeLeft(); // Recuperar el tiempo restante del backend al cargar la página
@@ -31,6 +36,7 @@ export default function Pregunta() {
                 }, 1000);
                 return () => clearInterval(timerId);
             } else {
+                navigate('/RankingGlobal'); 
                 const resetTime = 120;
                 setTimeLeft(resetTime); // Reiniciar el temporizador a 120 segundos
                 sendTimeLeft(resetTime); // Enviar el tiempo reiniciado al backend
@@ -44,10 +50,32 @@ export default function Pregunta() {
         return `${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
     };
 
+    //Funciones para gestionar el tiempo de la pregunta
+    useEffect(() => {
+        if (questionTimeLeft !== null) { // Solo iniciar el temporizador si timeLeft no es null
+            if (questionTimeLeft > 0) {
+                const timerIdq = setInterval(() => {
+                    setQuestionTimeLeft(questionTimeLeft - 1);
+                }, 1000);
+                return () => clearInterval(timerIdq);
+            } else {
+                setSelectedAnswer('Tiempo agotado'); // Redirige a otra página cuando el temporizador de la pregunta llega a 0
+            }
+        }
+    }, [questionTimeLeft]);
+
+    //Funcion para formatear el tiempo
+    const formatTimeq = (seconds) => {
+        const minutes = Math.floor(seconds / 60);
+        const remainingSeconds = seconds % 60;
+        return `${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
+    };
+
+
     // Función para obtener el tiempo restante de la partida
     async function getTimeLeft() {
         try {
-            const response = await axios.get('http://5.56.56.16:5000/api/caster/getTimeLeft');
+            const response = await axios.get('http://localhost:5000/api/caster/getTimeLeft');
             console.log('Tiempo restante recibido: ');
             console.log(response.data);
             setTimeLeft(response.data);
@@ -59,7 +87,7 @@ export default function Pregunta() {
     // Función para enviar el tiempo restante al backend
     async function sendTimeLeft(newTimeLeft) {
         try {
-            const response = await axios.post('http://5.56.56.16:5000/api/caster/saveTimeLeft', {
+            const response = await axios.post('http://localhost:5000/api/caster/saveTimeLeft', {
                 timeLeft: newTimeLeft
             });
             console.log(response.data);
@@ -77,7 +105,7 @@ export default function Pregunta() {
     async function getQuestion() {
         setLoading(true); // Iniciar el estado de carga
         try {
-            const response = await axios.get('http://5.56.56.16:5000/api/caster/selectedQuestion');
+            const response = await axios.get('http://localhost:5000/api/caster/selectedQuestion');
             setQuestion(response.data);
             console.log('Pregunta recibida: ');
             console.log(response.data);
@@ -136,7 +164,7 @@ export default function Pregunta() {
     async function sendPoints() {
         const puntos = calculatePoints();
         try {
-            const response = await axios.post('http://5.56.56.16:5000/api/admin/addPoints', { puntos });
+            const response = await axios.post('http://localhost:5000/api/admin/addPoints', { puntos });
             console.log(response.data);
         } catch (error) {
             console.error("Error al llamar a la API:", error.response ? error.response.data : error.message);
@@ -151,6 +179,7 @@ export default function Pregunta() {
     return (
         <div className="App h-screen bg-gray-100">
             <Header />
+            <p className="text-xl font-bold">Tiempo restante de la pregunta: {formatTimeq(questionTimeLeft)}</p>
             <div className="flex flex-col h-[82%] w-full items-center pt-20">
                 <div className="flex  items-center justify-between h-[10%] w-[90%]  mt-16">
                 <p className="text-xl font-bold ml-4">Equipo: </p>
