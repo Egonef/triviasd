@@ -24,7 +24,7 @@ function TeamSelection() {
     //Solicitud a la API para obtener el número de equipos registrados
     async function getRegisteredTeams() {
         try {
-            const response = await axios.get('http://localhost:5000/api/admin/getTeams2');
+            const response = await axios.get('http://localhost:5000/api/admin/getTeams');
             console.log(response.data);
             setRegisteredTeams(response.data);
         }

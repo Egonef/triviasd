@@ -74,8 +74,8 @@ export default function RankingLocal() {
                                         break;
                                 }
                                 return (
-                                    <div key={team.Name} className={`flex flex-col items-center justify-end w-1/3 ${heightClass} ${bgColorClass} ${orderClass} ${roundedBorders}`}>
-                                        <img src={trophySrc} alt="trophy" className={`absolute ${trophyPosition} scale-[0.8]`} />
+                                    <div key={team.Name} className={`flex flex-col items-center justify-end w-1/3 ${heightClass} ${bgColorClass} ${orderClass} ${roundedBorders} overflow-hidden`}>
+                                        <img src={trophySrc} alt="trophy" className={`absolute ${trophyPosition} scale-[0.8] overflow-hidden`} />
                                         <p className='text-2xl'>{team.Name}</p>
                                         <p className='text-2xl'>{team.score}</p>
                                     </div>
@@ -83,7 +83,7 @@ export default function RankingLocal() {
                             })}
                     </div>
                 </div>
-                <div className="flex w-full justify-end h-[10%]">
+                <div className="flex w-full justify-end h-[10%] z-10">
                     <StandardButton text="Siguiente" size="big" onClick={() => navigate('/presentador')}/>
                 </div>
             </div>
