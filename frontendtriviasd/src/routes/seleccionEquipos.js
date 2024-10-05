@@ -24,7 +24,7 @@ function TeamSelection() {
     //Solicitud a la API para obtener el número de equipos registrados
     async function getRegisteredTeams() {
         try {
-            const response = await axios.get('http://localhost:5000/api/admin/getTeams');
+            const response = await axios.get('http://localhost:5000/api/admin/getTeams2');
             console.log(response.data);
             setRegisteredTeams(response.data);
         }
@@ -93,6 +93,8 @@ function TeamSelection() {
         try {
             console.log('recoverTeams llamado');
             const response = await axios.get('http://localhost:5000/api/admin/loadTeams'); //Cambiar la dirección IP por la de la máquina que corre el backend
+            console.log(response.data);
+            setRegisteredTeams(response.data);
             //Imprimir los equipos registrados
             navigate('/seleccionEquipos');
         } catch (error) {

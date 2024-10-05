@@ -9,6 +9,8 @@ const router = express.Router();
 
 router.route('/registerTeam').post(ctr.registerTeam);
 router.route('/getTeams').get(ctr.getTeams);
+router.route('/getTeams2').get(ctr.getTeams2);
+router.route('/saveTeams2').post(ctr.saveTeams2);
 router.route('/getTeamsNumber').get(ctr.getTeamsNumber);
 router.route('/startGame').get(ctr.startGame);
 router.route('/getGameStatus').get(ctr.getGameStatus);

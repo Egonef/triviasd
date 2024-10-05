@@ -248,9 +248,22 @@ export default function Presentador(){
         return `${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
     };
 
+    //Funcion que envia al backend los equipos que han jugado esta partida
+    async function saveTeams2() {
+        try {
+            const response = await axios.post('http://localhost:5000/api/admin/saveTeams2', {
+                registeredTeams
+            });
+            console.log(response.data);
+        } catch (error) {
+            console.error("Error al llamar a la API:", error.response ? error.response.data : error.message);
+        }
+    }
+
     //Funcion para terminar la partida que resetea el temporizador y te lleva al rabnking global
     function endGame() {
         sendTimeLeft(120);
+        saveTeams2();
         navigate('/RankingGlobal');
     }
     //DEBUGEo

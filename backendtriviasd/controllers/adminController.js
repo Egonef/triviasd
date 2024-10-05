@@ -21,9 +21,10 @@ function Team(Name, LeaderName, LeaderEmail) {
 
 //Vector donde se guardan todos los equipos registrados
 export var teams = [];
+//Vector donde se guardan los equipos que han sido registrados excluyendo a los que ya han jugado una partida
+export var teams2 = [];
 //Vector de los equipos seleccionados para la partida actual
 export var selectedTeams = [];
-
 //Variable para guardar el nombre del ultimo equipo en responder
 export var lastAnswerTeam = '';
 //Variable para guardar la dificultad de la pregunta actual
@@ -87,6 +88,21 @@ function saveEmail(email) {
 //Funcion para devolver el vector de equipos
 export const getTeams = asyncHandler(async(req, res) => {
     res.send(teams);
+})
+
+//Funcion para devolver el vector de equipos sin los equiopos que ya han jugado una partida
+export const getTeams2 = asyncHandler(async(req, res) => {
+    res.send(teams2);
+})
+
+//Funcion que recibe los equipos que acaban de jugar por argumento y guarda en teams2 los equipos que no han jugado
+export const saveTeams2 = asyncHandler(async(req, res) => {
+    //Comparamos los equipos que acaban de jugar con los equipos registrados y guardamos los que no han jugado en teams2
+    teams2 = teams.filter(function (el) {
+        return !req.body.some(function (f) {
+            return f.Name === el.Name;
+        });
+    });
 })
 
 //Funcion para devolver los equipos seleccionados para esta partida
