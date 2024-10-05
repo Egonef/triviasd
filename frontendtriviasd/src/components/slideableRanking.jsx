@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import Header from '../components/header';
 import StandardButton from '../components/standardButton';
 
-export default function RankingGlobal() {
+export default function SlideableRanking() {
 
     //Estado para almacenar los equipos registrados
     const [registeredTeams, setRegisteredTeams] = useState([]);
@@ -37,7 +37,7 @@ export default function RankingGlobal() {
         <div className="App h-screen bg-gray-100">
             <Header />
             
-            <div className="flex flex-col h-full w-full items-center">
+            <div className="flex flex-col h-full w-96 items-center">
                 <div className="flex justify-center w-[60%] h-[80%]  mt-52 rounded-tl-3xl rounded-br-3xl border-[#FF0033] border-2 border-dashed p-4">
                     <div className='w-full h-full bg-slate-500 rounded-tl-3xl rounded-br-3xl'>
                         <ul className='w-full'>

@@ -7,12 +7,15 @@ import axios from 'axios';
 import { useState , useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-
+import { animate, motion, useCycle } from "framer-motion"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight, faTrophy } from '@fortawesome/free-solid-svg-icons'; // Importar el icono específico
 
 //Componentes
 
 import Header from '../components/header';
 import StandardButton from '../components/standardButton';
+import SlideableRanking from '../components/slideableRanking';
 
 
 
@@ -257,8 +260,69 @@ export default function Presentador(){
         console.log('Tamaño del vector: ', registeredTeams.length);
     }
 
+    //Animaciones
+
+    function setSizeAndDirecction(){
+        setIsOpen();
+        setDirection();
+    }
+
+    const [isOpen, setIsOpen] = useCycle(false, true);
+    
+    const sideRanking = {
+        open: {
+            width: '24rem',
+            transition: {
+                duration: 0.5
+            }
+        },
+        closed: {
+            scaleX: 1,
+            transition: {
+                duration: 0.5
+            }
+        }
+    }
+
+    const [direction, setDirection] = useCycle(true, false);
+
+    const faceDirection = {
+        left: {
+            rotate: 180,
+            transition: {
+                duration: 0.5
+            }
+        },
+        right: {
+            rotate: 0,
+            transition: {
+                duration: 0.5
+            }
+        }
+    }
+
     return (
         <div className="App h-screen bg-gray-100 " translate='no'>
+            <motion.div 
+            className=' absolute z-10' >
+                <motion.button 
+                className=' w-20 h-20 rounded-br-2xl cursor-pointer border-[#FF0033] border-2 border-dashed text-red-700 text-2xl' 
+                initial={false}
+                variants={sideRanking}
+                animate={isOpen ? "open" : "closed" } 
+                onClick={setSizeAndDirecction }>
+                    <div className='flex flex-row justify-end items-center mx-4'>
+                        <FontAwesomeIcon icon={faTrophy} className='w-5 h-5 text-[#FF0033]' />
+                        <motion.div 
+                        initial={false}
+                        variants={faceDirection}
+                        animate={direction ? "right" : "left" }>
+                            <FontAwesomeIcon icon={faArrowRight} className='w-5 h-5 ml-2 text-[#FF0033]'/>
+                        </motion.div>
+                    </div>
+                </motion.button>
+            </motion.div>
+                
             <Header/>
             <div className='flex flex-col items-center align-middle pt-20 h-screen'>
                 <div className="flex  items-center justify-between h-[10%] w-[90%]  mt-16">
