@@ -35,25 +35,55 @@ export default function RankingLocal() {
 
 
     return (
-        <div className="App h-screen bg-gray-100">
+        <div className="App h-screen bg-gray-100 flex flex-col justify-between">
             <Header />
-            <div className="flex flex-col w-full items-center h-full">
-                <div className="flex justify-center w-[60%] h-[80%]  mt-52 rounded-tl-3xl rounded-br-3xl border-[#FF0033] border-2 border-dashed p-4">
-                <div className='  w-[100%] h-[100%] bg-slate-500  rounded-tl-3xl rounded-br-3xl'>
-                    <ul className='w-full'>
-                        {registeredTeams.map((team) => {
-                            console.log(team);
-                            return (
-                                <li key={team.Name} className='flex items-center justify-between w-full h-20 bg-gray-500 border-b-2 border-gray-600 px-4 rounded-tl-3xl rounded-br-3xl'>
-                                    <p className='text-2xl'>{team.Name}</p>
-                                    <p className='text-2xl'>{team.score}</p>
-                                </li>
-                            )
-                        })}
-                    </ul>
+            <div className="flex flex-col w-full items-center h-full justify-end">
+                <div className="flex justify-center w-full h-full items-end translate-y-[10%]">
+                    <div className='flex flex-row w-[60%] h-[60%] items-end'>
+                        {registeredTeams
+                            .sort((a, b) => b.score - a.score)
+                            .slice(0, 3)
+                            .map((team, index) => {
+                                let orderClass = '';
+                                let heightClass = 'h-[80%]';
+                                let bgColorClass = 'bg-gray-500'; // Default color
+                                let roundedBorders = 'rounded-tl-3xl rounded-br-3xl'; // Rounded top borders
+                                let trophySrc = ''; // Default trophy
+                                let trophyPosition = 'top-0';
+                                switch (index) {
+                                    case 0:
+                                        orderClass = 'order-2'; // Middle
+                                        heightClass = 'h-[100%]'; // Taller
+                                        bgColorClass = 'bg-red-500'; // Red for middle
+                                        trophySrc = "Trophy1.svg"; // Trophy for first place
+                                        trophyPosition = 'top-[-35%]';
+                                        break;
+                                    case 1:
+                                        orderClass = 'order-1'; // Left
+                                        bgColorClass = 'bg-gray-300'; // Light gray for left
+                                        trophySrc = "Trophy2.svg"; // Trophy for second place
+                                        trophyPosition = 'top-[-20%]';
+                                        break;
+                                    case 2:
+                                        orderClass = 'order-3'; // Right
+                                        bgColorClass = 'bg-gray-500'; // Gray for right
+                                        trophySrc = "Trophy3.svg"; // Trophy for third place
+                                        trophyPosition = 'top-[-10%]';
+                                        break;
+                                    default:
+                                        break;
+                                }
+                                return (
+                                    <div key={team.Name} className={`flex flex-col items-center justify-end w-1/3 ${heightClass} ${bgColorClass} ${orderClass} ${roundedBorders}`}>
+                                        <img src={trophySrc} alt="trophy" className={`absolute ${trophyPosition} scale-[0.8]`} />
+                                        <p className='text-2xl'>{team.Name}</p>
+                                        <p className='text-2xl'>{team.score}</p>
+                                    </div>
+                                );
+                            })}
+                    </div>
                 </div>
-                </div>
-                <div className="flex w-full justify-end h-[30%]">
+                <div className="flex w-full justify-end h-[10%]">
                     <StandardButton text="Siguiente" size="big" onClick={() => navigate('/presentador')}/>
                 </div>
             </div>
