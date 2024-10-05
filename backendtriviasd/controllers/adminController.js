@@ -23,6 +23,8 @@ function Team(Name, LeaderName, LeaderEmail) {
 export var teams = [];
 //Vector donde se guardan los equipos que han sido registrados excluyendo a los que ya han jugado una partida
 export var teams2 = [];
+//Vector donde se guardan los equipos que ya han jugado una partida
+export var teamsPlayed = [];
 //Vector de los equipos seleccionados para la partida actual
 export var selectedTeams = [];
 //Variable para guardar el nombre del ultimo equipo en responder
@@ -51,6 +53,7 @@ export const registerTeam = asyncHandler(async(req, res) => {
     id++;
     team.id = id;
     teams.push(team);
+    teams2.push(team);
     console.log(teams); // ELIMINAR ANTES DE ENTREGAR
     //Guardamos el email en un archivo
     saveEmail(team.LeaderEmail);
@@ -97,13 +100,22 @@ export const getTeams2 = asyncHandler(async(req, res) => {
 
 //Funcion que recibe los equipos que acaban de jugar por argumento y guarda en teams2 los equipos que no han jugado
 export const saveTeams2 = asyncHandler(async(req, res) => {
-    //Comparamos los equipos que acaban de jugar con los equipos registrados y guardamos los que no han jugado en teams2
+    if (!Array.isArray(req.body)) {
+        return res.status(400).send('Invalid data format');
+    }
+
+    teamsPlayed = teamsPlayed.concat(req.body);
+    console.log('Equipos que han jugado:');
+    console.log(teamsPlayed);
+    // Comparamos los equipos que acaban de jugar con los equipos registrados y guardamos los que no han jugado en teams2
     teams2 = teams.filter(function (el) {
-        return !req.body.some(function (f) {
+        return !teamsPlayed.some(function (f) {
             return f.Name === el.Name;
         });
     });
-})
+
+    res.send('Teams updated');
+});
 
 //Funcion para devolver los equipos seleccionados para esta partida
 export const getSelectedTeams = asyncHandler(async(req, res) => {

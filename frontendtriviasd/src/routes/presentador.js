@@ -55,8 +55,7 @@ export default function Presentador(){
                 }, 1000);
                 return () => clearInterval(timerId);
             } else { //AQUI SE ACABA DE TERMINAR LA PARTIDA , HAY QUE PREPARAR PARA LA SIGUIENTE
-                sendTimeLeft(120) // Reiniciar el temporizador a 60 segundos
-                navigate('/RankingGlobal'); // Redirige a otra página cuando el temporizador llega a 0
+                endGame();
             }
         }
     }, [timeLeft]);
@@ -248,12 +247,11 @@ export default function Presentador(){
         return `${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
     };
 
-    //Funcion que envia al backend los equipos que han jugado esta partida
+    //Funcion para enviar al backend los equipos que han jugado esta partida
     async function saveTeams2() {
         try {
-            const response = await axios.post('http://localhost:5000/api/admin/saveTeams2', {
-                registeredTeams
-            });
+            const response = await axios.post('http://localhost:5000/api/admin/saveTeams2', registeredTeams); // Enviar el array directamente
+            console.log('Los equipos que se mandan para borrar son: ', registeredTeams);
             console.log(response.data);
         } catch (error) {
             console.error("Error al llamar a la API:", error.response ? error.response.data : error.message);
