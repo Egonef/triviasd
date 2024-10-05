@@ -18,7 +18,7 @@ export default function TeamForm() {
 
     async function registerTeam() {
         try {
-            const response = await axios.post('http://5.56.56.16:5000/api/admin/registerTeam', {
+            const response = await axios.post('http://localhost:5000/api/admin/registerTeam', {
                 teamName,
                 leaderName,
                 leaderEmail
