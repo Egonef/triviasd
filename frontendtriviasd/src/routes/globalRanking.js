@@ -38,9 +38,9 @@ export default function RankingGlobal() {
             <Header />
             
             <div className="flex flex-col h-full w-full items-center">
-                <div className="flex justify-center w-[60%] h-[80%]  mt-52 rounded-tl-3xl rounded-br-3xl border-[#FF0033] border-2 border-dashed p-4">
+                <div className="flex justify-center w-[60%] h-[70%]  mt-52 rounded-tl-3xl rounded-br-3xl border-[#FF0033] border-2 border-dashed p-4">
 
-                    <div className='w-full h-full bg-slate-500 rounded-tl-3xl rounded-br-3xl'>
+                    <div className='w-full h-full bg-slate-500 rounded-tl-3xl rounded-br-3xl overflow-scroll'>
                         <ul className='w-full'>
                             {registeredTeams.map((team) => {
                                 console.log(team);

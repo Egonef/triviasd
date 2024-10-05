@@ -7,7 +7,7 @@ import axios from 'axios';
 import { useState , useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-import { animate, motion, useCycle } from "framer-motion"
+import { animate, AnimatePresence, motion, useCycle } from "framer-motion"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faTrophy } from '@fortawesome/free-solid-svg-icons'; // Importar el icono específico
 
@@ -322,7 +322,9 @@ export default function Presentador(){
                     </div>
                 </motion.button>
             </motion.div>
-                
+                <AnimatePresence>
+                    {isOpen && <SlideableRanking />}
+                </AnimatePresence>
             <Header/>
             <div className='flex flex-col items-center align-middle pt-20 h-screen'>
                 <div className="flex  items-center justify-between h-[10%] w-[90%]  mt-16">

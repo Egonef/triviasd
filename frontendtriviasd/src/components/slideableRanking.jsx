@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
+
 
 //Components
-import Header from '../components/header';
-import StandardButton from '../components/standardButton';
 
-export default function SlideableRanking() {
+
+
+export default function SlideableRanking(isVisible) {
 
     //Estado para almacenar los equipos registrados
     const [registeredTeams, setRegisteredTeams] = useState([]);
-
-    const navigate = useNavigate();
 
 
     async function getTeams() {
@@ -34,14 +33,18 @@ export default function SlideableRanking() {
 
 
     return (
-        <div className="App h-screen bg-gray-100">
-            <Header />
-            
-            <div className="flex flex-col h-full w-96 items-center">
-                <div className="flex justify-center w-[60%] h-[80%]  mt-52 rounded-tl-3xl rounded-br-3xl border-[#FF0033] border-2 border-dashed p-4">
-                    <div className='w-full h-full bg-slate-500 rounded-tl-3xl rounded-br-3xl'>
+        <div className="App absolute h-screen bg-gray-100">
+            <motion.div 
+                className="flex flex-col h-full w-10 items-center"
+                animate={{ width: isVisible ? '24rem' : '0rem' }} // Animación de entrada y salida
+                exit={{ width: '5rem'}} // Animación de salida
+                transition={{ duration: 0.5 }}
+                onExitComplete={() => console.log('Animación de salida completada')}
+            >
+                <div className="flex justify-center w-[100%] h-[80%]  mt-[5.5rem] rounded-tl-3xl rounded-br-3xl border-[#FF0033] border-2 border-dashed p-4">
+                    <div className='w-full h-full bg-slate-500 rounded-tl-3xl rounded-br-3xl overflow-scroll'>
                         <ul className='w-full'>
-                            {registeredTeams.map((team) => {
+                            { isVisible ? registeredTeams.map((team) => {
                                 console.log(team);
                                 return (
                                     <li key={team.Name} className='flex items-center justify-between w-full h-20 bg-gray-500 border-b-2 border-gray-600 px-4 rounded-tl-3xl rounded-br-3xl'>
@@ -49,14 +52,11 @@ export default function SlideableRanking() {
                                         <p className='text-2xl'>{team.score}</p>
                                     </li>
                                 )
-                            })}
+                            }) : null}
                         </ul>
                     </div>
                 </div>
-                <div className="flex w-full justify-end h-[30%]">
-                    <StandardButton text="Siguiente" size="big" onClick={() => navigate('/seleccionEquipos')}/>
-                </div>
-            </div>
+            </motion.div>
         </div>
     );
 }
