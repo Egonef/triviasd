@@ -371,7 +371,7 @@ export default function Presentador(){
                         </div>
                     </div>
                    
-                    <div className='flex flex-row justify-center items-center 2xl:h-[27%] 2xl:w-[42%] rounded-tl-3xl rounded-br-3xl  border-[#FF0033] border-2 border-dashed md:translate-y-[50%]  lg:mb-40  md:mb-20'>
+                    <div className='flex flex-row justify-center items-center 2xl:h-[27%] 2xl:w-[42%] rounded-tl-3xl rounded-br-3xl  border-[#FF0033] border-2 border-dashed md:translate-y-[20%]  lg:mb-40  md:mb-20'>
                         <div translate='no'>
                             <StandardButton text="Facil" size="huge" onClick={setEasyDiff}/>
                             <StandardButton text="Media" size="huge" onClick={setMidDiff}/>
