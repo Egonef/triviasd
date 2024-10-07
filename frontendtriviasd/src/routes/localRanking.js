@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 //Components
 import Header from '../components/header';
@@ -50,6 +51,7 @@ export default function RankingLocal() {
                                 let roundedBorders = 'rounded-tl-3xl rounded-br-3xl'; // Rounded top borders
                                 let trophySrc = ''; // Default trophy
                                 let trophyPosition = 'top-0';
+                                let finalHeight = '80%';
                                 switch (index) {
                                     case 0:
                                         orderClass = 'order-2'; // Middle
@@ -57,6 +59,8 @@ export default function RankingLocal() {
                                         bgColorClass = 'bg-red-500'; // Red for middle
                                         trophySrc = "Trophy1.svg"; // Trophy for first place
                                         trophyPosition = 'top-[-35%]';
+                                        finalHeight = '100%';
+                                        
                                         break;
                                     case 1:
                                         orderClass = 'order-1'; // Left
@@ -70,15 +74,27 @@ export default function RankingLocal() {
                                         trophySrc = "Trophy3.svg"; // Trophy for third place
                                         trophyPosition = 'top-[-20%]';
                                         break;
+                                    case 3:
+                                        orderClass = 'order-4'; // Right
+                                        bgColorClass = 'bg-gray-600'; // Gray for right
+                                        finalHeight = '60%';
+                                        break;
                                     default:
                                         break;
                                 }
                                 return (
-                                    <div key={team.Name} className={`flex flex-col items-center justify-end w-1/3 ${heightClass} ${bgColorClass} ${orderClass} ${roundedBorders} overflow-hidden`}>
-                                        <img src={trophySrc} alt="trophy" className={`absolute ${trophyPosition} scale-[0.8] overflow-hidden`} />
+                                    <motion.div
+                                        key={team.Name} className={`flex flex-col items-center justify-end w-1/3 ${heightClass} ${bgColorClass} ${orderClass} ${roundedBorders} overflow-hidden`}
+                                        initial={{ height: 0 }}
+                                        animate={{ height: finalHeight }}
+                                        transition={{ duration: 1 }}
+                                        >
+                                        <motion.img src={trophySrc} alt="trophy" className={`absolute ${trophyPosition} scale-[0.8] overflow-hidden`} initial={{ y: 40, opacity: 0 }}
+                                        animate={{ y: 0, opacity: 1 ,scale: 0.8}}
+                                        transition={{ duration: 1 }}/>
                                         <p className='text-2xl'>{team.Name}</p>
                                         <p className='text-2xl'>{team.score}</p>
-                                    </div>
+                                    </motion.div>
                                 );
                             })}
                     </div>

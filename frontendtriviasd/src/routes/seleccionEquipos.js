@@ -114,7 +114,7 @@ function TeamSelection() {
     return (
         <div className="App min-h-screen 2xl:h-screen bg-gray-100 flex flex-col">
             <Header/>
-            <div className=" flex 2xl:flex-col sm:flex-col items-center justify-center 2xl:h-[50rem] 2xl:mt-40  sm:mt-32 md:h-[30rem] 2xl:pt-20"  >
+            <div className=" flex 2xl:flex-col sm:flex-col items-center justify-center 2xl:h-[50rem] 2xl:mt-40 md:mt-[13rem] sm:mt-32 md:h-[30rem] 2xl:pt-20"  >
                 <div className="flex flex-col items-center 2xl:h-[70%] w-[40%]  md:h-[75%] rounded-tl-3xl rounded-br-3xl  border-[#FF0033] border-2 border-dashed md:mt-6">
                     <div className="flex flex-col items-center justify-center h-[95%] w-[95%] my-3 bg-gray-400 rounded-br-3xl rounded-tl-3xl">
                         <div className=' flex flex-col items-center h-[100%] w-[95%] mt-4 mb-4 overflow-scroll'>
