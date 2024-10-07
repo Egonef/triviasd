@@ -200,12 +200,12 @@ export default function Pregunta() {
             ></motion.div>
             <div className="flex flex-col lg:h-[82%] md:h-[65%] w-full items-center lg:pt-20 md:pt-10">
                 <div className="flex  items-center justify-between h-[10%] w-[90%]  lg:mt-16 md:mt-10">
-                <p className="text-xl font-bold ml-4">Equipo: </p>
-                <div className=' flex justify-center items-center md:h:10 lg:h-10 xl:h-10 h-24 w-28 text-2xl text-white bg-slate-500 rounded-br-3xl rounded-tl-3xl'><b>{formatTime(timeLeft)}</b></div>
+                    <p className="text-xl font-bold ml-4">Pregunta: </p>
+                    <div className=' flex justify-center items-center md:h-10 lg:h-10 xl:h-10 h-24 w-28 text-2xl text-white bg-slate-500 rounded-br-3xl rounded-tl-3xl'><b>{formatTime(timeLeft)}</b></div>
                 </div>
                 {showQuestion && (
                     <>
-                        <div className="flex flex-grow items-center justify-center lg:h-[35%] md:h-[15%] md:mb-5 w-[90%]  rounded-tl-3xl rounded-br-3xl  border-[#FF0033] border-2 border-dashed ">
+                        <div className="flex flex-grow items-center justify-center lg:h-[35%] md:h-[15%] md:mt-5 md:mb-5 w-[90%]  rounded-tl-3xl rounded-br-3xl  border-[#FF0033] border-2 border-dashed ">
                             <h1 className="lg:text-4xl md:text-2xl font-bold pt-1 pb-1 text-center">{question.enunciado}</h1>
                         </div>
                         <div className="flex flex-row justify-center items-center h-[30%] w-[90%] rounded-2xl pt-20">
