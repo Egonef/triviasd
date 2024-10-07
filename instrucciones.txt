@@ -1,0 +1,15 @@
+Encendido automático:
+
+    1.- Bastará con ejecutar el script de encendido con "./encenderTrivia.sh"
+    Esto encenderá tanto backend como frontend en segundo plano.
+
+    Para apagarlo bastará con cerrar la instancia de terminal en el caso de haberse encendido a traves de ssh o si ha sido encendido desde la máquina se tendrán que haber anotado los ids de proceso( o buscarlos en la tabla de procesos) para enviar una señal que los termine.
+
+
+Encendido manual:
+
+    1.- Abrir una terminal y entrar en la carpeta backendtriviasd y ejecutar "npm start"
+    2.- Abrir otra terminal distinta y entrar en la carpeta frontendtriviasd y ejecutar "npm start"
+
+    Para apagarlo solo hay que pulsar control+c en cada terminal.
+    Puede hacerse en una misma terminal si se ejecuta "npm start &" en backendtriviasd pero se deberá apagar igual que en el metodo automático.
