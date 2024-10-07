@@ -43,7 +43,7 @@ export default function RankingLocal() {
                     <div className='flex flex-row w-[60%] h-[60%] items-end'>
                         {registeredTeams
                             .sort((a, b) => b.score - a.score)
-                            .slice(0, 3)
+                            .slice(0, 4)
                             .map((team, index) => {
                                 let orderClass = '';
                                 let heightClass = 'h-[80%]';
@@ -58,7 +58,7 @@ export default function RankingLocal() {
                                         heightClass = 'h-[100%]'; // Taller
                                         bgColorClass = 'bg-red-500'; // Red for middle
                                         trophySrc = "Trophy1.svg"; // Trophy for first place
-                                        trophyPosition = 'top-[-35%]';
+                                        trophyPosition = 'xl:top-[-35%] md:top-[-10%]'; // Higher trophy
                                         finalHeight = '100%';
                                         
                                         break;
@@ -66,13 +66,13 @@ export default function RankingLocal() {
                                         orderClass = 'order-1'; // Left
                                         bgColorClass = 'bg-gray-300'; // Light gray for left
                                         trophySrc = "Trophy2.svg"; // Trophy for second place
-                                        trophyPosition = 'top-[-20%]';
+                                        trophyPosition = 'xl:top-[-20%] md:top-[3%]';
                                         break;
                                     case 2:
                                         orderClass = 'order-3'; // Right
                                         bgColorClass = 'bg-gray-500'; // Gray for right
                                         trophySrc = "Trophy3.svg"; // Trophy for third place
-                                        trophyPosition = 'top-[-20%]';
+                                        trophyPosition = 'xl:top-[-20%] md:top-[3%]';
                                         break;
                                     case 3:
                                         orderClass = 'order-4'; // Right
@@ -89,7 +89,7 @@ export default function RankingLocal() {
                                         animate={{ height: finalHeight }}
                                         transition={{ duration: 1 }}
                                         >
-                                        <motion.img src={trophySrc} alt="trophy" className={`absolute ${trophyPosition} scale-[0.8] overflow-hidden`} initial={{ y: 40, opacity: 0 }}
+                                        <motion.img src={trophySrc} className={`absolute ${trophyPosition} scale-[0.8] overflow-hidden`} initial={{ y: 40, opacity: 0 }}
                                         animate={{ y: 0, opacity: 1 ,scale: 0.8}}
                                         transition={{ duration: 1 }}/>
                                         <p className='text-2xl'>{team.Name}</p>

@@ -370,7 +370,7 @@ export default function Presentador(){
                             <h1 className='text-white text-center'>Dificultad</h1>
                         </div>
                     </div>
-                    <div className='flex flex-row justify-center items-center 2xl:h-[27%] 2xl:w-[42%] rounded-tl-3xl rounded-br-3xl  border-[#FF0033] border-2 border-dashed translate-y-[50%]'>
+                    <div className='flex flex-row justify-center items-center 2xl:h-[27%] 2xl:w-[42%] rounded-tl-3xl rounded-br-3xl  border-[#FF0033] border-2 border-dashed lg:translate-y-[50%] md:translate-y-[10%] md:mb-20'>
                         <div translate='no'>
                             <StandardButton text="Facil" size="huge" onClick={setEasyDiff}/>
                             <StandardButton text="Media" size="huge" onClick={setMidDiff}/>
@@ -379,8 +379,8 @@ export default function Presentador(){
                     </div>
                     </>
                 }
-                <div className="flex  justify-center items-center h-[4%] w-[100%] lg:translate-y-[-10%] md:translate-y-0">
-                <StandardButton text="Terminar partida" size="small" onClick={endGame} marginY="0" />
+                <div className="flex  justify-center items-center h-[4%] w-[100%] lg:translate-y-[-10%] ">
+                    <StandardButton text="Terminar partida" size="small" onClick={endGame} marginY="0" />
                 </div>
             </div>
         </div>
