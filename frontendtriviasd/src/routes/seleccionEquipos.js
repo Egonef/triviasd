@@ -114,8 +114,8 @@ function TeamSelection() {
     return (
         <div className="App min-h-screen bg-gray-100 flex flex-col">
             <Header/>
-            <div className=" flex 2xl:flex-col sm:flex-row items-center justify-center 2xl:h-[50rem] 2xl:mt-40 sm:mt-32 md:h-[35rem] 2xl:pt-20"  >
-                <div className="flex flex-col items-center h-[70%] w-[40%]  rounded-tl-3xl rounded-br-3xl  border-[#FF0033] border-2 border-dashed">
+            <div className=" flex 2xl:flex-col sm:flex-col items-center justify-center 2xl:h-[50rem] 2xl:mt-40  sm:mt-32 md:h-[30rem] 2xl:pt-20"  >
+                <div className="flex flex-col items-center h-[70%] w-[40%]  md:h-[75%] rounded-tl-3xl rounded-br-3xl  border-[#FF0033] border-2 border-dashed md:mt-6">
                     <div className="flex flex-col items-center justify-center h-[95%] w-[95%] my-3 bg-gray-400 rounded-br-3xl rounded-tl-3xl">
                         <div className=' flex flex-col items-center h-[100%] w-[95%] mt-4 mb-4 overflow-scroll'>
                             {registeredTeams.map((team) => {
@@ -130,10 +130,10 @@ function TeamSelection() {
                         </div>
                     </div>
                 </div>
-                <div className='flex justify-between w-full mt-5'>
-                    <StandardButton text="Recuperar equipos" size="medium" onClick={recoverTeams}/>
-                    <StandardButton text="Iniciar trivia" size="medium" onClick={startGame} />
-                    <StandardButton text="Ranking" size="medium" onClick={() => navigate('/RankingGlobal')}/>
+                <div className='flex justify-between w-full mt-5 md:translate-y-6'>
+                    <StandardButton text="Recuperar equipos" size="small" onClick={recoverTeams} marginY ="0"/>
+                    <StandardButton text="Iniciar trivia" size="small" onClick={startGame} />
+                    <StandardButton text="Ranking" size="small" onClick={() => navigate('/RankingGlobal')}/>
                 </div>
             </div>
         </div>
