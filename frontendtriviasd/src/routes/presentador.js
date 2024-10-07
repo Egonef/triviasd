@@ -315,14 +315,14 @@ export default function Presentador(){
     return (
         <div className="App h-screen bg-gray-100 " translate='no'>
             <motion.div 
-            className=' absolute z-10' >
+            className=' absolute z-20' >
                 <motion.button 
-                className=' w-20 h-20 rounded-br-2xl cursor-pointer border-[#FF0033] border-2 border-dashed text-red-700 text-2xl' 
+                className=' w-20 h-20 rounded-br-2xl cursor-pointer  border-[#FF0033] border-2 border-dashed text-red-700 text-2xl' 
                 initial={false}
                 variants={sideRanking}
                 animate={isOpen ? "open" : "closed" } 
                 onClick={setSizeAndDirecction }>
-                    <div className='flex flex-row justify-end items-center mx-4'>
+                    <div className='flex flex-row justify-end items-center mx-4 bg-gray-100'>
                         <FontAwesomeIcon icon={faTrophy} className='w-5 h-5 text-[#FF0033]' />
                         <motion.div 
                         initial={false}

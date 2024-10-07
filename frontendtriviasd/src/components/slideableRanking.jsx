@@ -33,7 +33,7 @@ export default function SlideableRanking(isVisible) {
 
 
     return (
-        <div className="App absolute h-screen bg-gray-100">
+        <div className="App absolute h-screen bg-gray-100 z-10">
             <motion.div 
                 className="flex flex-col h-full w-10 items-center"
                 animate={{ width: isVisible ? '24rem' : '0rem' }} // Animación de entrada y salida

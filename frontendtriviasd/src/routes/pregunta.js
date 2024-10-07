@@ -176,15 +176,15 @@ export default function Pregunta() {
             animate={{ width: `0px` }}
             transition={{ duration: questionTimeLeft }}
             ></motion.div>
-            <div className="flex flex-col h-[82%] w-full items-center pt-20">
-                <div className="flex  items-center justify-between h-[10%] w-[90%]  mt-16">
+            <div className="flex flex-col lg:h-[82%] md:h-[65%] w-full items-center lg:pt-20 md:pt-10">
+                <div className="flex  items-center justify-between h-[10%] w-[90%]  lg:mt-16 md:mt-10">
                 <p className="text-xl font-bold ml-4">Equipo: </p>
                 <p className="text-xl font-bold">Tiempo restante: {formatTime(timeLeft)}</p>
                 </div>
                 {showQuestion && (
                     <>
-                        <div className="flex flex-grow items-center justify-center h-[35%] w-[90%]  rounded-tl-3xl rounded-br-3xl  border-[#FF0033] border-2 border-dashed mt-4">
-                            <h1 className="text-4xl font-bold pt-1 pb-1 text-center">{question.enunciado}</h1>
+                        <div className="flex flex-grow items-center justify-center lg:h-[35%] md:h-[15%] md:mb-5 w-[90%]  rounded-tl-3xl rounded-br-3xl  border-[#FF0033] border-2 border-dashed ">
+                            <h1 className="lg:text-4xl md:text-2xl font-bold pt-1 pb-1 text-center">{question.enunciado}</h1>
                         </div>
                         <div className="flex flex-row justify-center items-center h-[30%] w-[90%] rounded-2xl pt-20">
                             {question.opciones.map((respuesta, index) => (
@@ -199,7 +199,7 @@ export default function Pregunta() {
                                 />
                             ))}
                         </div>
-                        <div className="flex  justify-center items-center h-[4%] w-[90%] rounded-b-2xl translate-y-20">
+                        <div className="flex  justify-center items-center h-[4%] w-[90%] rounded-b-2xl lg:translate-y-20 md:translate-y-40">
                         {selectedAnswer !== null && <StandardButton text="Siguiente" size="small" onClick={backToMenu} />}
                         </div>
                     </>
