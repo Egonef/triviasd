@@ -15,7 +15,7 @@ function Team(Name, LeaderName, LeaderEmail) {
     this.LeaderName = LeaderName;
     this.LeaderEmail = LeaderEmail;
     this.turn = false;
-    this.score = 30;
+    this.score = 40;
 
 }
 

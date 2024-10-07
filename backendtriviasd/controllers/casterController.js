@@ -5,7 +5,7 @@ import fs from 'fs/promises';
 import { getTeams , getGameStatus, teams } from '../controllers/adminController.js';
 
 
-export var timeLeft = 240;
+export var timeLeft = 300;
 
 //Funcion para guardar el tiempo restante de partida
 export const saveTimeLeft = asyncHandler(async(req, res) => {

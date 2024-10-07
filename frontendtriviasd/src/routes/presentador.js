@@ -260,7 +260,7 @@ export default function Presentador(){
 
     //Funcion para terminar la partida que resetea el temporizador y te lleva al rabnking global
     function endGame() {
-        sendTimeLeft(240);
+        sendTimeLeft(300);
         saveTeams2();
         navigate('/RankingGlobal');
     }

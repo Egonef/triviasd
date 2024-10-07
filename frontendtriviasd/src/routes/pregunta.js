@@ -57,7 +57,7 @@ export default function Pregunta() {
                 }, 1000);
                 return () => clearInterval(timerId);
             } else {
-                const resetTime = 240;
+                const resetTime = 300;
                 setTimeLeft(resetTime); // Reiniciar el temporizador a 120 segundos
                 sendTimeLeft(resetTime); // Enviar el tiempo reiniciado al backend
                 saveTeams2(); // Enviar los equipos que han jugado esta partida al backend
