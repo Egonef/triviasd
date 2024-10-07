@@ -18,10 +18,14 @@ export default function Pregunta() {
     const [questionTimeLeft, setQuestionTimeLeft] = useState(60);
     const [registeredTeams, setRegisteredTeams] = useState([]);
 
+
+    
+
+
     //Solicitud a la API para obtener los equipos registrados
     async function getTeams() {
         try {
-            console.log('getTeams llamado');
+            console.log('getTeams en pregunta llamado');
             const response = await axios.get('http://localhost:5000/api/admin/getSelectedTeams'); //Cambiar la dirección IP por la de la máquina que corre el backend
             setRegisteredTeams(response.data);
         } catch (error) {
@@ -43,6 +47,7 @@ export default function Pregunta() {
 
     useEffect(() => {
         getTimeLeft(); // Recuperar el tiempo restante del backend al cargar la página
+        getTeams();
     }, []);
 
     useEffect(() => {
@@ -57,10 +62,11 @@ export default function Pregunta() {
                 }, 1000);
                 return () => clearInterval(timerId);
             } else {
+                saveTeams2();
                 const resetTime = 300;
                 setTimeLeft(resetTime); // Reiniciar el temporizador a 120 segundos
                 sendTimeLeft(resetTime); // Enviar el tiempo reiniciado al backend
-                saveTeams2(); // Enviar los equipos que han jugado esta partida al backend
+                // Enviar los equipos que han jugado esta partida al backend
                 navigate('/RankingGlobal');
             }
         }
@@ -101,6 +107,7 @@ export default function Pregunta() {
             console.log('Tiempo restante recibido: ');
             console.log(response.data);
             setTimeLeft(response.data);
+            getTeams();
         } catch (error) {
             console.error("Error al llamar a la API:", error.response ? error.response.data : error.message);
         }
