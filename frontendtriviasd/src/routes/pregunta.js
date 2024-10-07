@@ -16,8 +16,29 @@ export default function Pregunta() {
     const [showQuestion, setShowQuestion] = useState(false); // Estado para controlar si la pregunta debe mostrarse
     const [waitingButtonIndex, setWaitingButtonIndex] = useState(null);
     const [questionTimeLeft, setQuestionTimeLeft] = useState(60);
+    const [registeredTeams, setRegisteredTeams] = useState([]);
 
+    //Solicitud a la API para obtener los equipos registrados
+    async function getTeams() {
+        try {
+            console.log('getTeams llamado');
+            const response = await axios.get('http://localhost:5000/api/admin/getSelectedTeams'); //Cambiar la dirección IP por la de la máquina que corre el backend
+            setRegisteredTeams(response.data);
+        } catch (error) {
+            console.error("Error al llamar a la API:", error.response ? error.response.data : error.message);
+        }
+    }
 
+    //Funcion para enviar al backend los equipos que han jugado esta partida
+    async function saveTeams2() {
+        try {
+            const response = await axios.post('http://localhost:5000/api/admin/saveTeams2', registeredTeams); // Enviar el array directamente
+            console.log('Los equipos que se mandan para borrar son: ', registeredTeams);
+            console.log(response.data);
+        } catch (error) {
+            console.error("Error al llamar a la API:", error.response ? error.response.data : error.message);
+        }
+    }
 
 
     useEffect(() => {
@@ -36,10 +57,11 @@ export default function Pregunta() {
                 }, 1000);
                 return () => clearInterval(timerId);
             } else {
-                navigate('/RankingGlobal'); 
                 const resetTime = 240;
                 setTimeLeft(resetTime); // Reiniciar el temporizador a 120 segundos
                 sendTimeLeft(resetTime); // Enviar el tiempo reiniciado al backend
+                saveTeams2(); // Enviar los equipos que han jugado esta partida al backend
+                navigate('/RankingGlobal');
             }
         }
     }, [timeLeft]);
@@ -59,7 +81,7 @@ export default function Pregunta() {
                 }, 1000);
                 return () => clearInterval(timerIdq);
             } else {
-                setSelectedAnswer('Tiempo agotado'); // Redirige a otra página cuando el temporizador de la pregunta llega a 0
+                setSelectedAnswer('Tiempo agotado');// Redirige a otra página cuando el temporizador de la pregunta llega a 0
             }
         }
     }, [questionTimeLeft]);
