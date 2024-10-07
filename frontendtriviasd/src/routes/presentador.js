@@ -63,7 +63,7 @@ export default function Presentador(){
     //Funcion para obtener el tiempo restante de la partida
     async function getTimeLeft() {
         try {
-            const response = await axios.get('http://localhost:5000/api/caster/getTimeLeft');
+            const response = await axios.get('http://5.56.56.16:5000/api/caster/getTimeLeft');
             console.log('Tiempo restante recibido: ');
             console.log(response.data);
             setTimeLeft(response.data);
@@ -76,7 +76,7 @@ export default function Presentador(){
     // Función para enviar el tiempo restante al backend
     async function sendTimeLeft(newTimeLeft) {
         try {
-            const response = await axios.post('http://localhost:5000/api/caster/saveTimeLeft', {
+            const response = await axios.post('http://5.56.56.16:5000/api/caster/saveTimeLeft', {
                 timeLeft: newTimeLeft
             });
             console.log(response.data);
@@ -109,7 +109,7 @@ export default function Presentador(){
     async function getTeams() {
         try {
             console.log('getTeams llamado');
-            const response = await axios.get('http://localhost:5000/api/admin/getSelectedTeams'); //Cambiar la dirección IP por la de la máquina que corre el backend
+            const response = await axios.get('http://5.56.56.16:5000/api/admin/getSelectedTeams'); //Cambiar la dirección IP por la de la máquina que corre el backend
             console.log('getTeams devuelve: ');
             //Imprimir los equipos registrados
             console.log(response.data);
@@ -125,7 +125,7 @@ export default function Presentador(){
     async function checkgameready() {
         try {
             if (gameState === false) {
-                const response = await axios.get('http://localhost:5000/api/admin/getGameStatus'); //Cambiar la dirección IP por la de la máquina que corre el backend
+                const response = await axios.get('http://5.56.56.16:5000/api/admin/getGameStatus'); //Cambiar la dirección IP por la de la máquina que corre el backend
                 setGameState(response.data);
             }
         }catch (error) {
@@ -137,7 +137,7 @@ export default function Presentador(){
     // Función para cambiar el turno de los equipos
     async function nextTurn() {
         try {
-            const response = await axios.post('http://localhost:5000/api/caster/nextTurn', {
+            const response = await axios.post('http://5.56.56.16:5000/api/caster/nextTurn', {
                 registeredTeams
             }); // Cambiar la dirección IP por la de la máquina que corre el backend
             console.log(response.data);
@@ -165,7 +165,7 @@ export default function Presentador(){
         console.log('updateTeams llamado');
         console.log("Equipos a enviar: ", registeredTeams);
         try {
-            const response = await axios.put('http://localhost:5000/api/admin/saveSelectedTeams2', registeredTeams); // Envía el array directamente
+            const response = await axios.put('http://5.56.56.16:5000/api/admin/saveSelectedTeams2', registeredTeams); // Envía el array directamente
             console.log(response.data);
         } catch (error) {
             console.error("Error al llamar a la API:", error.response ? error.response.data : error.message);
@@ -175,7 +175,7 @@ export default function Presentador(){
     //Funcion para enviar al backend el ultimo equipo que iba a responder
     async function sendLastAnswerTeam(teamName) {
         try {
-            const response = await axios.post('http://localhost:5000/api/admin/setLastAnswerTeam', {
+            const response = await axios.post('http://5.56.56.16:5000/api/admin/setLastAnswerTeam', {
                 teamName
             });
             console.log(response.data);
@@ -230,7 +230,7 @@ export default function Presentador(){
     async function searchQuestion() {
         try {
             if (tema !== '' && dificultad !== '') {
-                const response = await axios.post('http://localhost:5000/api/caster/setTopicandDifficulty', {
+                const response = await axios.post('http://5.56.56.16:5000/api/caster/setTopicandDifficulty', {
                     tema,
                     dificultad
                 });
@@ -250,7 +250,7 @@ export default function Presentador(){
     //Funcion para enviar al backend los equipos que han jugado esta partida
     async function saveTeams2() {
         try {
-            const response = await axios.post('http://localhost:5000/api/admin/saveTeams2', registeredTeams); // Enviar el array directamente
+            const response = await axios.post('http://5.56.56.16:5000/api/admin/saveTeams2', registeredTeams); // Enviar el array directamente
             console.log('Los equipos que se mandan para borrar son: ', registeredTeams);
             console.log(response.data);
         } catch (error) {
