@@ -337,7 +337,7 @@ export default function Presentador(){
                     {isOpen && <SlideableRanking />}
                 </AnimatePresence>
             <Header/>
-            <div className='flex flex-col items-center align-middle lg:pt-20 md:pt-[2rem] h-screen'>
+            <div className='flex flex-col items-center align-middle lg:pt-12 md:pt-[2rem] h-screen'>
                 <div className="flex  items-center justify-between h-[10%] w-[90%]  mt-16">
                     <p className='lg:text-2xl font-bold'>Equipo: {registeredTeams.length > 0 ? checkTurn() : ''}</p>
                     <div className=' flex justify-center items-center h-24 w-28 text-2xl text-white bg-slate-500 rounded-br-3xl rounded-tl-3xl'><b>{formatTime(timeLeft)}</b></div>
@@ -345,11 +345,11 @@ export default function Presentador(){
                 {tema === '' ?
                 <>
                     <div className="flex  items-center justify-between h-[5%] w-[100%]">
-                    <div className=' flex lg:text-4xl md:text-xl font-bold bg-[#FF0033] lg:w-60 md:w-32 h-[3.5rem] rounded-br-3xl justify-center items-center'>
+                    <div className=' flex lg:text-4xl md:text-xl font-bold bg-[#FF0033] lg:w-52 md:w-32 h-[3.5rem] rounded-br-3xl justify-center items-center'>
                         <h1 className='text-white text-center'>Tema</h1>
                     </div>
                 </div>
-                    <div className='flex flex-col items-center  justify-center  md:h-[60%] md:w-[60%] 2xl:h-[50%] 2xl:w-[26%] sm:h-[60%] sm:w-[45%] rounded-tl-3xl rounded-br-3xl  border-[#FF0033] border-2 border-dashed translate-y-[-10%]'>
+                    <div className='flex flex-col items-center  justify-center lg:h-[60%] lg:w-[45%] md:h-[60%] md:w-[60%] 2xl:h-[50%] 2xl:w-[26%] sm:h-[60%] sm:w-[45%] rounded-tl-3xl rounded-br-3xl  border-[#FF0033] border-2 border-dashed translate-y-[-10%]'>
                         <div className="flex flex-row  w-full h-full">
                             <div className="flex flex-col items-end h-full w-1/2 ">
                                 <StandardButton text={<><span>Así</span><br /><span>somos</span></>} size="huge" onClick={() => setTema('Así somos')} marginX="10" />
@@ -379,7 +379,9 @@ export default function Presentador(){
                     </div>
                     </>
                 }
-            <StandardButton text="Terminar partida" size="small" onClick={endGame} />
+                <div className="flex  justify-center items-center h-[4%] w-[100%] lg:translate-y-[-10%] md:translate-y-0">
+                <StandardButton text="Terminar partida" size="small" onClick={endGame} marginY="0" />
+                </div>
             </div>
         </div>
     )
