@@ -10,6 +10,7 @@ import { useNavigate } from 'react-router-dom';
 //Componentes
 import Header from '../components/header';
 import StandardButton from '../components/standardButton';
+import CustomCheckbox from '../components/checkbox';
 
 function TeamSelection() {
 
@@ -121,9 +122,9 @@ function TeamSelection() {
                             {registeredTeams.map((team) => {
                                 console.log(team);
                                 return (
-                                    <div className='flex items-center justify-center w-full min-h-20 bg-gray-500 border-b-2 border-gray-600 rounded-tl-3xl rounded-br-3xl'>
-                                        <input type ="checkbox" id="check"/>
-                                        <label className='text-2xl'>{team.Name} </label>
+                                    <div className='flex items-center justify-start w-full min-h-20 bg-gray-500 border-b-2 border-gray-600 rounded-tl-3xl rounded-br-3xl pl-10'>
+                                        <CustomCheckbox />
+                                        <label className='text-2xl ml-5'>{team.Name} </label>
                                     </div>
                                 )
                             })}
