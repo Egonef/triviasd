@@ -143,11 +143,11 @@ export default function Pregunta() {
         console.log('Respuesta seleccionada: ', selectedAnswer);
         switch (question.dificultad) {
             case "Facil":
-                return selectedAnswer === question.respuestaCorrecta ? 1 : -1;
+                return selectedAnswer === question.respuesta_correcta ? 2 : -2;
             case 'Medio':
-                return selectedAnswer === question.respuestaCorrecta ? 2 : -2;
+                return selectedAnswer === question.respuesta_correcta ? 4 : -4;
             case 'Dificil':
-                return selectedAnswer === question.respuestaCorrecta ? 3 : -3;
+                return selectedAnswer === question.respuesta_correcta ? 6 : -6;
             default:
                 return 0;
         }

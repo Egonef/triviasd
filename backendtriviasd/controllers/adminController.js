@@ -32,6 +32,7 @@ export var lastAnswerTeam = '';
 //Variable para guardar la dificultad de la pregunta actual
 export var questionDifficulty = '';
 
+let teamsNumber = 0;
 
 var id = 0;
 var gameReady = false;
@@ -163,6 +164,8 @@ export const saveSelectedTeams = asyncHandler(async(req, res) => {
 export const saveSelectedTeams2 = asyncHandler(async(req, res) => {
     console.log('Guardando equipos seleccionados');
     selectedTeams = req.body;
+    teamsNumber = selectedTeams.length;
+    console.log('Numero de equipos seleccionados: ' + teamsNumber);
     console.log(selectedTeams);
     res.send('Selected teams saved');
 })
@@ -180,16 +183,26 @@ export const setLastAnswerTeam = asyncHandler(async(req, res) => {
 export const addPoints = asyncHandler(async(req, res) => {
     console.log('Añadiendo puntos');
     console.log(req.body);
+    let points = 0;
     for (let i = 0; i < selectedTeams.length; i++) {
         if (selectedTeams[i].Name == lastAnswerTeam) {
-            selectedTeams[i].score += req.body.puntos;
+            if(teamsNumber == 3){
+                selectedTeams[i].score += (req.body.puntos)*1.5;
+                points = (req.body.puntos)*1.5;
+            }else if(teamsNumber == 4){
+                selectedTeams[i].score += (req.body.puntos)*2;
+                points = (req.body.puntos)*2;
+            }else{
+                selectedTeams[i].score += req.body.puntos;
+                points = req.body.puntos;
+            }
             console.log('Puntos finales al equipo:');
             console.log(selectedTeams[i].score);
         }
     }
     for (let i = 0; i < teams.length; i++) {
         if (teams[i].Name == lastAnswerTeam) {
-            teams[i].score += req.body.puntos;
+            teams[i].score += points;
             console.log('Puntos finales al equipo:');
             console.log(teams[i].score);
         }
