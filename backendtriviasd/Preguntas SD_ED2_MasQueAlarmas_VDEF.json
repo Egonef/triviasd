@@ -1,0 +1,367 @@
+{
+    "preguntas": [
+        {
+            "enunciado": "¿Dónde se encuentran las sedes de la Central Receptora de Alarmas de Securitas Direct?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Facil",
+            "opciones": [
+                "Madrid y Cornellá",
+                "Barcelona y Valencia",
+                "Sevilla y Bilbao"
+            ],
+            "respuestaCorrecta": "Madrid y Cornellá"
+        },
+        {
+            "enunciado": "¿Cuántas incidencias atiende diariamente la Central Receptora de Alarmas?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Medio",
+            "opciones": [
+                "Más de 44.000",
+                "Más de 10.000",
+                "Más de 100.000."
+            ],
+            "respuestaCorrecta": "Más de 44.000"
+        },
+        {
+            "enunciado": "¿Cuál es el tiempo medio de respuesta de la Central Receptora de Alarmas de Securitas Direct?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Facil",
+            "opciones": [
+                "Menos de 30 segundos",
+                "Menos de 10 segundos",
+                "Menos de 20 segundos."
+            ],
+            "respuestaCorrecta": "Menos de 30 segundos"
+        },
+        {
+            "enunciado": "¿Qué es Guardián Verisure de Securitas Direct?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Facil",
+            "opciones": [
+                "Un servicio de localización por GPS de personas",
+                "Un sistema de videovigilancia",
+                "Un sistema de alarma para viviendas."
+            ],
+            "respuestaCorrecta": "Un servicio de localización por GPS de personas"
+        },
+        {
+            "enunciado": "¿Qué sucede cuando se pulsa el botón SOS de Guardián Verisure?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Medio",
+            "opciones": [
+                "Se envía una señal de emergencia a la Central Receptora de Alarmas con la ubicación exacta",
+                "Se activa una alarma sonora en el dispositivo.",
+                "Se envía un mensaje de texto a los contactos de emergencia."
+            ],
+            "respuestaCorrecta": "Se envía una señal de emergencia a la Central Receptora de Alarmas con la ubicación exacta"
+        },
+        {
+            "enunciado": "¿Qué función tiene la opción “Acompáñame” de Guardián Verisure?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Dificil",
+            "opciones": [
+                "Permite que la Central Receptora de Alarmas monitoree tu ruta hasta que llegues a tu destino",
+                "Permite realizar videollamadas de emergencia.",
+                "Permite grabar vídeos de seguridad."
+            ],
+            "respuestaCorrecta": "Permite que la Central Receptora de Alarmas monitoree tu ruta hasta que llegues a tu destino"
+        },
+        {
+            "enunciado": "¿Para qué tipo de usuarios está diseñado Guardián Verisure?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Facil",
+            "opciones": [
+                "Para cualquier persona que necesite asistencia en caso de emergencia",
+                "Solo para personas mayores.",
+                "Solo para deportistas"
+            ],
+            "respuestaCorrecta": "Para cualquier persona que necesite asistencia en caso de emergencia"
+        },
+        {
+            "enunciado": "¿Qué servicio ofrece Securitas Direct para proteger a los clientes cuando están fuera de casa?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Dificil",
+            "opciones": [
+                "Guardian Relief",
+                "Central Receptora de Alarmas",
+                "My Verisure."
+            ],
+            "respuestaCorrecta": "Guardian Relief"
+        },
+        {
+            "enunciado": "¿Qué sucede si no confirmas tu llegada al activar la funcionalidad Acompáñame de Guardián Verisure?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Medio",
+            "opciones": [
+                "Se activa el protocolo de emergencia",
+                "Se desactiva la aplicación",
+                "Se envía una notificación a tu móvil."
+            ],
+            "respuestaCorrecta": "Se activa el protocolo de emergencia"
+        },
+        {
+            "enunciado": "¿Qué tipo de atención médica ofrece Protección Senior?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Dificil",
+            "opciones": [
+                "Atención médica por videollamada con monitorización en tiempo real.",
+                "Consultas médicas presenciales.",
+                "Atención médica solo en hospitales"
+            ],
+            "respuestaCorrecta": "Atención médica por videollamada con monitorización en tiempo real."
+        },
+        {
+            "enunciado": "¿Qué permite hacer el botón SOS de Securitas Direct?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Facil",
+            "opciones": [
+                "Pedir ayuda en una situación de riesgo o urgencia",
+                "Activar la alarma de incendios",
+                "Desactivar la alarma de seguridad."
+            ],
+            "respuestaCorrecta": "Pedir ayuda en una situación de riesgo o urgencia"
+        },
+        {
+            "enunciado": "¿Qué tipo de emergencias cubre el botón SOS de Securitas Direct?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Medio",
+            "opciones": [
+                "Emergencias médicas y situaciones de peligro",
+                "Solo emergencias médicas.",
+                "Solo emergencias de seguridad."
+            ],
+            "respuestaCorrecta": "Emergencias médicas y situaciones de peligro"
+        },
+        {
+            "enunciado": "¿Qué sucede si los intrusos son detectados por el sistema de seguridad?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Facil",
+            "opciones": [
+                "Se avisa a la Policía o se expulsa al intruso",
+                "La alarma se apaga automáticamente",
+                "Se les envía una advertencia escrita"
+            ],
+            "respuestaCorrecta": "Se avisa a la Policía o se expulsa al intruso"
+        },
+        {
+            "enunciado": "¿Qué tecnología utiliza la unidad central para analizar las señales en tiempo real?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Facil",
+            "opciones": [
+                "Inteligencia artificial",
+                "Reconocimiento facial",
+                "Tecnología infrarroja"
+            ],
+            "respuestaCorrecta": "Inteligencia artificial"
+        },
+        {
+            "enunciado": "¿Cuántas horas al día protege la alarma de Securitas Direct?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Medio",
+            "opciones": [
+                "24 horas",
+                "12 horas",
+                "Solo durante la noche"
+            ],
+            "respuestaCorrecta": "24 horas"
+        },
+        {
+            "enunciado": "¿Cómo se llama el dispositivo que actúa como el \"cerebro\" de la alarma?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Facil",
+            "opciones": [
+                "Unidad principal",
+                "Unidad de sensores",
+                "Cámara principal"
+            ],
+            "respuestaCorrecta": "Unidad principal"
+        },
+        {
+            "enunciado": "¿Qué te ofrece el panel de control en la entrada a tu hogar?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Facil",
+            "opciones": [
+                "Seguridad y control al conectar y desconectar la alarma",
+                "Control del sistema de videovigilancia",
+                "Acceso a la configuración de todos los electrodomésticos"
+            ],
+            "respuestaCorrecta": "Seguridad y control al conectar y desconectar la alarma"
+        },
+        {
+            "enunciado": "¿Qué sucede si la alarma no se desconecta a tiempo?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Dificil",
+            "opciones": [
+                "Se activa una falsa alerta",
+                "El panel de control se reinicia automáticamente",
+                "No sucede nada, el sistema se apaga solo"
+            ],
+            "respuestaCorrecta": "Se activa una falsa alerta"
+        },
+        {
+            "enunciado": "¿Qué tecnología innovadora utiliza el panel de control exterior de Securitas Direct para mejorar la eficiencia y seguridad?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Dificil",
+            "opciones": [
+                "Tecnología PreSense™",
+                "Tecnología Bluetooth.",
+                "Tecnología Wi-Fi."
+            ],
+            "respuestaCorrecta": "Tecnología PreSense™"
+        },
+        {
+            "enunciado": "¿Qué red utiliza la alarma de Securitas Direct para enviar alertas en caso de inhibición?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Facil",
+            "opciones": [
+                "Red ATN",
+                "Red Wi-Fi.",
+                "Red Bluetooth."
+            ],
+            "respuestaCorrecta": "Red ATN"
+        },
+        {
+            "enunciado": "¿Qué tipo de batería utiliza el mando a distancia de Securitas Direct?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Dificil",
+            "opciones": [
+                "Batería de litio",
+                "Batería alcalina",
+                "Batería recargable solar"
+            ],
+            "respuestaCorrecta": "Batería de litio"
+        },
+        {
+            "enunciado": "¿Qué condiciones ambientales puede resistir la cámara Arlo Security?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Dificil",
+            "opciones": [
+                "Resiste la lluvia, nieve, polvo y luz extrema",
+                "Solo resiste la lluvia",
+                "No está diseñada para resistir condiciones adversas"
+            ],
+            "respuestaCorrecta": "Resiste la lluvia, nieve, polvo y luz extrema"
+        },
+        {
+            "enunciado": "¿Cuánto tiempo se almacenan las grabaciones de la cámara Arlo Security en la nube?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Medio",
+            "opciones": [
+                "30 días",
+                "7 días",
+                "60 días"
+            ],
+            "respuestaCorrecta": "30 días"
+        },
+        {
+            "enunciado": "¿Qué ocurre cuando se detecta un incendio en casa?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Facil",
+            "opciones": [
+                "Un experto de la central de alarmas actúa y avisa a los servicios de emergencia",
+                "La alarma envía un mensaje de advertencia a tu móvil",
+                "Se activa solo una luz parpadeante en la casa"
+            ],
+            "respuestaCorrecta": "Un experto de la central de alarmas actúa y avisa a los servicios de emergencia"
+        },
+        {
+            "enunciado": "¿Cuál es la potencia de la sirena incorporada en el detector de incendios de Securitas Direct?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Medio",
+            "opciones": [
+                "85 decibelios",
+                "70 decibelios",
+                "100 decibelios"
+            ],
+            "respuestaCorrecta": "85 decibelios"
+        },
+        {
+            "enunciado": "¿Cómo se asegura Securitas Direct de que los servicios de emergencia sean notificados rápidamente en caso de incendio?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Dificil",
+            "opciones": [
+                "La Central Receptora de Alarmas verifica la presencia de humo con imágenes y contacta a los servicios de emergencia.",
+                "El detector de incendios envía una señal directa a los bomberos.",
+                "El propietario debe confirmar la alarma antes de que se notifique a los servicios de emergencia."
+            ],
+            "respuestaCorrecta": "La Central Receptora de Alarmas verifica la presencia de humo con imágenes y contacta a los servicios de emergencia."
+        },
+        {
+            "enunciado": "¿Cuántas incidencias atiende diariamente la Central Receptora de Alarmas de Securitas Direct?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Medio",
+            "opciones": [
+                "Más de 44.000",
+                "Más de 10.000",
+                "Más de 100.000."
+            ],
+            "respuestaCorrecta": "Más de 44.000"
+        },
+        {
+            "enunciado": "¿Cuántos profesionales aproximadamente trabajan en la Central Receptora de Alarmas de Securitas Direct en España?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Medio",
+            "opciones": [
+                "500",
+                "1.000",
+                "2.000"
+            ],
+            "respuestaCorrecta": "1.000"
+        },
+        {
+            "enunciado": "¿Dónde se encuentran los centros de innovación de Securitas Direct?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Dificil",
+            "opciones": [
+                "En Malmo y Madrid",
+                "Londres y Nueva York",
+                "París y Berlín"
+            ],
+            "respuestaCorrecta": "En Malmo y Madrid"
+        },
+        {
+            "enunciado": "¿Cuántas llaves electrónicas vienen incluidas en el kit?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Facil",
+            "opciones": [
+                "6",
+                "4",
+                "8"
+            ],
+            "respuestaCorrecta": "6"
+        },
+        {
+            "enunciado": "¿Qué se necesita para activar la alarma con la llave electrónica?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Medio",
+            "opciones": [
+                "Mantener la llave sobre el botón central del lector",
+                "Memorizar un código",
+                "Pulsar un botón en la app"
+            ],
+            "respuestaCorrecta": "Mantener la llave sobre el botón central del lector"
+        },
+        {
+            "enunciado": "¿Qué puntos vulnerables protege el detector de apertura magnético?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Facil",
+            "opciones": [
+                "Puertas y ventanas",
+                "Techos y paredes",
+                "Electrodomésticos"
+            ],
+            "respuestaCorrecta": "Puertas y ventanas"
+        },
+        {
+            "enunciado": "¿Qué permite hacer el detector de acceso cuando detecta una intrusión?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Medio",
+            "opciones": [
+                "Avisar a la policía en segundos",
+                "Bloquear la entrada automáticamente",
+                "Encender las luces del hogar"
+            ],
+            "respuestaCorrecta": "Avisar a la policía en segundos"
+        }
+    ]
+}

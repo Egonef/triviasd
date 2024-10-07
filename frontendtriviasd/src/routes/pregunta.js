@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 // Components
 import Header from '../components/header';
@@ -40,60 +39,6 @@ export default function Pregunta() {
         }
     }
 
-
-    useEffect(() => {
-        getTimeLeft(); // Recuperar el tiempo restante del backend al cargar la página
-    }, []);
-
-    useEffect(() => {
-        if (timeLeft !== null) { // Solo iniciar el temporizador si timeLeft no es null
-            if (timeLeft > 0) {
-                const timerId = setInterval(() => {
-                    setTimeLeft(prevTimeLeft => {
-                        const newTimeLeft = prevTimeLeft - 1;
-                        sendTimeLeft(newTimeLeft); // Enviar el tiempo restante al backend
-                        return newTimeLeft;
-                    });
-                }, 1000);
-                return () => clearInterval(timerId);
-            } else {
-                const resetTime = 300;
-                setTimeLeft(resetTime); // Reiniciar el temporizador a 120 segundos
-                sendTimeLeft(resetTime); // Enviar el tiempo reiniciado al backend
-                saveTeams2(); // Enviar los equipos que han jugado esta partida al backend
-                navigate('/RankingGlobal');
-            }
-        }
-    }, [timeLeft]);
-
-    const formatTime = (seconds) => {
-        const minutes = Math.floor(seconds / 60);
-        const remainingSeconds = seconds % 60;
-        return `${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
-    };
-
-    //Funciones para gestionar el tiempo de la pregunta
-    useEffect(() => {
-        if (questionTimeLeft !== null) { // Solo iniciar el temporizador si timeLeft no es null
-            if (questionTimeLeft > 0) {
-                const timerIdq = setInterval(() => {
-                    setQuestionTimeLeft(questionTimeLeft - 1);
-                }, 1000);
-                return () => clearInterval(timerIdq);
-            } else {
-                setSelectedAnswer('Tiempo agotado');// Redirige a otra página cuando el temporizador de la pregunta llega a 0
-            }
-        }
-    }, [questionTimeLeft]);
-
-    //Funcion para formatear el tiempo
-    const formatTimeq = (seconds) => {
-        const minutes = Math.floor(seconds / 60);
-        const remainingSeconds = seconds % 60;
-        return `${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
-    };
-
-
     // Función para obtener el tiempo restante de la partida
     async function getTimeLeft() {
         try {
@@ -118,12 +63,7 @@ export default function Pregunta() {
         }
     }
 
-    useEffect(() => {
-        if (selectedAnswer !== null) {
-            sendPoints();
-        }
-    }, [selectedAnswer]);
-
+    // Función para obtener la pregunta
     async function getQuestion() {
         setLoading(true); // Iniciar el estado de carga
         try {
@@ -138,16 +78,65 @@ export default function Pregunta() {
         }
     }
 
+    // Efecto para cargar los datos iniciales
     useEffect(() => {
-        getQuestion();
+        const fetchData = async () => {
+            await getTeams();
+            await getTimeLeft();
+            await getQuestion();
+        };
+        fetchData();
     }, []);
 
+    // Efecto para manejar el temporizador de la partida
     useEffect(() => {
-        if (question) {
-            setShowQuestion(true); // Mostrar la pregunta cuando se haya cargado
+        if (timeLeft !== null) { // Solo iniciar el temporizador si timeLeft no es null
+            if (timeLeft > 0) {
+                const timerId = setInterval(() => {
+                    setTimeLeft(prevTimeLeft => {
+                        const newTimeLeft = prevTimeLeft - 1;
+                        sendTimeLeft(newTimeLeft); // Enviar el tiempo restante al backend
+                        return newTimeLeft;
+                    });
+                }, 1000);
+                return () => clearInterval(timerId);
+            } else {
+                const resetTime = 300;
+                setTimeLeft(resetTime); // Reiniciar el temporizador a 300 segundos
+                sendTimeLeft(resetTime); // Enviar el tiempo reiniciado al backend
+                saveTeams2(); // Enviar los equipos que han jugado esta partida al backend
+                navigate('/RankingGlobal');
+            }
         }
-    }, [question]);
+    }, [timeLeft]);
 
+    // Efecto para manejar el temporizador de la pregunta
+    useEffect(() => {
+        if (questionTimeLeft !== null) { // Solo iniciar el temporizador si questionTimeLeft no es null
+            if (questionTimeLeft > 0) {
+                const timerIdq = setInterval(() => {
+                    setQuestionTimeLeft(prevTimeLeft => prevTimeLeft - 1);
+                }, 1000);
+                return () => clearInterval(timerIdq);
+            } else {
+                setSelectedAnswer('Tiempo agotado'); // Redirige a otra página cuando el temporizador de la pregunta llega a 0
+            }
+        }
+    }, [questionTimeLeft]);
+
+    // Efecto para enviar los puntos cuando se selecciona una respuesta
+    useEffect(() => {
+        if (selectedAnswer !== null) {
+            sendPoints();
+        }
+    }, [selectedAnswer]);
+
+    // Función para formatear el tiempo
+    const formatTime = (seconds) => {
+        const minutes = Math.floor(seconds / 60);
+        const remainingSeconds = seconds % 60;
+        return `${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
+    };
 
     // Función para comprobar si la respuesta es correcta
     function checkAnswer(answer, index) {
@@ -203,28 +192,34 @@ export default function Pregunta() {
                     <p className="text-xl font-bold ml-4">Pregunta: </p>
                     <div className=' flex justify-center items-center md:h-10 lg:h-10 xl:h-10 h-24 w-28 text-2xl text-white bg-slate-500 rounded-br-3xl rounded-tl-3xl'><b>{formatTime(timeLeft)}</b></div>
                 </div>
-                {question && (
-                    <>
-                        <div className="flex flex-grow items-center justify-center lg:h-[35%] md:h-[15%] md:mt-5 md:mb-5 w-[90%]  rounded-tl-3xl rounded-br-3xl  border-[#FF0033] border-2 border-dashed ">
-                            <h1 className="lg:text-4xl md:text-2xl font-bold pt-1 pb-1 text-center">{question.enunciado}</h1>
-                        </div>
-                        <div className="flex flex-row justify-center items-center h-[30%] w-[90%] rounded-2xl pt-20">
-                            {question.opciones.map((respuesta, index) => (
-                                <StandardButton
-                                    key={index}
-                                    text={respuesta}
-                                    size="long"
-                                    onClick={() => checkAnswer(respuesta, index)}
-                                    isCorrect={selectedAnswer !== null && respuesta === question.respuestaCorrecta}
-                                    isIncorrect={selectedAnswer === respuesta && respuesta !== question.respuestaCorrecta}
-                                    waiting={waitingButtonIndex === index}
-                                />
-                            ))}
-                        </div>
-                        <div className="flex  justify-center items-center h-[4%] w-[90%] rounded-b-2xl lg:translate-y-20 md:translate-y-40">
-                        {selectedAnswer !== null && <StandardButton text="Siguiente" size="small" onClick={backToMenu} />}
-                        </div>
-                    </>
+                {loading ? (
+                    <div className="flex items-center justify-center h-full">
+                        <p className="text-xl font-bold">Cargando...</p>
+                    </div>
+                ) : (
+                    question && (
+                        <>
+                            <div className="flex flex-grow items-center justify-center lg:h-[35%] md:h-[15%] md:mt-5 md:mb-5 w-[90%]  rounded-tl-3xl rounded-br-3xl  border-[#FF0033] border-2 border-dashed ">
+                                <h1 className="lg:text-4xl md:text-2xl font-bold pt-1 pb-1 text-center">{question.enunciado}</h1>
+                            </div>
+                            <div className="flex flex-row justify-center items-center h-[30%] w-[90%] rounded-2xl pt-20">
+                                {question.opciones.map((respuesta, index) => (
+                                    <StandardButton
+                                        key={index}
+                                        text={respuesta}
+                                        size="long"
+                                        onClick={() => checkAnswer(respuesta, index)}
+                                        isCorrect={selectedAnswer !== null && respuesta === question.respuestaCorrecta}
+                                        isIncorrect={selectedAnswer === respuesta && respuesta !== question.respuestaCorrecta}
+                                        waiting={waitingButtonIndex === index}
+                                    />
+                                ))}
+                            </div>
+                            <div className="flex  justify-center items-center h-[4%] w-[90%] rounded-b-2xl lg:translate-y-20 md:translate-y-40">
+                                {selectedAnswer !== null && <StandardButton text="Siguiente" size="small" onClick={backToMenu} />}
+                            </div>
+                        </>
+                    )
                 )}
             </div>
         </div>
