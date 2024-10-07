@@ -25,7 +25,7 @@ function TeamSelection() {
     //Solicitud a la API para obtener el número de equipos registrados
     async function getRegisteredTeams() {
         try {
-            const response = await axios.get('http://5.56.56.16:5000/api/admin/getTeams2');
+            const response = await axios.get('http://localhost:5000/api/admin/getTeams2');
             console.log(response.data);
             setRegisteredTeams(response.data);
         }
@@ -54,7 +54,7 @@ function TeamSelection() {
 
 
             //Enviamos la solicitud a la API para guardar los equipos seleccionados
-            const respuestaPost = await axios.post('http://5.56.56.16:5000/api/admin/saveSelectedTeams', selectedTeamsTemp);
+            const respuestaPost = await axios.post('http://localhost:5000/api/admin/saveSelectedTeams', selectedTeamsTemp);
             if (respuestaPost.data !== 'Selected teams saved') {
                 Swal.fire({
                     icon: 'error',
@@ -64,7 +64,7 @@ function TeamSelection() {
                 });
             }
 
-            const respuestaGet = await axios.get('http://5.56.56.16:5000/api/admin/startGame');
+            const respuestaGet = await axios.get('http://localhost:5000/api/admin/startGame');
             console.log(respuestaGet.data);
             if (respuestaGet.data === 'Not enough teams') {
                 Swal.fire({
@@ -93,7 +93,7 @@ function TeamSelection() {
     async function recoverTeams() {
         try {
             console.log('recoverTeams llamado');
-            const response = await axios.get('http://5.56.56.16:5000/api/admin/loadTeams'); //Cambiar la dirección IP por la de la máquina que corre el backend
+            const response = await axios.get('http://localhost:5000/api/admin/loadTeams'); //Cambiar la dirección IP por la de la máquina que corre el backend
             console.log(response.data);
             setRegisteredTeams(response.data);
             //Imprimir los equipos registrados
