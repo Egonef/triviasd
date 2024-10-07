@@ -68,7 +68,7 @@ export default function RankingLocal() {
                                         orderClass = 'order-3'; // Right
                                         bgColorClass = 'bg-gray-500'; // Gray for right
                                         trophySrc = "Trophy3.svg"; // Trophy for third place
-                                        trophyPosition = 'top-[-10%]';
+                                        trophyPosition = 'top-[-20%]';
                                         break;
                                     default:
                                         break;
