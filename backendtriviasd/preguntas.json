@@ -1,52 +1,1895 @@
 {
     "preguntas": [
-      {
-        "tematica": "Animales",
-        "dificultad": "Fácil",
-        "enunciado": "¿Cuál es el mamífero más grande del mundo?",
-        "respuestas": [
-          "Elefante",
-          "Ballena Azul",
-          "Rinoceronte",
-          "Hipopótamo"
-        ],
-        "respuesta_correcta": "Ballena Azul"
-      },
-      {
-        "tematica": "Comida",
-        "dificultad": "Media",
-        "enunciado": "¿Cuál es el ingrediente principal del guacamole?",
-        "respuestas": [
-          "Tomate",
-          "Cebolla",
-          "Aguacate",
-          "Limón"
-        ],
-        "respuesta_correcta": "Aguacate"
-      },
-      {
-        "tematica": "Ropa",
-        "dificultad": "Difícil",
-        "enunciado": "¿Qué diseñador es conocido por la creación del 'Little Black Dress'?",
-        "respuestas": [
-          "Coco Chanel",
-          "Giorgio Armani",
-          "Ralph Lauren",
-          "Versace"
-        ],
-        "respuesta_correcta": "Coco Chanel"
-      },
-      {
-        "tematica": "Yoquese",
-        "dificultad": "Fácil",
-        "enunciado": "¿Cuál es la capital de Francia?",
-        "respuestas": [
-          "Madrid",
-          "Berlín",
-          "París",
-          "Roma"
-        ],
-        "respuesta_correcta": "París"
-      }
+        {
+            "enunciado": "¿Cuál es el propósito principal de Securitas Direct?",
+            "categoria": "Así somos",
+            "dificultad": "Facil",
+            "opciones": [
+                "Contribuir a crear un mundo más seguro",
+                "Proporcionar servicios de limpieza",
+                "Vender productos electrónicos"
+            ],
+            "respuestaCorrecta": "Contribuir a crear un mundo más seguro"
+        },
+        {
+            "enunciado": "¿A qué se debe que Securitas Direct sea referente internacional en protección?",
+            "categoria": "Así somos",
+            "dificultad": "Medio",
+            "opciones": [
+                "A ambas cosas",
+                "A disponer de la mejor propuesta de valor",
+                "A disponer de la mejor tecnología"
+            ],
+            "respuestaCorrecta": "A ambas cosas"
+        },
+        {
+            "enunciado": "Securitas Direct tiene un propósito claro, ¿cuál es?",
+            "categoria": "Así somos",
+            "dificultad": "Facil",
+            "opciones": [
+                "Ambiciosa y necesaria",
+                "Coherente y conservadora",
+                "Radical y disruptiva"
+            ],
+            "respuestaCorrecta": "Ambiciosa y necesaria"
+        },
+        {
+            "enunciado": "¿En qué posición se encuentra el Grupo Verisure en cuanto al mercado de alarmas europeo se refiere?",
+            "categoria": "Así somos",
+            "dificultad": "Facil",
+            "opciones": [
+                "Líderes",
+                "Segundos",
+                "Cuartos"
+            ],
+            "respuestaCorrecta": "Líderes"
+        },
+        {
+            "enunciado": "¿En cuántos países está presente el Grupo Verisure?",
+            "categoria": "Así somos",
+            "dificultad": "Facil",
+            "opciones": [
+                "17",
+                "10",
+                "20"
+            ],
+            "respuestaCorrecta": "17"
+        },
+        {
+            "enunciado": "¿Qué es el “Hub de I+D” de Securitas Direct?",
+            "categoria": "Así somos",
+            "dificultad": "Facil",
+            "opciones": [
+                "Un centro de investigación y desarrollo",
+                "Un centro de ventas",
+                "Un centro de atención al cliente"
+            ],
+            "respuestaCorrecta": "Un centro de investigación y desarrollo"
+        },
+        {
+            "enunciado": "¿Dónde se encuentra el Hub de I+D de Securitas Direct?",
+            "categoria": "Así somos",
+            "dificultad": "Facil",
+            "opciones": [
+                "Malmo, Madrid y Ginebra",
+                "Londres, París y Berlín",
+                "Nueva York, Tokio y Sídney"
+            ],
+            "respuestaCorrecta": "Malmo, Madrid y Ginebra"
+        },
+        {
+            "enunciado": "¿Qué es lo que hace a la tecnología de Securitas Direct reconocida?",
+            "categoria": "Así somos",
+            "dificultad": "Facil",
+            "opciones": [
+                "Su diseño, funcionalidad y fiabilidad",
+                "Su bajo costo",
+                "Su simplicidad"
+            ],
+            "respuestaCorrecta": "Su diseño, funcionalidad y fiabilidad"
+        },
+        {
+            "enunciado": "¿Cada cuántos segundos de operación consigue Securitas Direct un cliente nuevo?",
+            "categoria": "Así somos",
+            "dificultad": "Medio",
+            "opciones": [
+                "10",
+                "15",
+                "5"
+            ],
+            "respuestaCorrecta": "10"
+        },
+		{
+            "enunciado": "¿En cuantos países es Securitas Direct líder de todos aquellos en los que opera?",
+            "categoria": "Así somos",
+            "dificultad": "Medio",
+            "opciones": [
+                "12",
+                "8",
+                "16"
+            ],
+            "respuestaCorrecta": "12"
+        },
+        {
+            "enunciado": "¿Qué porcentaje de las alarmas conectadas en España pertenece a Securitas Direct?",
+            "categoria": "Así somos",
+            "dificultad": "Facil",
+            "opciones": [
+                "Más del 90%",
+                "0.5",
+                "0.75"
+            ],
+            "respuestaCorrecta": "Más del 90%"
+        },
+        {
+            "enunciado": "¿Qué tipo de servicios ofrece Securitas Direct a sus clientes?",
+            "categoria": "Así somos",
+            "dificultad": "Facil",
+            "opciones": [
+                "Servicios de protección y seguridad",
+                "Servicios de jardinería",
+                "Servicios de transporte"
+            ],
+            "respuestaCorrecta": "Servicios de protección y seguridad"
+        },
+        {
+            "enunciado": "¿Cuál es la principal recompensa para Securitas Direct?",
+            "categoria": "Así somos",
+            "dificultad": "Facil",
+            "opciones": [
+                "La confianza de sus clientes",
+                "Ganar premios",
+                "Aumentar sus ingresos"
+            ],
+            "respuestaCorrecta": "La confianza de sus clientes"
+        },
+        {
+            "enunciado": "¿Qué tipo de alarmas ha desarrollado Securitas Direct en España?",
+            "categoria": "Así somos",
+            "dificultad": "Facil",
+            "opciones": [
+                "Alarmas conectadas",
+                "Alarmas de incendios",
+                "Alarmas de humo"
+            ],
+            "respuestaCorrecta": "Alarmas conectadas"
+        },
+        {
+            "enunciado": "¿Qué hace Securitas Direct en caso de una emergencia?",
+            "categoria": "Así somos",
+            "dificultad": "Facil",
+            "opciones": [
+                "Actúa con rapidez y eficacia",
+                "Actúa con calma, no hay prisa",
+                "Espera a que pase la emergencia"
+            ],
+            "respuestaCorrecta": "Actúa con rapidez y eficacia"
+        },
+        {
+            "enunciado": "¿Qué tipo de relación tiene Securitas Direct con sus clientes?",
+            "categoria": "Así somos",
+            "dificultad": "Facil",
+            "opciones": [
+                "De confianza y responsabilidad",
+                "Superficial",
+                "Inexistente"
+            ],
+            "respuestaCorrecta": "De confianza y responsabilidad"
+        },
+        {
+            "enunciado": "¿Qué es lo que Securitas Direct protege principalmente?",
+            "categoria": "Así somos",
+            "dificultad": "Facil",
+            "opciones": [
+                "Personas, hogares y negocios",
+                "Parques y jardines",
+                "Vehículos"
+            ],
+            "respuestaCorrecta": "Personas, hogares y negocios"
+        },
+        {
+            "enunciado": "¿Qué tipo de equipo tiene Securitas Direct en sus centros de Malmo, Madrid y Ginebra?",
+            "categoria": "Así somos",
+            "dificultad": "Facil",
+            "opciones": [
+                "Equipo de I+D",
+                "Equipo de entretenimiento",
+                "Equipo de ventas"
+            ],
+            "respuestaCorrecta": "Equipo de I+D"
+        },
+        {
+            "enunciado": "¿Cuántos clientes tiene Securitas Direct?",
+            "categoria": "Así somos",
+            "dificultad": "Facil",
+            "opciones": [
+                "Más de 5 millones",
+                "Aproximadamente 1 millón",
+                "Aproximadamente 3 millones"
+            ],
+            "respuestaCorrecta": "Más de 5 millones"
+        },
+		{
+            "enunciado": "¿Cuántas alarmas tiene Securitas Direct en España?",
+            "categoria": "Así somos",
+            "dificultad": "Facil",
+            "opciones": [
+                "Más de 2 millones",
+                "Menos de 1 millón",
+                "Rondando los 5 millones"
+            ],
+            "respuestaCorrecta": "Más de 2 millones"
+        },
+        {
+            "enunciado": "¿Qué es lo que hace a Securitas Direct líder en el mercado?",
+            "categoria": "Así somos",
+            "dificultad": "Facil",
+            "opciones": [
+                "Su combinación de tecnología avanzada y equipo cualificado",
+                "Su publicidad",
+                "Sus bajos precios"
+            ],
+            "respuestaCorrecta": "Su combinación de tecnología avanzada y equipo cualificado"
+        },
+        {
+            "enunciado": "¿Qué tipo de instalaciones tiene Securitas Direct en Madrid y Cornellà?",
+            "categoria": "Así somos",
+            "dificultad": "Facil",
+            "opciones": [
+                "La central receptora de alarmas más grande y avanzada de Europa",
+                "Instalaciones de entretenimiento",
+                "Instalaciones de almacenamiento"
+            ],
+            "respuestaCorrecta": "La central receptora de alarmas más grande y avanzada de Europa"
+        },
+        {
+            "enunciado": "¿Qué tipo de compromiso tiene Securitas Direct con sus clientes?",
+            "categoria": "Así somos",
+            "dificultad": "Facil",
+            "opciones": [
+                "Compromiso con la protección y la confianza",
+                "Compromiso superficial",
+                "Compromiso con la venta"
+            ],
+            "respuestaCorrecta": "Compromiso con la protección y la confianza"
+        },
+        {
+            "enunciado": "¿Cómo se llama el sistema de protección que tiene Securitas Direct para las personas mayores?",
+            "categoria": "Así somos",
+            "dificultad": "Facil",
+            "opciones": [
+                "Sistema de protección senior",
+                "Sistema de entretenimiento",
+                "Sistema de transporte"
+            ],
+            "respuestaCorrecta": "Sistema de protección senior"
+        },
+        {
+            "enunciado": "¿Qué tipo de tecnología desarrolla el Hub de I+D de Securitas Direct?",
+            "categoria": "Así somos",
+            "dificultad": "Facil",
+            "opciones": [
+                "Tecnología de seguridad",
+                "Tecnología de entretenimiento",
+                "Tecnología médica"
+            ],
+            "respuestaCorrecta": "Tecnología de seguridad"
+        },
+		{
+            "enunciado": "¿Qué tipo de tecnología utiliza Securitas Direct en sus alarmas?",
+            "categoria": "Así somos",
+            "dificultad": "Medio",
+            "opciones": [
+                "Tecnología propia avanzada",
+                "Tecnología obsoleta",
+                "Tecnología de terceros avanzada"
+            ],
+            "respuestaCorrecta": "Tecnología propia avanzada"
+        },
+        {
+            "enunciado": "¿Qué hace Securitas Direct para contribuir a un mundo más seguro?",
+            "categoria": "Así somos",
+            "dificultad": "Medio",
+            "opciones": [
+                "Proporciona la mejor protección para las personas y lo que más les importa",
+                "Proporciona servicios de limpieza",
+                "Vende productos electrónicos"
+            ],
+            "respuestaCorrecta": "Proporciona la mejor protección para las personas y lo que más les importa"
+        },
+        {
+            "enunciado": "¿Qué sentencia define mejor a la central receptora de alarmas de Securitas Direct?",
+            "categoria": "Así somos",
+            "dificultad": "Medio",
+            "opciones": [
+                "La más grande y avanzada de Europa",
+                "Un centro de entretenimiento",
+                "Un centro de almacenamiento"
+            ],
+            "respuestaCorrecta": "La más grande y avanzada de Europa"
+        },
+        {
+            "enunciado": "¿Cuántos años lleva operando Securitas Direct en España?",
+            "categoria": "Así somos",
+            "dificultad": "Medio",
+            "opciones": [
+                "30 años",
+                "10 años",
+                "20 años"
+            ],
+            "respuestaCorrecta": "30 años"
+        },
+        {
+            "enunciado": "¿Qué tipo de compromiso tiene Securitas Direct con sus clientes?",
+            "categoria": "Así somos",
+            "dificultad": "Medio",
+            "opciones": [
+                "Compromiso con la protección y la confianza",
+                "Compromiso superficial",
+                "Compromiso con la venta"
+            ],
+            "respuestaCorrecta": "Compromiso con la protección y la confianza"
+        },
+        {
+            "enunciado": "¿Qué tipo de servicios ofrece Securitas Direct en caso de intrusión?",
+            "categoria": "Así somos",
+            "dificultad": "Medio",
+            "opciones": [
+                "Servicios de vigilancia y aviso a las Fuerzas de Seguridad",
+                "Servicios de limpieza",
+                "Servicios de transporte"
+            ],
+            "respuestaCorrecta": "Servicios de vigilancia y aviso a las Fuerzas de Seguridad"
+        },
+        {
+            "enunciado": "¿Dónde se encuentra el corazón de Securittas Direct, también conocido como la central receptora de alarmas?",
+            "categoria": "Así somos",
+            "dificultad": "Medio",
+            "opciones": [
+                "Madrid y Cornellá",
+                "Madrid y Ginebra",
+                "Cornellá y Ginebra"
+            ],
+            "respuestaCorrecta": "Madrid y Cornellá"
+        },
+        {
+            "enunciado": "¿Qué tecnología utiliza Securitas Direct para detectar inhibidores de frecuencia?",
+            "categoria": "Así somos",
+            "dificultad": "Medio",
+            "opciones": [
+                "Tecnología PreSense",
+                "Tecnología Shocksensor",
+                "Tecnología SENTINEL"
+            ],
+            "respuestaCorrecta": "Tecnología PreSense"
+        },
+        {
+            "enunciado": "¿Qué porcentaje de satisfacción tienen los clientes de Securitas Direct?",
+            "categoria": "Así somos",
+            "dificultad": "Medio",
+            "opciones": [
+                "9.4",
+                "8.5",
+                "7.8"
+            ],
+            "respuestaCorrecta": "9.4"
+        },
+        {
+            "enunciado": "¿Qué significa el acrónimo KPI en el contexto de Securitas Direct?",
+            "categoria": "Así somos",
+            "dificultad": "Dificil",
+            "opciones": [
+                "Key Performance Indicator",
+                "Knowledge Process Integration",
+                "Key Product Information"
+            ],
+            "respuestaCorrecta": "Key Performance Indicator"
+        },
+		{
+            "enunciado": "¿Qué significa “Attrition LTM” en el contexto de Securitas Direct?",
+            "categoria": "Así somos",
+            "dificultad": "Dificil",
+            "opciones": [
+                "Porcentaje de bajas de los últimos 12 meses sobre la cartera media",
+                "Porcentaje de ventas de los últimos 12 meses",
+                "Porcentaje de nuevos clientes en los últimos 12 meses"
+            ],
+            "respuestaCorrecta": "Porcentaje de bajas de los últimos 12 meses sobre la cartera media"
+        },
+        {
+            "enunciado": "¿Qué es el “NPS” y cómo se mide en Securitas Direct?",
+            "categoria": "Así somos",
+            "dificultad": "Dificil",
+            "opciones": [
+                "Net Promoter Score",
+                "Net Profit Score",
+                "Net Performance Score"
+            ],
+            "respuestaCorrecta": "Net Promoter Score"
+        },
+        {
+            "enunciado": "¿Qué es el “ROI” en Securitas Direct?",
+            "categoria": "Así somos",
+            "dificultad": "Dificil",
+            "opciones": [
+                "Return on Investment",
+                "Rate of Investment",
+                "Return on Income"
+            ],
+            "respuestaCorrecta": "Return on Investment"
+        },
+        {
+            "enunciado": "¿Qué es el “NPSi” en Securitas Direct?",
+            "categoria": "Así somos",
+            "dificultad": "Dificil",
+            "opciones": [
+                "Net Promoter Score for installations",
+                "Net Performance Score for installations",
+                "Net Profit Score for installations"
+            ],
+            "respuestaCorrecta": "Net Promoter Score for installations"
+        },
+        {
+            "enunciado": "¿Qué es el “ENPS” en Securitas Direct?",
+            "categoria": "Así somos",
+            "dificultad": "Dificil",
+            "opciones": [
+                "Employee Net Promoter Score",
+                "Employee Net Performance Score",
+                "Employee Net Profit Score"
+            ],
+            "respuestaCorrecta": "Employee Net Promoter Score"
+        },
+        {
+            "enunciado": "¿En cuantos idiomas está escrito \"Somos diversidad\" en las escaleras de la sede de Madrid de Securitas Direct?",
+            "categoria": "Así somos",
+            "dificultad": "Dificil",
+            "opciones": [
+                "8",
+                "7",
+                "9"
+            ],
+            "respuestaCorrecta": "8"
+        },
+        {
+            "enunciado": "¿Dónde se encuentran las sedes de la Central Receptora de Alarmas de Securitas Direct?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Facil",
+            "opciones": [
+                "Madrid y Cornellá",
+                "Barcelona y Valencia",
+                "Sevilla y Bilbao"
+            ],
+            "respuestaCorrecta": "Madrid y Cornellá"
+        },
+        {
+            "enunciado": "¿Cuántas incidencias atiende diariamente la Central Receptora de Alarmas?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Medio",
+            "opciones": [
+                "Más de 44.000",
+                "Más de 10.000",
+                "Más de 100.000."
+            ],
+            "respuestaCorrecta": "Más de 44.000"
+        },
+        {
+            "enunciado": "¿Cuál es el tiempo medio de respuesta de la Central Receptora de Alarmas de Securitas Direct?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Facil",
+            "opciones": [
+                "Menos de 30 segundos",
+                "Menos de 10 segundos",
+                "Menos de 20 segundos."
+            ],
+            "respuestaCorrecta": "Menos de 30 segundos"
+        },
+        {
+            "enunciado": "¿Qué es Guardián Verisure de Securitas Direct?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Facil",
+            "opciones": [
+                "Un servicio de localización por GPS de personas",
+                "Un sistema de videovigilancia",
+                "Un sistema de alarma para viviendas."
+            ],
+            "respuestaCorrecta": "Un servicio de localización por GPS de personas"
+        },
+        {
+            "enunciado": "¿Qué sucede cuando se pulsa el botón SOS de Guardián Verisure?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Medio",
+            "opciones": [
+                "Se envía una señal de emergencia a la Central Receptora de Alarmas con la ubicación exacta",
+                "Se activa una alarma sonora en el dispositivo.",
+                "Se envía un mensaje de texto a los contactos de emergencia."
+            ],
+            "respuestaCorrecta": "Se envía una señal de emergencia a la Central Receptora de Alarmas con la ubicación exacta"
+        },
+        {
+            "enunciado": "¿Qué función tiene la opción “Acompáñame” de Guardián Verisure?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Dificil",
+            "opciones": [
+                "Permite que la Central Receptora de Alarmas monitoree tu ruta hasta que llegues a tu destino",
+                "Permite realizar videollamadas de emergencia.",
+                "Permite grabar vídeos de seguridad."
+            ],
+            "respuestaCorrecta": "Permite que la Central Receptora de Alarmas monitoree tu ruta hasta que llegues a tu destino"
+        },
+        {
+            "enunciado": "¿Para qué tipo de usuarios está diseñado Guardián Verisure?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Facil",
+            "opciones": [
+                "Para cualquier persona que necesite asistencia en caso de emergencia",
+                "Solo para personas mayores.",
+                "Solo para deportistas"
+            ],
+            "respuestaCorrecta": "Para cualquier persona que necesite asistencia en caso de emergencia"
+        },
+        {
+            "enunciado": "¿Qué servicio ofrece Securitas Direct para proteger a los clientes cuando están fuera de casa?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Dificil",
+            "opciones": [
+                "Guardian Relief",
+                "Central Receptora de Alarmas",
+                "My Verisure."
+            ],
+            "respuestaCorrecta": "Guardian Relief"
+        },
+        {
+            "enunciado": "¿Qué sucede si no confirmas tu llegada al activar la funcionalidad Acompáñame de Guardián Verisure?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Medio",
+            "opciones": [
+                "Se activa el protocolo de emergencia",
+                "Se desactiva la aplicación",
+                "Se envía una notificación a tu móvil."
+            ],
+            "respuestaCorrecta": "Se activa el protocolo de emergencia"
+        },
+        {
+            "enunciado": "¿Qué tipo de atención médica ofrece Protección Senior?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Dificil",
+            "opciones": [
+                "Atención médica por videollamada con monitorización en tiempo real.",
+                "Consultas médicas presenciales.",
+                "Atención médica solo en hospitales"
+            ],
+            "respuestaCorrecta": "Atención médica por videollamada con monitorización en tiempo real."
+        },
+        {
+            "enunciado": "¿Qué permite hacer el botón SOS de Securitas Direct?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Facil",
+            "opciones": [
+                "Pedir ayuda en una situación de riesgo o urgencia",
+                "Activar la alarma de incendios",
+                "Desactivar la alarma de seguridad."
+            ],
+            "respuestaCorrecta": "Pedir ayuda en una situación de riesgo o urgencia"
+        },
+        {
+            "enunciado": "¿Qué tipo de emergencias cubre el botón SOS de Securitas Direct?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Medio",
+            "opciones": [
+                "Emergencias médicas y situaciones de peligro",
+                "Solo emergencias médicas.",
+                "Solo emergencias de seguridad."
+            ],
+            "respuestaCorrecta": "Emergencias médicas y situaciones de peligro"
+        },
+        {
+            "enunciado": "¿Qué sucede si los intrusos son detectados por el sistema de seguridad?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Facil",
+            "opciones": [
+                "Se avisa a la Policía o se expulsa al intruso",
+                "La alarma se apaga automáticamente",
+                "Se les envía una advertencia escrita"
+            ],
+            "respuestaCorrecta": "Se avisa a la Policía o se expulsa al intruso"
+        },
+        {
+            "enunciado": "¿Qué tecnología utiliza la unidad central para analizar las señales en tiempo real?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Facil",
+            "opciones": [
+                "Inteligencia artificial",
+                "Reconocimiento facial",
+                "Tecnología infrarroja"
+            ],
+            "respuestaCorrecta": "Inteligencia artificial"
+        },
+        {
+            "enunciado": "¿Cuántas horas al día protege la alarma de Securitas Direct?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Medio",
+            "opciones": [
+                "24 horas",
+                "12 horas",
+                "Solo durante la noche"
+            ],
+            "respuestaCorrecta": "24 horas"
+        },
+        {
+            "enunciado": "¿Cómo se llama el dispositivo que actúa como el \"cerebro\" de la alarma?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Facil",
+            "opciones": [
+                "Unidad principal",
+                "Unidad de sensores",
+                "Cámara principal"
+            ],
+            "respuestaCorrecta": "Unidad principal"
+        },
+        {
+            "enunciado": "¿Qué te ofrece el panel de control en la entrada a tu hogar?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Facil",
+            "opciones": [
+                "Seguridad y control al conectar y desconectar la alarma",
+                "Control del sistema de videovigilancia",
+                "Acceso a la configuración de todos los electrodomésticos"
+            ],
+            "respuestaCorrecta": "Seguridad y control al conectar y desconectar la alarma"
+        },
+        {
+            "enunciado": "¿Qué sucede si la alarma no se desconecta a tiempo?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Dificil",
+            "opciones": [
+                "Se activa una falsa alerta",
+                "El panel de control se reinicia automáticamente",
+                "No sucede nada, el sistema se apaga solo"
+            ],
+            "respuestaCorrecta": "Se activa una falsa alerta"
+        },
+        {
+            "enunciado": "¿Qué tecnología innovadora utiliza el panel de control exterior de Securitas Direct para mejorar la eficiencia y seguridad?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Dificil",
+            "opciones": [
+                "Tecnología PreSense™",
+                "Tecnología Bluetooth.",
+                "Tecnología Wi-Fi."
+            ],
+            "respuestaCorrecta": "Tecnología PreSense™"
+        },
+        {
+            "enunciado": "¿Qué red utiliza la alarma de Securitas Direct para enviar alertas en caso de inhibición?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Facil",
+            "opciones": [
+                "Red ATN",
+                "Red Wi-Fi.",
+                "Red Bluetooth."
+            ],
+            "respuestaCorrecta": "Red ATN"
+        },
+        {
+            "enunciado": "¿Qué tipo de batería utiliza el mando a distancia de Securitas Direct?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Dificil",
+            "opciones": [
+                "Batería de litio",
+                "Batería alcalina",
+                "Batería recargable solar"
+            ],
+            "respuestaCorrecta": "Batería de litio"
+        },
+        {
+            "enunciado": "¿Qué condiciones ambientales puede resistir la cámara Arlo Security?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Dificil",
+            "opciones": [
+                "Resiste la lluvia, nieve, polvo y luz extrema",
+                "Solo resiste la lluvia",
+                "No está diseñada para resistir condiciones adversas"
+            ],
+            "respuestaCorrecta": "Resiste la lluvia, nieve, polvo y luz extrema"
+        },
+        {
+            "enunciado": "¿Cuánto tiempo se almacenan las grabaciones de la cámara Arlo Security en la nube?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Medio",
+            "opciones": [
+                "30 días",
+                "7 días",
+                "60 días"
+            ],
+            "respuestaCorrecta": "30 días"
+        },
+        {
+            "enunciado": "¿Qué ocurre cuando se detecta un incendio en casa?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Facil",
+            "opciones": [
+                "Un experto de la central de alarmas actúa y avisa a los servicios de emergencia",
+                "La alarma envía un mensaje de advertencia a tu móvil",
+                "Se activa solo una luz parpadeante en la casa"
+            ],
+            "respuestaCorrecta": "Un experto de la central de alarmas actúa y avisa a los servicios de emergencia"
+        },
+        {
+            "enunciado": "¿Cuál es la potencia de la sirena incorporada en el detector de incendios de Securitas Direct?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Medio",
+            "opciones": [
+                "85 decibelios",
+                "70 decibelios",
+                "100 decibelios"
+            ],
+            "respuestaCorrecta": "85 decibelios"
+        },
+        {
+            "enunciado": "¿Cómo se asegura Securitas Direct de que los servicios de emergencia sean notificados rápidamente en caso de incendio?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Dificil",
+            "opciones": [
+                "La Central Receptora de Alarmas verifica la presencia de humo con imágenes y contacta a los servicios de emergencia.",
+                "El detector de incendios envía una señal directa a los bomberos.",
+                "El propietario debe confirmar la alarma antes de que se notifique a los servicios de emergencia."
+            ],
+            "respuestaCorrecta": "La Central Receptora de Alarmas verifica la presencia de humo con imágenes y contacta a los servicios de emergencia."
+        },
+        {
+            "enunciado": "¿Cuántas incidencias atiende diariamente la Central Receptora de Alarmas de Securitas Direct?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Medio",
+            "opciones": [
+                "Más de 44.000",
+                "Más de 10.000",
+                "Más de 100.000."
+            ],
+            "respuestaCorrecta": "Más de 44.000"
+        },
+        {
+            "enunciado": "¿Cuántos profesionales aproximadamente trabajan en la Central Receptora de Alarmas de Securitas Direct en España?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Medio",
+            "opciones": [
+                "500",
+                "1.000",
+                "2.000"
+            ],
+            "respuestaCorrecta": "1.000"
+        },
+        {
+            "enunciado": "¿Dónde se encuentran los centros de innovación de Securitas Direct?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Dificil",
+            "opciones": [
+                "En Malmo y Madrid",
+                "Londres y Nueva York",
+                "París y Berlín"
+            ],
+            "respuestaCorrecta": "En Malmo y Madrid"
+        },
+        {
+            "enunciado": "¿Cuántas llaves electrónicas vienen incluidas en el kit?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Facil",
+            "opciones": [
+                "6",
+                "4",
+                "8"
+            ],
+            "respuestaCorrecta": "6"
+        },
+        {
+            "enunciado": "¿Qué se necesita para activar la alarma con la llave electrónica?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Medio",
+            "opciones": [
+                "Mantener la llave sobre el botón central del lector",
+                "Memorizar un código",
+                "Pulsar un botón en la app"
+            ],
+            "respuestaCorrecta": "Mantener la llave sobre el botón central del lector"
+        },
+        {
+            "enunciado": "¿Qué puntos vulnerables protege el detector de apertura magnético?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Facil",
+            "opciones": [
+                "Puertas y ventanas",
+                "Techos y paredes",
+                "Electrodomésticos"
+            ],
+            "respuestaCorrecta": "Puertas y ventanas"
+        },
+        {
+            "enunciado": "¿Qué permite hacer el detector de acceso cuando detecta una intrusión?",
+            "categoria": "Mas que alarmas",
+            "dificultad": "Medio",
+            "opciones": [
+                "Avisar a la policía en segundos",
+                "Bloquear la entrada automáticamente",
+                "Encender las luces del hogar"
+            ],
+            "respuestaCorrecta": "Avisar a la policía en segundos"
+        },
+        {
+            "enunciado": "¿Cuál es el principal objetivo del Marketing Contact Center en Securitas Direct?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Facil",
+            "opciones": [
+                "Convertir cada lead en una visita de calidad.",
+                "Supervisar el mantenimiento de los equipos tecnológicos.",
+                "Gestionar las finanzas de la compañía"
+            ],
+            "respuestaCorrecta": "Convertir cada lead en una visita de calidad."
+        },
+        {
+            "enunciado": "¿Qué área se encarga de contactar al cliente si la alarma no ha sido instalada dentro de los dos días posteriores a la visita del experto en seguridad?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Medio",
+            "opciones": [
+                "Telecierre.",
+                "Visitas RE-MARKETING.",
+                "MDP (Mejora de Procesos)."
+            ],
+            "respuestaCorrecta": "Telecierre."
+        },
+        {
+            "enunciado": "¿Cuáles son las distintas áreas de Captación?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Facil",
+            "opciones": [
+                "MKT CC, MKT Staff, Ventas, Televenta y Alianza",
+                "MKT CC, Ventas, y Alianza",
+                "MKT CC, Ventas, Retención y Alianza"
+            ],
+            "respuestaCorrecta": "MKT CC, MKT Staff, Ventas, Televenta y Alianza"
+        },
+        {
+            "enunciado": "¿Cuál es una de las responsabilidades de los expertos en tecnología del área de Marketing Captación?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Facil",
+            "opciones": [
+                "Definir la estrategia de lanzamiento de nuevos productos y servicios.",
+                "Gestionar las finanzas de la compañía.",
+                "Supervisar el mantenimiento de los equipos tecnológicos."
+            ],
+            "respuestaCorrecta": "Definir la estrategia de lanzamiento de nuevos productos y servicios."
+        },
+        {
+            "enunciado": "¿Qué buscan los expertos para generar nuevas oportunidades de venta?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Facil",
+            "opciones": [
+                "Nuevas ideas y modelos de negocio",
+                "Estrategias para reducir costos operativos",
+                "Técnicas de mantenimiento de equipos."
+            ],
+            "respuestaCorrecta": "Nuevas ideas y modelos de negocio"
+        },
+        {
+            "enunciado": "¿Qué hacen los expertos con las campañas publicitarias?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Facil",
+            "opciones": [
+                "Planifican, gestionan y negocian todas las campañas publicitarias.",
+                "Supervisan el mantenimiento de los equipos tecnológicos.",
+                "Gestionan las finanzas de la compañía."
+            ],
+            "respuestaCorrecta": "Planifican, gestionan y negocian todas las campañas publicitarias."
+        },
+        {
+            "enunciado": "¿Qué área se encarga de contactar al cliente si la alarma no ha sido instalada dentro de los dos días posteriores a la visita del experto en seguridad?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Medio",
+            "opciones": [
+                "Telecierre.",
+                "Visitas RE-MARKETING.",
+                "MDP (Mejora de Procesos)."
+            ],
+            "respuestaCorrecta": "Telecierre."
+        },
+        {
+            "enunciado": "¿Qué exploran los expertos para generar nuevas oportunidades de venta?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Medio",
+            "opciones": [
+                "Nuevos mercados adyacentes, canales y partnerships de marketing.",
+                "Métodos para mejorar la eficiencia energética.",
+                "Opciones de financiamiento a largo plazo."
+            ],
+            "respuestaCorrecta": "Nuevos mercados adyacentes, canales y partnerships de marketing."
+        },
+        {
+            "enunciado": "¿Qué hacen los expertos en tecnología del área de Marketing Captación para incorporar nuevas tendencias tecnológicas a la propuesta de valor?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Medio",
+            "opciones": [
+                "Exploran posibles áreas o mercados de crecimiento y tendencias tecnológicas.",
+                "Supervisan el mantenimiento de los equipos tecnológicos.",
+                "Gestionan las finanzas de la compañía."
+            ],
+            "respuestaCorrecta": "Exploran posibles áreas o mercados de crecimiento y tendencias tecnológicas."
+        },
+        {
+            "enunciado": "¿Cuál es una de las funciones del equipo de MDP (Mejora de Procesos)?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Dificil",
+            "opciones": [
+                "Asignar las visitas, gestionar incidencias y auditar llamadas.",
+                "Administrar C2C, chat y WhatsApp",
+                "Organizar viajes de incentivos y actividades."
+            ],
+            "respuestaCorrecta": "Asignar las visitas, gestionar incidencias y auditar llamadas."
+        },
+        {
+            "enunciado": "¿Cuál es una de las responsabilidades clave en la definición del posicionamiento de la marca?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Dificil",
+            "opciones": [
+                "Asegurar que los mensajes se trasladen de forma homogénea.",
+                "Gestionar las finanzas de la compañía.",
+                "Supervisar el mantenimiento de los equipos tecnológicos."
+            ],
+            "respuestaCorrecta": "Asegurar que los mensajes se trasladen de forma homogénea."
+        },
+        {
+            "enunciado": "¿Cómo velan por la imagen de la marca los responsables de definir su posicionamiento?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Dificil",
+            "opciones": [
+                "Coordinándose con todas las áreas de la compañía.",
+                "Implementando nuevas tecnologías de producción.",
+                "Desarrollando estrategias de reducción de costos."
+            ],
+            "respuestaCorrecta": "Coordinándose con todas las áreas de la compañía."
+        },
+        {
+            "enunciado": "¿Quién es la directora de Marketing Contact Center en Securitas Direct?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Facil",
+            "opciones": [
+                "Nuria Pérez",
+                "Sara Medina",
+                "Sandra Gamella"
+            ],
+            "respuestaCorrecta": "Nuria Pérez"
+        },
+        {
+            "enunciado": "¿Quién es el director de Ventas en Securitas Direct?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Facil",
+            "opciones": [
+                "Javier Turmo",
+                "Nuria Pérez",
+                "Jaime Parra"
+            ],
+            "respuestaCorrecta": "Javier Turmo"
+        },
+        {
+            "enunciado": "¿Qué KPI mide televenta en las campañas de clientes actuales para asegurarse de que están contentos con la compañía?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Facil",
+            "opciones": [
+                "CFL.",
+                "Finanzas, Recursos Humanos y IT.",
+                "Logística, Producción y Compras."
+            ],
+            "respuestaCorrecta": "CFL."
+        },
+        {
+            "enunciado": "¿Quién es la directora de Televenta en Securitas Direct?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Facil",
+            "opciones": [
+                "Sandra Gamella",
+                "Nuria Perez",
+                "Aberto de la Capilla"
+            ],
+            "respuestaCorrecta": "Sandra Gamella"
+        },
+        {
+            "enunciado": "¿Qué hace el equipo de backoffice de Televenta?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Facil",
+            "opciones": [
+                "Agenda las citas entre el cliente y el técnico instalador.",
+                "Realiza auditorías de calidad de los equipos instalados.",
+                "Confirma que todos los equipos instalados están correctamente facturados y con su contrato firmado."
+            ],
+            "respuestaCorrecta": "Agenda las citas entre el cliente y el técnico instalador."
+        },
+        {
+            "enunciado": "¿Cuál es la misión del departamento de Origen en Televenta?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Medio",
+            "opciones": [
+                "Hacer el primer contacto con el cliente para ofrecerle servicios",
+                "Realizar auditorías y facturación",
+                "Analizar informes y dar soporte a toda el área"
+            ],
+            "respuestaCorrecta": "Hacer el primer contacto con el cliente para ofrecerle servicios"
+        },
+        {
+            "enunciado": "¿Qué áreas de la compañía colaboran con Televenta para recuperar oportunidades de venta no exitosas?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Dificil",
+            "opciones": [
+                "MKT Cliente, Contact Center e Instalafield.",
+                "Finanzas, Recursos Humanos y IT.",
+                "Logística, Producción y Compras."
+            ],
+            "respuestaCorrecta": "MKT Cliente, Contact Center e Instalafield."
+        },
+        {
+            "enunciado": "¿Qué servicio lidera Alianzas Banca a través de Caixabank?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Facil",
+            "opciones": [
+                "Servicio de Protección Senior.",
+                "Servicio de Mantenimiento Tecnológico.",
+                "Servicio de Gestión Financiera."
+            ],
+            "respuestaCorrecta": "Servicio de Protección Senior."
+        },
+        {
+            "enunciado": "¿Quién es la directora de Relación con el Cliente en Securitas Direct?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Facil",
+            "opciones": [
+                "Montse Díaz",
+                "Nuria Pérez",
+                "Ana Casas"
+            ],
+            "respuestaCorrecta": "Montse Díaz"
+        },
+        {
+            "enunciado": "¿Cuál es la misión del departamento de Customer Alarm Monitoring?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Facil",
+            "opciones": [
+                "Dar la atención más personalizada y generar la mejor experiencia de cliente",
+                "Realizar verificaciones presenciales del hogar o negocio",
+                "Proteger a las personas en cualquier lugar a través del móvil"
+            ],
+            "respuestaCorrecta": "Dar la atención más personalizada y generar la mejor experiencia de cliente"
+        },
+        {
+            "enunciado": "¿Cuántas llamadas mensuales atiende el equipo de Customer Service?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Dificil",
+            "opciones": [
+                "Más de 300.000",
+                "Más de 100.000",
+                "Más de 200.000"
+            ],
+            "respuestaCorrecta": "Más de 300.000"
+        },
+        {
+            "enunciado": "¿Cuántos profesionales trabajan en la Central Receptora de Alarmas (CRA) en Madrid y Cornellà?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Medio",
+            "opciones": [
+                "Más de 1650",
+                "Más de 460",
+                "Más de 3000"
+            ],
+            "respuestaCorrecta": "Más de 1650"
+        },
+        {
+            "enunciado": "¿Dónde están ubicadas las dos Centrales Receptoras de Alarmas de Securitas Direct?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Medio",
+            "opciones": [
+                "Madrid y Cornellà de Llobregat",
+                "Madrid y Valencia",
+                "Madrid y Barcelona"
+            ],
+            "respuestaCorrecta": "Madrid y Cornellà de Llobregat"
+        },
+        {
+            "enunciado": "¿Cuál es la misión del departamento de Customer Alarm Monitoring?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Medio",
+            "opciones": [
+                "Dar la atención más personalizada y generar la mejor experiencia de cliente",
+                "Realizar verificaciones presenciales del hogar o negocio",
+                "Proteger a las personas en cualquier lugar a través del móvil"
+            ],
+            "respuestaCorrecta": "Dar la atención más personalizada y generar la mejor experiencia de cliente"
+        },
+        {
+            "enunciado": "¿Quién es la directora de Marketing Cliente en Securitas Direct?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Facil",
+            "opciones": [
+                "Ana Casas",
+                "Nuria Pérez",
+                "Javier Turmo"
+            ],
+            "respuestaCorrecta": "Ana Casas"
+        },
+        {
+            "enunciado": "¿Cuál es el objetivo principal de Marketing Cliente en Securitas Direct?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Medio",
+            "opciones": [
+                "Dar a cada cliente lo que necesita en cada momento",
+                "Vender más productos",
+                "Reducir costos operativos"
+            ],
+            "respuestaCorrecta": "Dar a cada cliente lo que necesita en cada momento"
+        },
+        {
+            "enunciado": "¿Cuál es el objetivo principal de Field Services?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Medio",
+            "opciones": [
+                "Dar el mejor servicio de mantenimiento desde el principio hasta el final, mejorando la seguridad de los clientes.",
+                "Planificar la cita según las preferencias de los clientes.",
+                "Dar un servicio excelente durante el mantenimiento."
+            ],
+            "respuestaCorrecta": "Dar el mejor servicio de mantenimiento desde el principio hasta el final, mejorando la seguridad de los clientes."
+        },
+        {
+            "enunciado": "¿Cuál es el KPI relacionado con la satisfacción del cliente?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Facil",
+            "opciones": [
+                "CFL",
+                "RM",
+                "NDS"
+            ],
+            "respuestaCorrecta": "CFL"
+        },
+        {
+            "enunciado": "¿Qué porcentaje de cumplimiento de la cita agendada se menciona como objetivo?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Medio",
+            "opciones": [
+                "90%",
+                "50%",
+                "10%"
+            ],
+            "respuestaCorrecta": "90%"
+        },
+        {
+            "enunciado": "Cuál es la diferencia entre el Canal Inbound y el Canal Outbound?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Dificil",
+            "opciones": [
+                "En el Canal Inbound, el cliente contacta proactivamente; en el Canal Outbound, la empresa contacta al cliente.",
+                "En el Canal Inbound, se venden productos nuevos; en el Canal Outbound, se venden productos usados.",
+                "En el Canal Inbound, se ofrecen descuentos; en el Canal Outbound, se ofrecen servicios gratuitos."
+            ],
+            "respuestaCorrecta": "En el Canal Inbound, el cliente contacta proactivamente; en el Canal Outbound, la empresa contacta al cliente."
+        },
+        {
+            "enunciado": "¿Cuál de los siguientes KPIs mide la satisfacción del cliente después de una interacción?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Dificil",
+            "opciones": [
+                "NPS (Net Promoter Score)",
+                "Conversión telefónica",
+                "Coste/venta"
+            ],
+            "respuestaCorrecta": "NPS (Net Promoter Score)"
+        },
+        {
+            "enunciado": "¿Cuál es el papel de SD una vez que un cliente tiene instalada una alarma?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Dificil",
+            "opciones": [
+                "Asegurarse de que la alarma funciona correctamente y que el cliente está protegido y satisfecho con el servicio",
+                "Vender más productos al cliente",
+                "Instalar la alarma en el menor tiempo posible"
+            ],
+            "respuestaCorrecta": "Asegurarse de que la alarma funciona correctamente y que el cliente está protegido y satisfecho con el servicio"
+        },
+        {
+            "enunciado": "¿Quién es la directora de Venta al Portfolio en Securitas Direct?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Facil",
+            "opciones": [
+                "Laura Perez",
+                "Nuria Perez",
+                "Elena Prieto"
+            ],
+            "respuestaCorrecta": "Laura Perez"
+        },
+        {
+            "enunciado": "¿Cuál es el objetivo principal del área de Retención?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Facil",
+            "opciones": [
+                "Mantener la cartera de clientes y fidelizarlos",
+                "Aumentar las ventas de nuevos productos",
+                "Reducir el número de empleados."
+            ],
+            "respuestaCorrecta": "Mantener la cartera de clientes y fidelizarlos"
+        },
+        {
+            "enunciado": "¿Cuántos profesionales forman parte del equipo de Retención?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Medio",
+            "opciones": [
+                "Más de 400",
+                "Más de 100",
+                "Más de 50"
+            ],
+            "respuestaCorrecta": "Más de 400"
+        },
+        {
+            "enunciado": "¿Quién es la directora del área de Retención en Securitas Direct?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Facil",
+            "opciones": [
+                "Elena Prieto",
+                "Laura Perez",
+                "Nina Llordachs"
+            ],
+            "respuestaCorrecta": "Elena Prieto"
+        },
+        {
+            "enunciado": "¿Cuál es el objetivo principal de gestionar las solicitudes de baja en el área de Retención?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Medio",
+            "opciones": [
+                "Evitar cancelaciones del servicio y consolidar ventas",
+                "Incrementar la publicidad de la empresa",
+                "Reducir el número de empleados."
+            ],
+            "respuestaCorrecta": "Evitar cancelaciones del servicio y consolidar ventas"
+        },
+        {
+            "enunciado": "¿Cuántos proveedores gestiona Securitas Direct?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Facil",
+            "opciones": [
+                "2.400",
+                "1.200",
+                "3.600"
+            ],
+            "respuestaCorrecta": "2.400"
+        },
+        {
+            "enunciado": "¿Cuántos productos gestiona Securitas Direct en su cadena de suministro?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Facil",
+            "opciones": [
+                "1.800",
+                "2.000",
+                "2.200"
+            ],
+            "respuestaCorrecta": "1.800"
+        },
+        {
+            "enunciado": "¿Cuántas nacionalidades están representadas en el equipo de Compras y Cadena de Suministro?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Medio",
+            "opciones": [
+                "25",
+                "15",
+                "20"
+            ],
+            "respuestaCorrecta": "25"
+        },
+        {
+            "enunciado": "¿Cómo se llama el director global de Compras y Cadena de Suministro de Securitas Direct?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Facil",
+            "opciones": [
+                "Mariano Andreu",
+                "Alvaro Vazquez",
+                "Miguel Angel Fueyo"
+            ],
+            "respuestaCorrecta": "Mariano Andreu"
+        },
+        {
+            "enunciado": "¿Qué gestiona el área de Compras Directas?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Facil",
+            "opciones": [
+                "Las compras relacionadas con los componentes de las soluciones ofrecidas a los clientes",
+                "La compra de materiales, servicios y mantenimientos necesarios para el negocio",
+                "La digitalización de los procesos y la implementación de ORACLE."
+            ],
+            "respuestaCorrecta": "Las compras relacionadas con los componentes de las soluciones ofrecidas a los clientes"
+        },
+        {
+            "enunciado": "¿Cuál es uno de los objetivos principales del área de Gestión de Personas en Securitas Direct?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Facil",
+            "opciones": [
+                "Asegurar la mejor experiencia para las personas que trabajan en Securitas Direct, desde la incorporación hasta la salida de la compañía.",
+                "Gestionar la entrega de productos desde los fabricantes a los clientes.",
+                "Incrementar la eficiencia mediante el uso de la tecnología y digitalización."
+            ],
+            "respuestaCorrecta": "Asegurar la mejor experiencia para las personas que trabajan en Securitas Direct, desde la incorporación hasta la salida de la compañía."
+        },
+        {
+            "enunciado": "¿Qué área dentro de Gestión de Personas se encarga de analizar y diseñar estrategias de compensación y organización?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Dificil",
+            "opciones": [
+                "Compensación, Organización y People Analytics",
+                "Talento",
+                "HRBPs"
+            ],
+            "respuestaCorrecta": "Compensación, Organización y People Analytics"
+        },
+        {
+            "enunciado": "¿Dónde se ubica generalmente el equipo de Gestión de Personas de Securitas Direct?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Facil",
+            "opciones": [
+                "En la segunda planta del Edificio Victoria, en la sede Central de Pozuelo.",
+                "En la primera planta del Edificio Victoria",
+                "En la tercera planta del Edificio Victoria"
+            ],
+            "respuestaCorrecta": "En la segunda planta del Edificio Victoria, en la sede Central de Pozuelo."
+        },
+        {
+            "enunciado": "¿Cuál es el porcentaje de mujeres en la plantilla de Securitas Direct en España?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Dificil",
+            "opciones": [
+                "44%",
+                "29%",
+                "38%"
+            ],
+            "respuestaCorrecta": "44%"
+        },
+        {
+            "enunciado": "¿Cuál es el rol de los HRBPs en el área de Gestión de Personas?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Medio",
+            "opciones": [
+                "Dar apoyo al negocio en la gestión de las personas y de la organización",
+                "Gestionar la digitalización de los procesos y la implementación de ORACLE",
+                "Analizar y diseñar estrategias de compensación y organización"
+            ],
+            "respuestaCorrecta": "Dar apoyo al negocio en la gestión de las personas y de la organización"
+        },
+        {
+            "enunciado": "¿Quién es el director de Gestión de Personas en Securitas Direct?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Facil",
+            "opciones": [
+                "Álvaro Vázquez",
+                "Carlos García",
+                "Juan Alonso"
+            ],
+            "respuestaCorrecta": "Álvaro Vázquez"
+        },
+        {
+            "enunciado": "¿Cuántas veces consecutivas ha sido Securitas Direct reconocida como Top Employer en España?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Facil",
+            "opciones": [
+                "6 veces",
+                "5 veces",
+                "4 veces"
+            ],
+            "respuestaCorrecta": "6 veces"
+        },
+        {
+            "enunciado": "¿En qué ranking de Actualidad Económica está presente Securitas Direct?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Medio",
+            "opciones": [
+                "“Las 100 mejores empresas para trabajar”",
+                "“Las 50 empresas más innovadoras”",
+                "“Las 100 empresas con mayor crecimiento”"
+            ],
+            "respuestaCorrecta": "Las 100 mejores empresas para trabajar"
+        },{
+            "enunciado": "¿Quién es la directora de Administración y Finanzas en Securitas Direct?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Facil",
+            "opciones": [
+                "Ana Gargallo",
+                "María López",
+                "Laura Ripoll"
+            ],
+            "respuestaCorrecta": "Ana Gargallo"
+        },
+        {
+            "enunciado": "¿Cuántos profesionales forman parte del área de Administración y Finanzas en Securitas Direct?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Medio",
+            "opciones": [
+                "200",
+                "170",
+                "120"
+            ],
+            "respuestaCorrecta": "200"
+        },
+        {
+            "enunciado": "¿Qué funciones realiza el equipo de Seguridad Corporativa?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Dificil",
+            "opciones": [
+                "Diseñar y gestionar el Plan de Continuidad de Negocio, controlar la Seguridad Física de oficinas y empleados, e investigar conductas fraudulentas.",
+                "Elaborar y negociar contratos con terceras partes.",
+                "Responder a los requerimientos de la Agencia Española de Protección de Datos."
+            ],
+            "respuestaCorrecta": "Diseñar y gestionar el Plan de Continuidad de Negocio, controlar la Seguridad Física de oficinas y empleados, e investigar conductas fraudulentas."
+        },
+        {
+            "enunciado": "¿Quién es la directora de Comunicación & ESG en Securitas Direct?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Facil",
+            "opciones": [
+                "Laura Gonzalvo",
+                "Ana García",
+                "Natalia Perez"
+            ],
+            "respuestaCorrecta": "Laura Gonzalvo"
+        },
+        {
+            "enunciado": "¿Cuál es uno de los objetivos de la comunicación interna en Securitas Direct?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Medio",
+            "opciones": [
+                "Trasladar a los colaboradores la información relevante de la compañía en tiempo y forma.",
+                "Desarrollar nuevos productos y servicios.",
+                "Gestionar la demanda e inventarios."
+            ],
+            "respuestaCorrecta": "Trasladar a los colaboradores la información relevante de la compañía en tiempo y forma."
+        },
+        {
+            "enunciado": "¿Qué reconocimientos ha recibido Securitas Direct por su gestión de talento?",
+            "categoria": "Sobre todo, personas",
+            "dificultad": "Dificil",
+            "opciones": [
+                "Empresa Top Employer",
+                "Empresa más innovadora",
+                "Empresa con mejor tecnología"
+            ],
+            "respuestaCorrecta": "Empresa Top Employer"
+        },
+        {
+            "enunciado": "¿Qué herramientas tienen los empleados para gestionar su día a día en Securitas Direct?",
+            "categoria": "Sobre todo, personas",
+            "dificultad": "Facil",
+            "opciones": [
+                "La intranet y un chatbot llamado SeDi",
+                "Un sistema de correos electrónicos",
+                "Una app de mensajería"
+            ],
+            "respuestaCorrecta": "La intranet y un chatbot llamado SeDi"
+        },
+        {
+            "enunciado": "¿Qué combina la empresa para ser líder en el mercado?",
+            "categoria": "Sobre todo, personas",
+            "dificultad": "Facil",
+            "opciones": [
+                "Tecnología avanzada e innovación constante",
+                "Tecnología avanzada y formación profesional",
+                "Tecnología avanzada y atención al cliente"
+            ],
+            "respuestaCorrecta": "Tecnología avanzada e innovación constante"
+        },
+        {
+            "enunciado": "¿Con qué cuenta la empresa para ofrecer un servicio líder?",
+            "categoria": "Sobre todo, personas",
+            "dificultad": "Facil",
+            "opciones": [
+                "Un Hub tecnológico propio",
+                "Un equipo de profesionales internacionales",
+                "Una central de servicio internacional"
+            ],
+            "respuestaCorrecta": "Un Hub tecnológico propio"
+        },
+        {
+            "enunciado": "¿Qué lugar ocupan los clientes en la filosofía de la empresa?",
+            "categoria": "Sobre todo, personas",
+            "dificultad": "Facil",
+            "opciones": [
+                "En el centro de todo",
+                "En el segundo plano",
+                "En la toma de decisiones internas"
+            ],
+            "respuestaCorrecta": "En el centro de todo"
+        },
+        {
+            "enunciado": "¿Qué porcentaje de las posiciones en la empresa se cubren desde dentro?",
+            "categoria": "Sobre todo, personas",
+            "dificultad": "Dificil",
+            "opciones": [
+                "Más del 70%",
+                "Más del 50%",
+                "Más del 90%"
+            ],
+            "respuestaCorrecta": "Más del 70%"
+        },
+        {
+            "enunciado": "¿Qué herramienta utiliza la empresa para fomentar el crecimiento de sus empleados?",
+            "categoria": "Sobre todo, personas",
+            "dificultad": "Medio",
+            "opciones": [
+                "Planes de carrera e itinerarios de desarrollo",
+                "Talleres ocasionales",
+                "Conferencias externas"
+            ],
+            "respuestaCorrecta": "Planes de carrera e itinerarios de desarrollo"
+        },
+        {
+            "enunciado": "¿Cómo gana la empresa, de acuerdo con su Cultura y ADN?",
+            "categoria": "Sobre todo, personas",
+            "dificultad": "Facil",
+            "opciones": [
+                "Ganando en equipo",
+                "Con competiciones internas",
+                "Con trabajo individual"
+            ],
+            "respuestaCorrecta": "Ganando en equipo"
+        },
+        {
+            "enunciado": "¿Cuántas generaciones están representadas en la empresa?",
+            "categoria": "Sobre todo, personas",
+            "dificultad": "Dificil",
+            "opciones": [
+                "4 generaciones",
+                "2 generaciones",
+                "6 generaciones"
+            ],
+            "respuestaCorrecta": "4 generaciones"
+        },
+        {
+            "enunciado": "¿Cómo se informa a los usuarios sobre las novedades en las formaciones?",
+            "categoria": "Sobre todo, personas",
+            "dificultad": "Facil",
+            "opciones": [
+                "A través de un correo mensual llamado \"Grow Learning Academy\"",
+                "A través de publicaciones en redes sociales",
+                "Mediante un boletín diario en el sitio web"
+            ],
+            "respuestaCorrecta": "A través de un correo mensual llamado \"Grow Learning Academy\""
+        },
+        {
+            "enunciado": "¿Qué tipo de rutas formativas se realizan?",
+            "categoria": "Sobre todo, personas",
+            "dificultad": "Dificil",
+            "opciones": [
+                "Rutas para adquirir habilidades específicas de un puesto o área",
+                "Rutas para la gestión del tiempo",
+                "Rutas de desarrollo personal"
+            ],
+            "respuestaCorrecta": "Rutas para adquirir habilidades específicas de un puesto o área"
+        },
+        {
+            "enunciado": "¿Cuál de los siguientes programas no forma parte de los itinerarios específicos?",
+            "categoria": "Sobre todo, personas",
+            "dificultad": "Medio",
+            "opciones": [
+                "Marketing Digital",
+                "Escuela de Analistas",
+                "Programas de Liderazgo"
+            ],
+            "respuestaCorrecta": "Marketing Digital"
+        },
+        {
+            "enunciado": "¿Qué condición debe cumplirse para que la empresa subvencione el coste del curso?",
+            "categoria": "Sobre todo, personas",
+            "dificultad": "Facil",
+            "opciones": [
+                "Tener un compromiso de asistencia",
+                "Realizar el curso en línea",
+                "Inscribirse antes de junio"
+            ],
+            "respuestaCorrecta": "Tener un compromiso de asistencia"
+        },
+        {
+            "enunciado": "¿Cómo se informará a los usuarios sobre las novedades en las formaciones?",
+            "categoria": "Sobre todo, personas",
+            "dificultad": "Facil",
+            "opciones": [
+                "A través de un correo mensual llamado \"Grow Learning Academy\"",
+                "A través de publicaciones en redes sociales",
+                "Mediante un boletín diario en el sitio web"
+            ],
+            "respuestaCorrecta": "A través de un correo mensual llamado \"Grow Learning Academy\""
+        },
+        {
+            "enunciado": "¿Cuántos programas universitarios están disponibles?",
+            "categoria": "Sobre todo, personas",
+            "dificultad": "Medio",
+            "opciones": [
+                "5",
+                "3",
+                "7"
+            ],
+            "respuestaCorrecta": "5"
+        },
+        {
+            "enunciado": "¿Qué programa de inglés se ofrece de forma online?",
+            "categoria": "Sobre todo, personas",
+            "dificultad": "Medio",
+            "opciones": [
+                "Spexx",
+                "Business English",
+                "Speaking"
+            ],
+            "respuestaCorrecta": "Spexx"
+        },
+        {
+            "enunciado": "¿Cuándo comienzan las clases de los programas de inglés?",
+            "categoria": "Sobre todo, personas",
+            "dificultad": "Medio",
+            "opciones": [
+                "En octubre",
+                "En enero",
+                "En septiembre"
+            ],
+            "respuestaCorrecta": "En octubre"
+        },
+        {
+            "enunciado": "¿Cuál es el propósito de la fase \"Set Priorities\"?",
+            "categoria": "Sobre todo, personas",
+            "dificultad": "Medio",
+            "opciones": [
+                "Definir los objetivos individuales anuales según las prioridades del área",
+                "Revisar el desempeño del año anterior",
+                "Establecer un presupuesto para el área"
+            ],
+            "respuestaCorrecta": "Definir los objetivos individuales anuales según las prioridades del área"
+        },
+        {
+            "enunciado": "¿Cuándo se reflexiona sobre el avance de los objetivos anuales?",
+            "categoria": "Sobre todo, personas",
+            "dificultad": "Facil",
+            "opciones": [
+                "A la mitad del año",
+                "Al inicio del año",
+                "Al final del año"
+            ],
+            "respuestaCorrecta": "A la mitad del año"
+        },
+        {
+            "enunciado": "¿Qué programa ayuda a las mujeres a tener referentes femeninos dentro de la empresa?",
+            "categoria": "Sobre todo, personas",
+            "dificultad": "Medio",
+            "opciones": [
+                "SheLeads",
+                "Somos Diversidad",
+                "Plan de Igualdad"
+            ],
+            "respuestaCorrecta": "SheLeads"
+        },
+        {
+            "enunciado": "¿Qué es lo que el programa \"Chilito\" ofrece a los empleados?",
+            "categoria": "Sobre todo, personas",
+            "dificultad": "Dificil",
+            "opciones": [
+                "Referentes de liderazgo femenino",
+                "Cursos de liderazgo empresarial",
+                "Plan de movilidad"
+            ],
+            "respuestaCorrecta": "Referentes de liderazgo femenino"
+        },
+        {
+            "enunciado": "¿Cuántos ejes principales tiene el programa \"Somos Diversidad\"?",
+            "categoria": "Sobre todo, personas",
+            "dificultad": "Medio",
+            "opciones": [
+                "5",
+                "3",
+                "7"
+            ],
+            "respuestaCorrecta": "5"
+        },
+        {
+            "enunciado": "¿Qué valor destaca Securitas Direct en \"Somos Diversidad\"?",
+            "categoria": "Sobre todo, personas",
+            "dificultad": "Difícil",
+            "opciones": [
+                "Innovación",
+                "Confianza",
+                "Rentabilidad"
+            ],
+            "respuestaCorrecta": "Innovación"
+        },
+        {
+            "enunciado": "¿Qué encuesta se realiza anualmente para recoger las opiniones de los empleados?",
+            "categoria": "Sobre todo, personas",
+            "dificultad": "Fácil",
+            "opciones": [
+                "Encuesta de Compromiso",
+                "Encuesta de Rendimiento",
+                "Encuesta de Diversidad"
+            ],
+            "respuestaCorrecta": "Encuesta de Compromiso"
+        },
+        {
+            "enunciado": "¿En qué mes se realiza la Encuesta de Compromiso en Securitas Direct?",
+            "categoria": "Sobre todo, personas",
+            "dificultad": "Difícil",
+            "opciones": [
+                "Octubre",
+                "Junio",
+                "Diciembre"
+            ],
+            "respuestaCorrecta": "Octubre"
+        },
+        {
+            "enunciado": "¿Qué programa acompaña a los empleados en sus primeros días dentro de la empresa?",
+            "categoria": "Sobre todo, personas",
+            "dificultad": "Medio",
+            "opciones": [
+                "Programa de Onboarding",
+                "Programa de formación",
+                "Programa de liderazgo"
+            ],
+            "respuestaCorrecta": "Programa de Onboarding"
+        },
+        {
+            "enunciado": "¿Qué herramienta permite detectar áreas de mejora en tiempo real durante la experiencia del empleado?",
+            "categoria": "Sobre todo, personas",
+            "dificultad": "Difícil",
+            "opciones": [
+                "Pulse survey",
+                "Encuesta anual",
+                "Análisis de rendimiento"
+            ],
+            "respuestaCorrecta": "Pulse survey"
+        },
+        {
+            "enunciado": "¿Quiénes son los responsables de proponer mejoras tras la encuesta de compromiso?",
+            "categoria": "Sobre todo, personas",
+            "dificultad": "Difícil",
+            "opciones": [
+                "Red de embajadores de compromiso",
+                "Equipo directivo",
+                "Recursos humanos"
+            ],
+            "respuestaCorrecta": "Red de embajadores de compromiso"
+        },
+        {
+            "enunciado": "¿Cuál es la clave para ofrecer una experiencia de empleado excelente?",
+            "categoria": "Sobre todo, personas",
+            "dificultad": "Medio",
+            "opciones": [
+                "Programas de desarrollo y bienestar",
+                "Incrementar los días de vacaciones",
+                "Ofrecer descuentos especiales"
+            ],
+            "respuestaCorrecta": "Programas de desarrollo y bienestar"
+        },
+        {
+            "enunciado": "¿Qué significa ESG?",
+            "categoria": "Sobre todo, personas",
+            "dificultad": "Fácil",
+            "opciones": [
+                "Environmental, social and governance",
+                "Environmental, social and growth",
+                "Environmental, sustainable and governance"
+            ],
+            "respuestaCorrecta": "Environmental, social and governance"
+        },
+        {
+            "enunciado": "¿En qué año se creó la Fundación Verisure?",
+            "categoria": "Sobre todo, personas",
+            "dificultad": "Fácil",
+            "opciones": [
+                "2024",
+                "2004",
+                "2014"
+            ],
+            "respuestaCorrecta": "2004"
+        },
+        {
+            "enunciado": "¿Cuál es el propósito de la Fundación Verisure?",
+            "categoria": "Sobre todo, personas",
+            "dificultad": "Fácil",
+            "opciones": [
+                "Construir un marco de protección para los colectivos más vulnerables",
+                "Promover la igualdad de género",
+                "Fomentar el desarrollo económico"
+            ],
+            "respuestaCorrecta": "Construir un marco de protección para los colectivos más vulnerables"
+        },
+        {
+            "enunciado": "¿Qué iniciativa clave tiene Securitas Direct para la seguridad de mujeres víctimas de violencia de género?",
+            "categoria": "Sobre todo, personas",
+            "dificultad": "Medio",
+            "opciones": [
+                "El Centro COMETA",
+                "El Programa de Protección",
+                "La Fundación Verisure"
+            ],
+            "respuestaCorrecta": "El Centro COMETA"
+        },
+        {
+            "enunciado": "¿A que hace referencia \"Memoria de Sostenibilidad 2022\"?",
+            "categoria": "Sobre todo, personas",
+            "dificultad": "Difícil",
+            "opciones": [
+                "Los criterios ESG y su importancia",
+                "Los logros de la empresa",
+                "Las festividades nacionales"
+            ],
+            "respuestaCorrecta": "Los criterios ESG y su importancia"
+        },
+        {
+            "enunciado": "¿Qué área se encarga del programa de bienestar?",
+            "categoria": "Sobre todo, personas",
+            "dificultad": "Fácil",
+            "opciones": [
+                "Sobre todo, personas",
+                "Asi somos",
+                "El cliente en el centro"
+            ],
+            "respuestaCorrecta": "Sobre todo, personas"
+        },
+        {
+            "enunciado": "El Servicios de Bienstar económico consiste en...",
+            "categoria": "Sobre todo, personas",
+            "dificultad": "Medio",
+            "opciones": [
+                "Acceso a descuentos y acuerdos con distintas entidades para salvaguardar el bienestar economico",
+                "Acciones que contribuyen a mantener una buena forma fisica mesiante acuerdos con gimnasios",
+                "Acciones y recursos para ayudar a nuestras personas a gestioanr sus entorno mas cercano."
+            ],
+            "respuestaCorrecta": "Acceso a descuentos y acuerdos con distintas entidades para salvaguardar el bienestar economico"
+        },
+        {
+            "enunciado": "¿Que Servicio de Bienestar esta relacionado con el autoliderazgo?",
+            "categoria": "Sobre todo, personas",
+            "dificultad": "Medio",
+            "opciones": [
+                "Bienestar intelectual",
+                "Bienestar diverso",
+                "Bienestar social"
+            ],
+            "respuestaCorrecta": "Bienestar intelectual"
+        },
+        {
+            "enunciado": "¿Qué recursos proporciona Securitas Direct mediante el Programa de Bienestar emocional?",
+            "categoria": "Sobre todo, personas",
+            "dificultad": "Medio",
+            "opciones": [
+                "Programa d Atención Psicologica y cursos de Inteligencia emocioanl",
+                "Programas de gamificacion para aprender, Cursos para potenciar fortalezas",
+                "Plan de igualdad y un programa de talento femenino"
+            ],
+            "respuestaCorrecta": "Programa d Atención Psicologica y cursos de Inteligencia emocioanl"
+        },
+        {
+            "enunciado": "¿Qué tipos de recursos potencia Securitas Direct para gestionar la diversidad?",
+            "categoria": "Sobre todo, personas",
+            "dificultad": "Difícil",
+            "opciones": [
+                "Desarrollo de Liderazgo y Programa de Talento femenino",
+                "Formacion y talleres para la gestión emoional",
+                "Acuerdos con guarderias para favorecer la conciliación"
+            ],
+            "respuestaCorrecta": "Desarrollo de Liderazgo y Programa de Talento femenino"
+        },
+        {
+            "enunciado": "¿Con que Programa de Bienestar potencia Securitas Direct las acciones orientadas a proteger nuetsro entorno más cercano?",
+            "categoria": "Sobre todo, personas",
+            "dificultad": "Medio",
+            "opciones": [
+                "Bienestar social y ESG",
+                "Bienstar intelectual",
+                "Bienestar diverso"
+            ],
+            "respuestaCorrecta": "Bienestar social y ESG"
+        },
+        {
+            "enunciado": "¿Cuántas categorias tiene el Programa de Bienestar?",
+            "categoria": "Sobre todo, personas",
+            "dificultad": "Medio",
+            "opciones": [
+                "6",
+                "8",
+                "7"
+            ],
+            "respuestaCorrecta": "6"
+        }
     ]
 }

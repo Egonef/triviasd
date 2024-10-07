@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
-
+import { motion } from 'framer-motion';
 // Components
 import Header from '../components/header';
 import StandardButton from '../components/standardButton';
@@ -37,7 +37,7 @@ export default function Pregunta() {
                 return () => clearInterval(timerId);
             } else {
                 navigate('/RankingGlobal'); 
-                const resetTime = 120;
+                const resetTime = 240;
                 setTimeLeft(resetTime); // Reiniciar el temporizador a 120 segundos
                 sendTimeLeft(resetTime); // Enviar el tiempo reiniciado al backend
             }
@@ -139,15 +139,15 @@ export default function Pregunta() {
     // Función para calcular los puntos que deben añadirse o restarse al equipo
     function calculatePoints() {
         console.log('Dificultad: ', question.dificultad);
-        console.log('Respuesta correcta: ', question.respuesta_correcta);
+        console.log('Respuesta correcta: ', question.respuestaCorrecta);
         console.log('Respuesta seleccionada: ', selectedAnswer);
         switch (question.dificultad) {
             case "Facil":
-                return selectedAnswer === question.respuesta_correcta ? 1 : -1;
+                return selectedAnswer === question.respuestaCorrecta ? 1 : -1;
             case 'Medio':
-                return selectedAnswer === question.respuesta_correcta ? 2 : -2;
+                return selectedAnswer === question.respuestaCorrecta ? 2 : -2;
             case 'Dificil':
-                return selectedAnswer === question.respuesta_correcta ? 3 : -3;
+                return selectedAnswer === question.respuestaCorrecta ? 3 : -3;
             default:
                 return 0;
         }
@@ -172,7 +172,10 @@ export default function Pregunta() {
     return (
         <div className="App h-screen bg-gray-100" translate='no'>
             <Header />
-            <p className="text-xl font-bold">Tiempo restante de la pregunta: {formatTimeq(questionTimeLeft)}</p>
+            <motion.div className=' h-5 w-full bg-[#FF0033]'
+            animate={{ width: `0px` }}
+            transition={{ duration: questionTimeLeft }}
+            ></motion.div>
             <div className="flex flex-col h-[82%] w-full items-center pt-20">
                 <div className="flex  items-center justify-between h-[10%] w-[90%]  mt-16">
                 <p className="text-xl font-bold ml-4">Equipo: </p>
@@ -184,14 +187,14 @@ export default function Pregunta() {
                             <h1 className="text-4xl font-bold pt-1 pb-1 text-center">{question.enunciado}</h1>
                         </div>
                         <div className="flex flex-row justify-center items-center h-[30%] w-[90%] rounded-2xl pt-20">
-                            {question.respuestas.map((respuesta, index) => (
+                            {question.opciones.map((respuesta, index) => (
                                 <StandardButton
                                     key={index}
                                     text={respuesta}
                                     size="long"
                                     onClick={() => checkAnswer(respuesta, index)}
-                                    isCorrect={selectedAnswer !== null && respuesta === question.respuesta_correcta}
-                                    isIncorrect={selectedAnswer === respuesta && respuesta !== question.respuesta_correcta}
+                                    isCorrect={selectedAnswer !== null && respuesta === question.respuestaCorrecta}
+                                    isIncorrect={selectedAnswer === respuesta && respuesta !== question.respuestaCorrecta}
                                     waiting={waitingButtonIndex === index}
                                 />
                             ))}

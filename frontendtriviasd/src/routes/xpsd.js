@@ -15,7 +15,7 @@ export default function ExperienciaSD() {
             style={{ backgroundImage: `url('/xpsd.svg')`, backgroundSize: 'cover', backgroundPosition: 'center' }}
         >
             <div className="flex flex-col items-center justify-center h-full mt-60 2xl:mt-96">
-            <TypeAnimation className="text-9xl font-extrabold text-gray-500 font-sans"
+            <TypeAnimation className="text-9xl font-extrabold text-gray-500 "
                     sequence={['VIVE LA EXPERIENCIA',700,
                                 '',800]}
                     style={{ fontSize: '3em', fontWeight: 'bolder' }}

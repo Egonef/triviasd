@@ -79,7 +79,7 @@ export default function TeamForm() {
         <form id='registerForm' className=" flex flex-col shadow-xl bg-[#636466] my-4 w-[95%] h-[95%] rounded-tl-3xl rounded-br-3xl p-8 ">
             <div className="flex flex-col items-center h-auto ">
                 <div className='flex flex-col w-4/5 '>
-                    <label htmlFor="Name" className="block text-white text-md font-bold mb-2 font-serif">
+                    <label htmlFor="Name" className="block text-white text-md font-bold mb-2 ">
                         Nombre del equipo
                     </label>
                     <input type="text" id="Name" value={teamName}
@@ -87,7 +87,7 @@ export default function TeamForm() {
                     className="border-2 border-[#FF0033] rounded-lg "/>
                 </div>
                 <div className='flex flex-col mb-2 mt-5 w-4/5 '>
-                    <label htmlFor="leaderName" className="block text-white text-md font-bold mb-2 font-serif">
+                    <label htmlFor="leaderName" className="block text-white text-md font-bold mb-2 ">
                         Nombre del líder
                     </label>
                     <input type="text" id="leaderName" value={leaderName}
@@ -95,7 +95,7 @@ export default function TeamForm() {
                     className="border-2 border-[#FF0033] rounded-lg"/>
                 </div>
                 <div className='flex flex-col mb-2 mt-5 w-4/5'>
-                    <label htmlFor="leaderMail" className="block text-white text-md font-bold mb-2 font-serif">
+                    <label htmlFor="leaderMail" className="block text-white text-md font-bold mb-2 ">
 
                         Correo del líder
                     </label>

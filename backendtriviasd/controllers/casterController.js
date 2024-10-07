@@ -5,7 +5,7 @@ import fs from 'fs/promises';
 import { getTeams , getGameStatus, teams } from '../controllers/adminController.js';
 
 
-export var timeLeft = 120;
+export var timeLeft = 240;
 
 //Funcion para guardar el tiempo restante de partida
 export const saveTimeLeft = asyncHandler(async(req, res) => {
@@ -76,11 +76,11 @@ export const setTopicandDifficulty = asyncHandler(async(req, res) => {
 async function getQuestion(tema, dificultad){
 
     // Leer el archivo JSON que contiene las preguntas
-    const data = await fs.readFile('./preguntassd.json', 'utf8');
+    const data = await fs.readFile('./preguntas.json', 'utf8');
     const questions = JSON.parse(data).preguntas;
      // Filtrar las preguntas según la categoría dada
     const filteredQuestions = questions.filter(question =>
-        question.tematica === tema && question.dificultad === dificultad
+        question.categoria === tema && question.dificultad === dificultad
     );
     for (let i = 0; i < filteredQuestions.length; i++) {
         //console.log('Preguntas filtradas: ');

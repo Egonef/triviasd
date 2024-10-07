@@ -260,7 +260,7 @@ export default function Presentador(){
 
     //Funcion para terminar la partida que resetea el temporizador y te lleva al rabnking global
     function endGame() {
-        sendTimeLeft(120);
+        sendTimeLeft(240);
         saveTeams2();
         navigate('/RankingGlobal');
     }
@@ -340,7 +340,7 @@ export default function Presentador(){
             <div className='flex flex-col items-center align-middle pt-20 h-screen'>
                 <div className="flex  items-center justify-between h-[10%] w-[90%]  mt-16">
                     <p className='text-2xl font-bold'>Equipo: {registeredTeams.length > 0 ? checkTurn() : ''}</p>
-                    <p className="text-xl font-bold">Tiempo restante: {formatTime(timeLeft)}</p>
+                    <div className=' flex justify-center items-center h-24 w-28 text-2xl text-white bg-slate-500 '><b>{formatTime(timeLeft)}</b></div>
                 </div>
                 {tema === '' ?
                 <>
@@ -353,11 +353,11 @@ export default function Presentador(){
                         <div className="flex flex-row  w-full h-full">
                             <div className="flex flex-col items-end h-full w-1/2">
                                 <StandardButton text={<><span>Así</span><br /><span>somos</span></>} size="huge" onClick={() => setTema('Así somos')} marginX="10" />
-                                <StandardButton text="Más que alarmas" size="huge" onClick={() => setTema('Captación')} marginX="10" />
+                                <StandardButton text="Más que alarmas" size="huge" onClick={() => setTema('Mas que alarmas')} marginX="10" />
                             </div>
                             <div className="flex flex-col items-start h-full w-1/2">
-                                <StandardButton text="El viaje del cliente" size="huge" onClick={() => setTema('Portfolio')} marginX="10" />
-                                <StandardButton text="Sobre todo, personas" size="huge" onClick={() => setTema('Soporte a Negocio')} marginX="10" />
+                                <StandardButton text="El viaje del cliente" size="huge" onClick={() => setTema('El viaje del cliente')} marginX="10" />
+                                <StandardButton text="Sobre todo, personas" size="huge" onClick={() => setTema('Sobre todo, personas')} marginX="10" />
                             </div>
                         </div>
                     </div>

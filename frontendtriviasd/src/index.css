@@ -6,8 +6,8 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: 'Fira Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -16,4 +16,34 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* index.css */
+
+/* Estilo para la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 8px; /* Ancho de la barra de desplazamiento */
+    height: 8px; /* Altura de la barra de desplazamiento horizontal */
+}
+
+/* Estilo para el pulgar de la barra de desplazamiento */
+::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color del pulgar */
+    border-radius: 4px; /* Radio de borde para el pulgar */
+}
+
+/* Estilo para la pista de la barra de desplazamiento */
+::-webkit-scrollbar-track {
+    background: #9ca3af; /* Color de la pista */
+    border-radius: 4px; /* Radio de borde para la pista */
+}
+
+/* Estilo para la pista de la barra de desplazamiento cuando está activa */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color del pulgar cuando está activo */
+}
+
+/* Estilo para el "scroll corner" */
+::-webkit-scrollbar-corner {
+    background: #9ca3af; /* Color del "scroll corner" */
 }

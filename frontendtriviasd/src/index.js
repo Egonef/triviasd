@@ -17,6 +17,9 @@ import TeamSelection from './routes/seleccionEquipos';
 import RankingLocal from './routes/localRanking';
 import RankingGlobal from './routes/globalRanking';
 
+//Fonts
+import '@fontsource/fira-sans';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>

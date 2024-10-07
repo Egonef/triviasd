@@ -2,7 +2,7 @@ import React from "react";
 
 export default function StandardButton({ text, onClick, size, type, isCorrect, isIncorrect, waiting, marginX, marginY }) {
 
-    let baseClasses = "bg-[#FF0033] text-white 2xl:text-3xl sm:text-xl py-2 px-4 rounded-tl-3xl rounded-br-3xl font-serif";
+    let baseClasses = "bg-[#FF0033] text-white 2xl:text-3xl sm:text-xl py-2 px-4 rounded-tl-3xl rounded-br-3xl";
 
     let colorClass;
     if (waiting) {
