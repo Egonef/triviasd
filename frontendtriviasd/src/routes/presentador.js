@@ -339,7 +339,7 @@ export default function Presentador(){
             <Header/>
             <div className='flex flex-col items-center align-middle lg:pt-20 md:pt-[2rem] h-screen'>
                 <div className="flex  items-center justify-between h-[10%] w-[90%]  mt-16">
-                    <p className='lg:text-2xl md:xl font-bold'>Equipo: {registeredTeams.length > 0 ? checkTurn() : ''}</p>
+                    <p className='lg:text-2xl font-bold'>Equipo: {registeredTeams.length > 0 ? checkTurn() : ''}</p>
                     <div className=' flex justify-center items-center h-24 w-28 text-2xl text-white bg-slate-500 rounded-br-3xl rounded-tl-3xl'><b>{formatTime(timeLeft)}</b></div>
                 </div>
                 {tema === '' ?
@@ -349,7 +349,7 @@ export default function Presentador(){
                         <h1 className='text-white text-center'>Tema</h1>
                     </div>
                 </div>
-                    <div className='flex flex-col items-center  justify-center  md:h-[60%] md:w-[35%] 2xl:h-[50%] 2xl:w-[26%] sm:h-[60%] sm:w-[45%] rounded-tl-3xl rounded-br-3xl  border-[#FF0033] border-2 border-dashed translate-y-[-10%]'>
+                    <div className='flex flex-col items-center  justify-center  md:h-[60%] md:w-[60%] 2xl:h-[50%] 2xl:w-[26%] sm:h-[60%] sm:w-[45%] rounded-tl-3xl rounded-br-3xl  border-[#FF0033] border-2 border-dashed translate-y-[-10%]'>
                         <div className="flex flex-row  w-full h-full">
                             <div className="flex flex-col items-end h-full w-1/2 ">
                                 <StandardButton text={<><span>Así</span><br /><span>somos</span></>} size="huge" onClick={() => setTema('Así somos')} marginX="10" />
