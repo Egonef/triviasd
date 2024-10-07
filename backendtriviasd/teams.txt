@@ -1,1 +1,1 @@
-[{"Name":"A","LeaderName":"kjgh","LeaderEmail":"khgjf","turn":false,"score":32,"id":1},{"Name":"B","LeaderName":"ligh","LeaderEmail":"jklhg","turn":false,"score":30,"id":2},{"Name":"C","LeaderName":"jkghf","LeaderEmail":"kgjhf","turn":false,"score":30,"id":3}]
+[{"Name":"A","LeaderName":"lhkjg","LeaderEmail":"lhjkg","turn":false,"score":21,"id":1},{"Name":"B","LeaderName":"ñljkh","LeaderEmail":"ñkljh","turn":false,"score":32,"id":2}]

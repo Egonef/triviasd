@@ -100,9 +100,19 @@ async function getQuestion(tema, dificultad){
     //console.log('Pregunta aleatoria seleccionada: ' + randomQuestion.enunciado);
     // Enviar la pregunta aleatoria como respuesta
 
+    randomQuestion.opciones = shuffle(randomQuestion.opciones);
+
     return randomQuestion;
 }
 
+// Función que mezcla (shuffle) un array
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
 
 //Función que devuelve la pregunta seleccionada
 export const getSelectedQuestion = asyncHandler(async(req, res) => {
