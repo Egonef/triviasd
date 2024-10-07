@@ -38,7 +38,7 @@ export default function RankingGlobal() {
             <Header />
             
             <div className="flex flex-col h-full w-full items-center">
-                <div className="flex justify-center w-[60%] lg:h-[70%] md:h-[50%] lg:mt-52 md:mt-32 rounded-tl-3xl rounded-br-3xl border-[#FF0033] border-2 border-dashed p-4">
+                <div className="flex justify-center w-[60%] h-[70%] xl:mt-40  mt-52 rounded-tl-3xl rounded-br-3xl border-[#FF0033] border-2 border-dashed p-4">
 
                     <div className='w-full h-full bg-slate-500 rounded-tl-3xl rounded-br-3xl overflow-scroll'>
                         <ul className='w-full'>
@@ -54,8 +54,8 @@ export default function RankingGlobal() {
                         </ul>
                     </div>
                 </div>
-                <div className="flex w-full justify-end h-[30%]">
-                    <StandardButton text="Siguiente" size="big" onClick={() => navigate('/seleccionEquipos')}/>
+                <div className="flex w-full justify-end h-[30%] xl:translate-y-[-40%]">
+                    <StandardButton text="Siguiente" size="tiny" onClick={() => navigate('/seleccionEquipos')}/>
                 </div>
             </div>
         </div>
