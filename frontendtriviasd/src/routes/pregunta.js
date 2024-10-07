@@ -203,7 +203,7 @@ export default function Pregunta() {
                     <p className="text-xl font-bold ml-4">Pregunta: </p>
                     <div className=' flex justify-center items-center md:h-10 lg:h-10 xl:h-10 h-24 w-28 text-2xl text-white bg-slate-500 rounded-br-3xl rounded-tl-3xl'><b>{formatTime(timeLeft)}</b></div>
                 </div>
-                {showQuestion && (
+                {question && (
                     <>
                         <div className="flex flex-grow items-center justify-center lg:h-[35%] md:h-[15%] md:mt-5 md:mb-5 w-[90%]  rounded-tl-3xl rounded-br-3xl  border-[#FF0033] border-2 border-dashed ">
                             <h1 className="lg:text-4xl md:text-2xl font-bold pt-1 pb-1 text-center">{question.enunciado}</h1>
