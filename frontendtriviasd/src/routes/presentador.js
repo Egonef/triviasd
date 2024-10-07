@@ -349,7 +349,7 @@ export default function Presentador(){
                         <h1 className='text-white text-center'>Tema</h1>
                     </div>
                 </div>
-                    <div className='flex flex-col items-center  justify-center lg:h-[60%] lg:w-[45%] md:h-[60%] md:w-[60%] 2xl:h-[50%] 2xl:w-[26%] sm:h-[60%] sm:w-[45%] rounded-tl-3xl rounded-br-3xl  border-[#FF0033] border-2 border-dashed translate-y-[-10%]'>
+                    <div className='flex flex-col items-center  justify-center lg:h-[60%] lg:w-[45%] xl:w-[35%] md:h-[60%] md:w-[60%] 2xl:h-[50%] 2xl:w-[26%] sm:h-[60%] sm:w-[45%] rounded-tl-3xl rounded-br-3xl  border-[#FF0033] border-2 border-dashed translate-y-[-10%]'>
                         <div className="flex flex-row  w-full h-full">
                             <div className="flex flex-col items-end h-full w-1/2 ">
                                 <StandardButton text={<><span>Así</span><br /><span>somos</span></>} size="huge" onClick={() => setTema('Así somos')} marginX="10" />
@@ -370,7 +370,8 @@ export default function Presentador(){
                             <h1 className='text-white text-center'>Dificultad</h1>
                         </div>
                     </div>
-                    <div className='flex flex-row justify-center items-center 2xl:h-[27%] 2xl:w-[42%] rounded-tl-3xl rounded-br-3xl  border-[#FF0033] border-2 border-dashed lg:translate-y-[50%] md:translate-y-[10%] md:mb-20'>
+                   
+                    <div className='flex flex-row justify-center items-center 2xl:h-[27%] 2xl:w-[42%] rounded-tl-3xl rounded-br-3xl  border-[#FF0033] border-2 border-dashed md:translate-y-[50%]  lg:mb-40  md:mb-20'>
                         <div translate='no'>
                             <StandardButton text="Facil" size="huge" onClick={setEasyDiff}/>
                             <StandardButton text="Media" size="huge" onClick={setMidDiff}/>
