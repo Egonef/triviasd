@@ -1,1 +1,1 @@
-[{"Name":"A","LeaderName":"lhkjg","LeaderEmail":"lhjkg","turn":false,"score":21,"id":1},{"Name":"B","LeaderName":"ñljkh","LeaderEmail":"ñkljh","turn":false,"score":32,"id":2}]
+[{"Name":"C","LeaderName":"lkjhg","LeaderEmail":"jkhg","turn":false,"score":20,"id":1},{"Name":"D","LeaderName":"lkhjg","LeaderEmail":"lkhjg","turn":false,"score":24,"id":2}]
