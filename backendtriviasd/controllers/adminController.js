@@ -225,7 +225,8 @@ export const loadTeams = asyncHandler(async(req, res) => {
     fs.readFile('teams.txt', 'utf8', function (err, data) {
         if (err) throw err;
         teams = JSON.parse(data);
+        teams2 = teams;
         console.log(teams);
-        res.send('Teams loaded');
+        res.send(teams);
     });
 })
