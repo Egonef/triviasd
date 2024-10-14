@@ -441,6 +441,17 @@
             "respuestaCorrecta": "Employee Net Promoter Score"
         },
         {
+            "enunciado": "¿En cuantos idiomas está escrito \"Somos diversidad\" en las escaleras de la sede de Madrid de Securitas Direct?",
+            "categoria": "Así somos",
+            "dificultad": "Dificil",
+            "opciones": [
+                "8",
+                "7",
+                "9"
+            ],
+            "respuestaCorrecta": "8"
+        },
+        {
             "enunciado": "¿Dónde se encuentran las sedes de la Central Receptora de Alarmas de Securitas Direct?",
             "categoria": "Mas que alarmas",
             "dificultad": "Facil",
@@ -1057,6 +1068,17 @@
             "respuestaCorrecta": "Más de 300.000"
         },
         {
+            "enunciado": "¿Cuántos profesionales trabajan en la Central Receptora de Alarmas (CRA) en Madrid y Cornellà?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Medio",
+            "opciones": [
+                "Más de 1650",
+                "Más de 460",
+                "Más de 3000"
+            ],
+            "respuestaCorrecta": "Más de 1650"
+        },
+        {
             "enunciado": "¿Dónde están ubicadas las dos Centrales Receptoras de Alarmas de Securitas Direct?",
             "categoria": "El viaje del cliente",
             "dificultad": "Medio",
@@ -1066,6 +1088,17 @@
                 "Madrid y Barcelona"
             ],
             "respuestaCorrecta": "Madrid y Cornellà de Llobregat"
+        },
+        {
+            "enunciado": "¿Cuál es la misión del departamento de Customer Alarm Monitoring?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Medio",
+            "opciones": [
+                "Dar la atención más personalizada y generar la mejor experiencia de cliente",
+                "Realizar verificaciones presenciales del hogar o negocio",
+                "Proteger a las personas en cualquier lugar a través del móvil"
+            ],
+            "respuestaCorrecta": "Dar la atención más personalizada y generar la mejor experiencia de cliente"
         },
         {
             "enunciado": "¿Quién es la directora de Marketing Cliente en Securitas Direct?",
@@ -1288,6 +1321,17 @@
             "respuestaCorrecta": "Compensación, Organización y People Analytics"
         },
         {
+            "enunciado": "¿Dónde se ubica generalmente el equipo de Gestión de Personas de Securitas Direct?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Facil",
+            "opciones": [
+                "En la segunda planta del Edificio Victoria, en la sede Central de Pozuelo.",
+                "En la primera planta del Edificio Victoria",
+                "En la tercera planta del Edificio Victoria"
+            ],
+            "respuestaCorrecta": "En la segunda planta del Edificio Victoria, en la sede Central de Pozuelo."
+        },
+        {
             "enunciado": "¿Cuál es el porcentaje de mujeres en la plantilla de Securitas Direct en España?",
             "categoria": "El viaje del cliente",
             "dificultad": "Dificil",
@@ -1319,6 +1363,17 @@
                 "Juan Alonso"
             ],
             "respuestaCorrecta": "Álvaro Vázquez"
+        },
+        {
+            "enunciado": "¿Cuántas veces consecutivas ha sido Securitas Direct reconocida como Top Employer en España?",
+            "categoria": "El viaje del cliente",
+            "dificultad": "Facil",
+            "opciones": [
+                "6 veces",
+                "5 veces",
+                "4 veces"
+            ],
+            "respuestaCorrecta": "6 veces"
         },
         {
             "enunciado": "¿En qué ranking de Actualidad Económica está presente Securitas Direct?",
@@ -1606,7 +1661,7 @@
             "respuestaCorrecta": "SheLeads"
         },
         {
-            "enunciado": "¿Qué es lo que el programa \"SheLeads\" ofrece a los empleados?",
+            "enunciado": "¿Qué es lo que el programa \"Chilito\" ofrece a los empleados?",
             "categoria": "Sobre todo, personas",
             "dificultad": "Dificil",
             "opciones": [
@@ -1738,6 +1793,17 @@
             "respuestaCorrecta": "Construir un marco de protección para los colectivos más vulnerables"
         },
         {
+            "enunciado": "¿Qué iniciativa clave tiene Securitas Direct para la seguridad de mujeres víctimas de violencia de género?",
+            "categoria": "Sobre todo, personas",
+            "dificultad": "Medio",
+            "opciones": [
+                "El Centro COMETA",
+                "El Programa de Protección",
+                "La Fundación Verisure"
+            ],
+            "respuestaCorrecta": "El Centro COMETA"
+        },
+        {
             "enunciado": "¿A que hace referencia \"Memoria de Sostenibilidad 2022\"?",
             "categoria": "Sobre todo, personas",
             "dificultad": "Difícil",
@@ -1804,7 +1870,7 @@
             "respuestaCorrecta": "Desarrollo de Liderazgo y Programa de Talento femenino"
         },
         {
-            "enunciado": "¿Con qué Programa de Bienestar potencia Securitas Direct las acciones orientadas a proteger nuestro entorno más cercano?",
+            "enunciado": "¿Con que Programa de Bienestar potencia Securitas Direct las acciones orientadas a proteger nuetsro entorno más cercano?",
             "categoria": "Sobre todo, personas",
             "dificultad": "Medio",
             "opciones": [

@@ -1,7 +1,7 @@
 import express from 'express';
 import asyncHandler from 'express-async-handler';
 import fs from 'fs';
-
+import path from 'path';
 
 
 //     /admin/test
@@ -128,7 +128,7 @@ export const getTeamsNumber = asyncHandler(async(req, res) => {
     res.send(teams.length.toString());
 })
 
-//Funcion para iniciar la trivia //*
+//Funcion para iniciar la trivia
 export const startGame = asyncHandler(async(req, res) => {
     //Comprobamos si hay 4 equipos registrados
     if (selectedTeams.length < 2) {
@@ -136,6 +136,8 @@ export const startGame = asyncHandler(async(req, res) => {
     }else if(selectedTeams.length > 4){
         res.send('Too many teams');
     }else {
+        //Hacemos una copia de seguridad antes de empezar la partida
+        saveTeamsBackup(teams);
         selectedTeams[0].turn = true;
         gameReady = true;
         console.log('Equipos seleccionados para la partida:');
@@ -220,13 +222,83 @@ function saveTeams() {
     });
 }
 
-//Funcion para cargar en el vector de equipos los equipos guardados en el archivo cuando se llama desde el frontend
-export const loadTeams = asyncHandler(async(req, res) => {
-    fs.readFile('teams.txt', 'utf8', function (err, data) {
+//Función que hace copias de seguridad de los equipos registrados
+
+function saveTeamsBackup(teams) {
+    const backupDir = 'backups';
+
+    // Asegurarse de que la carpeta de backups existe
+    if (!fs.existsSync(backupDir)) {
+        fs.mkdirSync(backupDir);
+    }
+
+    // Leer el contenido de la carpeta de backups
+    fs.readdir(backupDir, (err, files) => {
         if (err) throw err;
-        teams = JSON.parse(data);
-        teams2 = teams;
-        console.log(teams);
-        res.send(teams);
+
+        // Filtrar los archivos que comienzan con 'teams' y terminan con '.txt'
+        const backupFiles = files.filter(file => file.startsWith('teams') && file.endsWith('.txt'));
+
+        // Calcular el número del próximo archivo de backup
+        const nextBackupNumber = backupFiles.length + 1;
+        const backupFileName = `teams${nextBackupNumber}.txt`;
+
+        // Escribir el archivo de backup
+        fs.writeFile(path.join(backupDir, backupFileName), JSON.stringify(teams), (err) => {
+            if (err) throw err;
+            console.log(`Backup guardado como ${backupFileName}`);
+        });
     });
-})
+}
+
+//Funcion para cargar en el vector de equipos los equipos guardados en el archivo cuando se llama desde el frontend
+export const loadTeams = asyncHandler(async (req, res) => {
+    const teamsFilePath = 'teams.txt';
+    const backupDir = 'backups';
+
+    // Leer el archivo teams.txt
+    fs.readFile(teamsFilePath, 'utf8', function (err, data) {
+        if (err) throw err;
+
+        // Si el archivo está vacío, buscar la última copia de seguridad
+        if (!data || data.trim() === '') {
+            console.log('teams.txt está vacío. Buscando la última copia de seguridad...');
+
+            // Leer el contenido de la carpeta de backups
+            fs.readdir(backupDir, (err, files) => {
+                if (err) throw err;
+
+                // Filtrar los archivos que comienzan con 'teams' y terminan con '.txt'
+                const backupFiles = files.filter(file => file.startsWith('teams') && file.endsWith('.txt'));
+
+                // Ordenar los archivos por número de copia de seguridad en orden descendente
+                backupFiles.sort((a, b) => {
+                    const aNumber = parseInt(a.match(/\d+/)[0], 10);
+                    const bNumber = parseInt(b.match(/\d+/)[0], 10);
+                    return bNumber - aNumber;
+                });
+
+                // Si hay copias de seguridad disponibles, leer la última
+                if (backupFiles.length > 0) {
+                    const latestBackupFile = path.join(backupDir, backupFiles[0]);
+                    fs.readFile(latestBackupFile, 'utf8', function (err, backupData) {
+                        if (err) throw err;
+                        teams = JSON.parse(backupData);
+                        teams2 = teams;
+                        console.log('Equipos cargados desde la última copia de seguridad:', teams);
+                        res.send(teams);
+                    });
+                } else {
+                    console.log('No se encontraron copias de seguridad.');
+                    res.status(404).send('No se encontraron equipos y no hay copias de seguridad disponibles.');
+                }
+            });
+        } else {
+            // Si el archivo no está vacío, cargar los equipos desde teams.txt
+            teams = JSON.parse(data);
+            teams2 = teams;
+            console.log('Equipos cargados desde teams.txt:', teams);
+            res.send(teams);
+        }
+    });
+});
