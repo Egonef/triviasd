@@ -352,12 +352,12 @@ export default function Presentador(){
                     <div className='flex flex-col items-center  justify-center lg:h-[60%] lg:w-[45%] xl:w-[35%] md:h-[60%] md:w-[60%] 2xl:h-[50%] 2xl:w-[26%] sm:h-[60%] sm:w-[45%] rounded-tl-3xl rounded-br-3xl  border-[#FF0033] border-2 border-dashed translate-y-[-10%]'>
                         <div className="flex flex-row  w-full h-full">
                             <div className="flex flex-col items-end h-full w-1/2 ">
-                                <StandardButton text={<><span>Así</span><br /><span>somos</span></>} size="huge" onClick={() => setTema('Así somos')} marginX="10" />
-                                <StandardButton text="Más que alarmas" size="huge" onClick={() => setTema('Mas que alarmas')} marginX="10" />
+                                <StandardButton text={<><span>Introducción a</span><br /><span>la ética normativa</span></>} size="huge" onClick={() => setTema('Introducción a la Ética Normativa')} marginX="10" />
+                                <StandardButton text="Códigos deontológicos" size="huge" onClick={() => setTema('Códigos deontológicos')} marginX="10" />
                             </div>
                             <div className="flex flex-col items-start h-full w-1/2">
-                                <StandardButton text="El viaje del cliente" size="huge" onClick={() => setTema('El viaje del cliente')} marginX="10" />
-                                <StandardButton text="Sobre todo, personas" size="huge" onClick={() => setTema('Sobre todo, personas')} marginX="10" />
+                                <StandardButton text="Retos Éticos y Casos Reales" size="huge" onClick={() => setTema('Retos Éticos y Casos Reales')} marginX="10" />
+                                <StandardButton text="Ética en Ingeniería Informática" size="huge" onClick={() => setTema('Ética en Ingeniería Informática')} marginX="10" />
                             </div>
                         </div>
                     </div>

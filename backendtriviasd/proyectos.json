@@ -3,7 +3,7 @@
         {
             "enunciado": "¿Qué es la ética?",
             "categoria": "Introducción a la Ética Normativa",
-            "dificultad": "Fácil",
+            "dificultad": "Facil",
             "opciones": [
                 "La rama de la filosofía que estudia el deber y la felicidad",
                 "La rama de la filosofía que habla de lo bueno, lo malo, lo moral, etc.",
@@ -14,7 +14,7 @@
         {
             "enunciado": "¿Qué busca la ética normativa?",
             "categoria": "Introducción a la Ética Normativa",
-            "dificultad": "Fácil",
+            "dificultad": "Facil",
             "opciones": [
                 "Analizar las costumbres de las sociedades",
                 "Regular la conducta humana con normas o estándares",
@@ -47,7 +47,7 @@
         {
             "enunciado": "¿Qué característica define a la ética de virtudes?",
             "categoria": "Introducción a la Ética Normativa",
-            "dificultad": "Fácil",
+            "dificultad": "Facil",
             "opciones": [
                 "Enfatiza en las cualidades morales de las personas",
                 "Se basa en las consecuencias de las acciones",
@@ -58,7 +58,7 @@
         {
             "enunciado": "¿Qué significa el término “deontología”?",
             "categoria": "Introducción a la Ética Normativa",
-            "dificultad": "Fácil",
+            "dificultad": "Facil",
             "opciones": [
                 "Ciencia de la felicidad",
                 "Ciencia del deber",
@@ -69,7 +69,7 @@
         {
             "enunciado": "¿Cuál de los siguientes ejemplos refleja una ética consecuencialista?",
             "categoria": "Introducción a la Ética Normativa",
-            "dificultad": "Difícil",
+            "dificultad": "Dificil",
             "opciones": [
                 "Ayudar a alguien por el deber moral",
                 "Tomar una decisión basándote en los resultados esperados",
@@ -80,7 +80,7 @@
         {
             "enunciado": "¿Qué es un código deontológico?",
             "categoria": "Códigos Deontológicos",
-            "dificultad": "Fácil",
+            "dificultad": "Facil",
             "opciones": [
                 "Un conjunto de normas legales",
                 "Un conjunto de principios éticos en un ámbito profesional",
@@ -91,7 +91,7 @@
         {
             "enunciado": "¿Cuál es el objetivo principal de los códigos deontológicos?",
             "categoria": "Códigos Deontológicos",
-            "dificultad": "Fácil",
+            "dificultad": "Facil",
             "opciones": [
                 "Aumentar la competitividad profesional",
                 "Regular el comportamiento ético de los profesionales",
@@ -135,7 +135,7 @@
         {
             "enunciado": "¿Qué ética debe aplicarse en el diseño de sistemas tecnológicos?",
             "categoria": "Ética en Ingeniería Informática",
-            "dificultad": "Difícil",
+            "dificultad": "Dificil",
             "opciones": [
                 "Ética basada en normas",
                 "Ética profesional enfocada en seguridad",
@@ -157,7 +157,7 @@
         {
             "enunciado": "¿Qué ejemplo real resalta el uso no ético de datos?",
             "categoria": "Retos Éticos y Casos Reales",
-            "dificultad": "Difícil",
+            "dificultad": "Dificil",
             "opciones": [
                 "Cambridge Analytica y Facebook",
                 "La ley de privacidad de datos en Europa (GDPR)",
@@ -179,7 +179,7 @@
         {
             "enunciado": "¿Qué consideraciones éticas son clave en el desarrollo de tecnología autónoma?",
             "categoria": "Retos Éticos y Casos Reales",
-            "dificultad": "Difícil",
+            "dificultad": "Dificil",
             "opciones": [
                 "Responsabilidad, equidad y seguridad",
                 "Rentabilidad y eficiencia",
@@ -212,7 +212,7 @@
         {
             "enunciado": "¿Qué hace el principio de minimización de datos?",
             "categoria": "Ética en Ingeniería Informática",
-            "dificultad": "Fácil",
+            "dificultad": "Facil",
             "opciones": [
                 "Evita recopilar más datos de los necesarios",
                 "Maximiza la utilidad de los datos recopilados",
@@ -234,7 +234,7 @@
         {
             "enunciado": "¿Qué es la ética del hacking ético?",
             "categoria": "Ética en Ingeniería Informática",
-            "dificultad": "Fácil",
+            "dificultad": "Facil",
             "opciones": [
                 "Hacer ciberataques por diversión",
                 "Detectar vulnerabilidades para proteger sistemas",
@@ -256,7 +256,7 @@
         {
             "enunciado": "¿Qué principios son esenciales en el desarrollo de inteligencia artificial responsable?",
             "categoria": "Retos Éticos y Casos Reales",
-            "dificultad": "Difícil",
+            "dificultad": "Dificil",
             "opciones": [
                 "Transparencia, justicia y privacidad",
                 "Rentabilidad y eficiencia",
@@ -278,7 +278,7 @@
         {
             "enunciado": "¿Cómo afecta el sesgo algorítmico en los sistemas de IA?",
             "categoria": "Retos Éticos y Casos Reales",
-            "dificultad": "Difícil",
+            "dificultad": "Dificil",
             "opciones": [
                 "Genera resultados erróneos en todos los casos",
                 "Refleja prejuicios humanos en decisiones automatizadas",
@@ -289,7 +289,7 @@
         {
             "enunciado": "¿Qué es la ética de la sostenibilidad tecnológica?",
             "categoria": "Ética en Ingeniería Informática",
-            "dificultad": "Fácil",
+            "dificultad": "Facil",
             "opciones": [
                 "Garantizar que la tecnología no dañe el medio ambiente",
                 "Crear sistemas más veloces",
@@ -300,7 +300,7 @@
         {
             "enunciado": "¿Qué problema ético puede surgir al usar tecnología de reconocimiento facial?",
             "categoria": "Retos Éticos y Casos Reales",
-            "dificultad": "Difícil",
+            "dificultad": "Dificil",
             "opciones": [
                 "Falta de precisión en las predicciones",
                 "Violación de la privacidad y posibles sesgos",
@@ -311,7 +311,7 @@
         {
             "enunciado": "¿Qué principio ético está en juego en la privacidad digital?",
             "categoria": "Ética en Ingeniería Informática",
-            "dificultad": "Fácil",
+            "dificultad": "Facil",
             "opciones": [
                 "Confidencialidad de la información personal",
                 "Accesibilidad de los sistemas",
