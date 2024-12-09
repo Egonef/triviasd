@@ -1,0 +1,334 @@
+{
+    "preguntas": [
+        {
+            "enunciado": "¿Qué es la ética?",
+            "categoria": "Introducción a la Ética Normativa",
+            "dificultad": "Fácil",
+            "opciones": [
+                "La rama de la filosofía que estudia el deber y la felicidad",
+                "La rama de la filosofía que habla de lo bueno, lo malo, lo moral, etc.",
+                "Un conjunto de normas obligatorias para todos"
+            ],
+            "respuestaCorrecta": "La rama de la filosofía que habla de lo bueno, lo malo, lo moral, etc."
+        },
+        {
+            "enunciado": "¿Qué busca la ética normativa?",
+            "categoria": "Introducción a la Ética Normativa",
+            "dificultad": "Fácil",
+            "opciones": [
+                "Analizar las costumbres de las sociedades",
+                "Regular la conducta humana con normas o estándares",
+                "Estudiar los sentimientos humanos"
+            ],
+            "respuestaCorrecta": "Regular la conducta humana con normas o estándares"
+        },
+        {
+            "enunciado": "¿Qué se evalúa en el consecuencialismo?",
+            "categoria": "Introducción a la Ética Normativa",
+            "dificultad": "Medio",
+            "opciones": [
+                "Las intenciones de quien actúa",
+                "Las consecuencias de las acciones",
+                "Los principios universales"
+            ],
+            "respuestaCorrecta": "Las consecuencias de las acciones"
+        },
+        {
+            "enunciado": "Según la ética deontológica, ¿qué se prioriza al evaluar una acción?",
+            "categoria": "Introducción a la Ética Normativa",
+            "dificultad": "Medio",
+            "opciones": [
+                "Las consecuencias favorables",
+                "El cumplimiento de deberes",
+                "Las cualidades morales del actor"
+            ],
+            "respuestaCorrecta": "El cumplimiento de deberes"
+        },
+        {
+            "enunciado": "¿Qué característica define a la ética de virtudes?",
+            "categoria": "Introducción a la Ética Normativa",
+            "dificultad": "Fácil",
+            "opciones": [
+                "Enfatiza en las cualidades morales de las personas",
+                "Se basa en las consecuencias de las acciones",
+                "Defiende un sistema de normas universales"
+            ],
+            "respuestaCorrecta": "Enfatiza en las cualidades morales de las personas"
+        },
+        {
+            "enunciado": "¿Qué significa el término “deontología”?",
+            "categoria": "Introducción a la Ética Normativa",
+            "dificultad": "Fácil",
+            "opciones": [
+                "Ciencia de la felicidad",
+                "Ciencia del deber",
+                "Estudio de las emociones"
+            ],
+            "respuestaCorrecta": "Ciencia del deber"
+        },
+        {
+            "enunciado": "¿Cuál de los siguientes ejemplos refleja una ética consecuencialista?",
+            "categoria": "Introducción a la Ética Normativa",
+            "dificultad": "Difícil",
+            "opciones": [
+                "Ayudar a alguien por el deber moral",
+                "Tomar una decisión basándote en los resultados esperados",
+                "Seguir una norma sin importar el contexto"
+            ],
+            "respuestaCorrecta": "Tomar una decisión basándote en los resultados esperados"
+        },
+        {
+            "enunciado": "¿Qué es un código deontológico?",
+            "categoria": "Códigos Deontológicos",
+            "dificultad": "Fácil",
+            "opciones": [
+                "Un conjunto de normas legales",
+                "Un conjunto de principios éticos en un ámbito profesional",
+                "Un tratado filosófico sobre ética"
+            ],
+            "respuestaCorrecta": "Un conjunto de principios éticos en un ámbito profesional"
+        },
+        {
+            "enunciado": "¿Cuál es el objetivo principal de los códigos deontológicos?",
+            "categoria": "Códigos Deontológicos",
+            "dificultad": "Fácil",
+            "opciones": [
+                "Aumentar la competitividad profesional",
+                "Regular el comportamiento ético de los profesionales",
+                "Sustituir a las leyes"
+            ],
+            "respuestaCorrecta": "Regular el comportamiento ético de los profesionales"
+        },
+        {
+            "enunciado": "¿Qué principio guía la confidencialidad en los códigos deontológicos?",
+            "categoria": "Códigos Deontológicos",
+            "dificultad": "Medio",
+            "opciones": [
+                "Evitar favoritismos",
+                "Proteger la privacidad de la información",
+                "Actuar con imparcialidad"
+            ],
+            "respuestaCorrecta": "Proteger la privacidad de la información"
+        },
+        {
+            "enunciado": "¿Qué sucede si un profesional viola su código deontológico?",
+            "categoria": "Códigos Deontológicos",
+            "dificultad": "Medio",
+            "opciones": [
+                "Es automáticamente despedido",
+                "Puede enfrentarse a sanciones disciplinarias",
+                "Pierde su licencia profesional"
+            ],
+            "respuestaCorrecta": "Puede enfrentarse a sanciones disciplinarias"
+        },
+        {
+            "enunciado": "¿Qué principio ético es clave en la relación profesional-cliente?",
+            "categoria": "Códigos Deontológicos",
+            "dificultad": "Medio",
+            "opciones": [
+                "La honestidad",
+                "La confidencialidad",
+                "Ambos"
+            ],
+            "respuestaCorrecta": "Ambos"
+        },
+        {
+            "enunciado": "¿Qué ética debe aplicarse en el diseño de sistemas tecnológicos?",
+            "categoria": "Ética en Ingeniería Informática",
+            "dificultad": "Difícil",
+            "opciones": [
+                "Ética basada en normas",
+                "Ética profesional enfocada en seguridad",
+                "Ética del diseño inclusivo y responsable"
+            ],
+            "respuestaCorrecta": "Ética del diseño inclusivo y responsable"
+        },
+        {
+            "enunciado": "¿Qué significa responsabilidad social en la ingeniería informática?",
+            "categoria": "Ética en Ingeniería Informática",
+            "dificultad": "Medio",
+            "opciones": [
+                "Contribuir a resolver problemas sociales a través de la tecnología",
+                "Solo cumplir los estándares legales",
+                "Mejorar la experiencia del usuario"
+            ],
+            "respuestaCorrecta": "Contribuir a resolver problemas sociales a través de la tecnología"
+        },
+        {
+            "enunciado": "¿Qué ejemplo real resalta el uso no ético de datos?",
+            "categoria": "Retos Éticos y Casos Reales",
+            "dificultad": "Difícil",
+            "opciones": [
+                "Cambridge Analytica y Facebook",
+                "La ley de privacidad de datos en Europa (GDPR)",
+                "Desarrollar software libre"
+            ],
+            "respuestaCorrecta": "Cambridge Analytica y Facebook"
+        },
+        {
+            "enunciado": "¿Cómo se define la transparencia en sistemas de inteligencia artificial?",
+            "categoria": "Retos Éticos y Casos Reales",
+            "dificultad": "Medio",
+            "opciones": [
+                "Revelar datos sensibles al público",
+                "Permitir comprender cómo se toman las decisiones",
+                "Publicar todas las operaciones internas del sistema"
+            ],
+            "respuestaCorrecta": "Permitir comprender cómo se toman las decisiones"
+        },
+        {
+            "enunciado": "¿Qué consideraciones éticas son clave en el desarrollo de tecnología autónoma?",
+            "categoria": "Retos Éticos y Casos Reales",
+            "dificultad": "Difícil",
+            "opciones": [
+                "Responsabilidad, equidad y seguridad",
+                "Rentabilidad y eficiencia",
+                "Cumplimiento de estándares legales"
+            ],
+            "respuestaCorrecta": "Responsabilidad, equidad y seguridad"
+        },
+        {
+            "enunciado": "¿Qué es el sesgo algorítmico?",
+            "categoria": "Retos Éticos y Casos Reales",
+            "dificultad": "Medio",
+            "opciones": [
+                "Errores matemáticos en algoritmos",
+                "Resultados que reflejan prejuicios humanos",
+                "Problemas de diseño ineficaz"
+            ],
+            "respuestaCorrecta": "Resultados que reflejan prejuicios humanos"
+        },
+         {
+            "enunciado": "¿Qué problema ético surge al usar datos personales en proyectos tecnológicos?",
+            "categoria": "Retos Éticos y Casos Reales",
+            "dificultad": "Medio",
+            "opciones": [
+                "La eficiencia de los sistemas",
+                "La privacidad y el consentimiento",
+                "La capacidad de almacenamiento"
+            ],
+            "respuestaCorrecta": "La privacidad y el consentimiento"
+        },
+        {
+            "enunciado": "¿Qué hace el principio de minimización de datos?",
+            "categoria": "Ética en Ingeniería Informática",
+            "dificultad": "Fácil",
+            "opciones": [
+                "Evita recopilar más datos de los necesarios",
+                "Maximiza la utilidad de los datos recopilados",
+                "Reduce la calidad de los datos"
+            ],
+            "respuestaCorrecta": "Evita recopilar más datos de los necesarios"
+        },
+        {
+            "enunciado": "¿Qué significa el término \"diseño ético\" en tecnología?",
+            "categoria": "Ética en Ingeniería Informática",
+            "dificultad": "Medio",
+            "opciones": [
+                "Crear productos atractivos visualmente",
+                "Asegurar que los productos respeten principios éticos",
+                "Optimizar el rendimiento técnico de un producto"
+            ],
+            "respuestaCorrecta": "Asegurar que los productos respeten principios éticos"
+        },
+        {
+            "enunciado": "¿Qué es la ética del hacking ético?",
+            "categoria": "Ética en Ingeniería Informática",
+            "dificultad": "Fácil",
+            "opciones": [
+                "Hacer ciberataques por diversión",
+                "Detectar vulnerabilidades para proteger sistemas",
+                "Utilizar virus para probar la seguridad"
+            ],
+            "respuestaCorrecta": "Detectar vulnerabilidades para proteger sistemas"
+        },
+        {
+            "enunciado": "¿Qué dilema ético plantea la inteligencia artificial en el ámbito laboral?",
+            "categoria": "Retos Éticos y Casos Reales",
+            "dificultad": "Medio",
+            "opciones": [
+                "Eliminar tareas repetitivas",
+                "Posibles pérdidas de empleo humano",
+                "Incremento de la productividad"
+            ],
+            "respuestaCorrecta": "Posibles pérdidas de empleo humano"
+        },
+        {
+            "enunciado": "¿Qué principios son esenciales en el desarrollo de inteligencia artificial responsable?",
+            "categoria": "Retos Éticos y Casos Reales",
+            "dificultad": "Difícil",
+            "opciones": [
+                "Transparencia, justicia y privacidad",
+                "Rentabilidad y eficiencia",
+                "Cumplimiento estricto de la ley"
+            ],
+            "respuestaCorrecta": "Transparencia, justicia y privacidad"
+        },
+        {
+            "enunciado": "¿Qué ética aplica el manejo responsable de grandes volúmenes de datos?",
+            "categoria": "Ética en Ingeniería Informática",
+            "dificultad": "Medio",
+            "opciones": [
+                "Ética del big data",
+                "Ética de la privacidad",
+                "Ética de la gestión de la información"
+            ],
+            "respuestaCorrecta": "Ética del big data"
+        },
+        {
+            "enunciado": "¿Cómo afecta el sesgo algorítmico en los sistemas de IA?",
+            "categoria": "Retos Éticos y Casos Reales",
+            "dificultad": "Difícil",
+            "opciones": [
+                "Genera resultados erróneos en todos los casos",
+                "Refleja prejuicios humanos en decisiones automatizadas",
+                "Hace que los sistemas sean menos eficientes"
+            ],
+            "respuestaCorrecta": "Refleja prejuicios humanos en decisiones automatizadas"
+        },
+        {
+            "enunciado": "¿Qué es la ética de la sostenibilidad tecnológica?",
+            "categoria": "Ética en Ingeniería Informática",
+            "dificultad": "Fácil",
+            "opciones": [
+                "Garantizar que la tecnología no dañe el medio ambiente",
+                "Crear sistemas más veloces",
+                "Reducir los costos de producción"
+            ],
+            "respuestaCorrecta": "Garantizar que la tecnología no dañe el medio ambiente"
+        },
+        {
+            "enunciado": "¿Qué problema ético puede surgir al usar tecnología de reconocimiento facial?",
+            "categoria": "Retos Éticos y Casos Reales",
+            "dificultad": "Difícil",
+            "opciones": [
+                "Falta de precisión en las predicciones",
+                "Violación de la privacidad y posibles sesgos",
+                "Costos elevados de implementación"
+            ],
+            "respuestaCorrecta": "Violación de la privacidad y posibles sesgos"
+        },
+        {
+            "enunciado": "¿Qué principio ético está en juego en la privacidad digital?",
+            "categoria": "Ética en Ingeniería Informática",
+            "dificultad": "Fácil",
+            "opciones": [
+                "Confidencialidad de la información personal",
+                "Accesibilidad de los sistemas",
+                "Maximización del almacenamiento"
+            ],
+            "respuestaCorrecta": "Confidencialidad de la información personal"
+        },
+        {
+            "enunciado": "¿Qué dilema ético puede surgir con los algoritmos de redes sociales?",
+            "categoria": "Retos Éticos y Casos Reales",
+            "dificultad": "Medio",
+            "opciones": [
+                "Mejorar la interacción entre usuarios",
+                "Promover desinformación o adicción",
+                "Reducir los costos de las empresas tecnológicas"
+            ],
+            "respuestaCorrecta": "Promover desinformación o adicción"
+        }
+    ]
+}
