@@ -133,6 +133,72 @@
             "respuestaCorrecta": "Ambos"
         },
         {
+            "enunciado": "¿Qué implica el principio de 'autonomía' en los códigos deontológicos de la ingeniería informática?",
+            "categoria": "Códigos deontológicos",
+            "dificultad": "Difícil",
+            "opciones": [
+                "Garantizar que los sistemas informáticos funcionen correctamente",
+                "Respetar las decisiones y derechos de los usuarios",
+                "Optimizar el uso de los recursos tecnológicos"
+            ],
+            "respuestaCorrecta": "Respetar las decisiones y derechos de los usuarios"
+        },
+        {
+            "enunciado": "¿Cuál es el principal desafío de implementar los principios éticos en proyectos internacionales?",
+            "categoria": "Códigos deontológicos",
+            "dificultad": "Difícil",
+            "opciones": [
+                "Las diferencias culturales y legales entre países",
+                "La falta de recursos tecnológicos avanzados",
+                "El tiempo requerido para implementar soluciones técnicas"
+            ],
+            "respuestaCorrecta": "Las diferencias culturales y legales entre países"
+        },
+        {
+            "enunciado": "En el contexto del código deontológico, ¿qué dilema surge con la confidencialidad de datos sensibles?",
+            "categoria": "Códigos deontológicos",
+            "dificultad": "Difícil",
+            "opciones": [
+                "Decidir entre proteger datos y cumplir obligaciones legales",
+                "Definir quién tiene acceso a los datos internos",
+                "Garantizar que los datos no se pierdan en un sistema"
+            ],
+            "respuestaCorrecta": "Decidir entre proteger datos y cumplir obligaciones legales"
+        },
+        {
+            "enunciado": "¿Qué define un conflicto de interés según los códigos deontológicos en ingeniería informática?",
+            "categoria": "Códigos deontológicos",
+            "dificultad": "Difícil",
+            "opciones": [
+                "Usar datos para múltiples fines sin permiso",
+                "Tener intereses personales que afecten decisiones profesionales",
+                "Implementar tecnología incompatible con estándares internacionales"
+            ],
+            "respuestaCorrecta": "Tener intereses personales que afecten decisiones profesionales"
+        },
+        {
+            "enunciado": "¿Qué criterio fundamental establece el ACM Code of Ethics sobre el uso de tecnología?",
+            "categoria": "Códigos deontológicos",
+            "dificultad": "Difícil",
+            "opciones": [
+                "Promover la igualdad y evitar daños a las personas",
+                "Desarrollar sistemas altamente innovadores",
+                "Garantizar la optimización de recursos económicos"
+            ],
+            "respuestaCorrecta": "Promover la igualdad y evitar daños a las personas"
+        },
+        {
+            "enunciado": "¿Qué principio del código deontológico se enfrenta a retos éticos en entornos de inteligencia artificial?",
+            "categoria": "Códigos deontológicos",
+            "dificultad": "Difícil",
+            "opciones": [
+                "Evitar discriminación y sesgos en las decisiones",
+                "Garantizar la máxima eficiencia operativa",
+                "Proteger los derechos de los desarrolladores"
+            ],
+            "respuestaCorrecta": "Evitar discriminación y sesgos en las decisiones"
+        },
+        {
             "enunciado": "¿Qué ética debe aplicarse en el diseño de sistemas tecnológicos?",
             "categoria": "Ética en Ingeniería Informática",
             "dificultad": "Dificil",
